@@ -1,0 +1,246 @@
+<!-- IDs are strictly coded and changes will impact js code. IDs are not used for styling. A unique class that matches the ID can be used for this purpose. -->
+<!-- HTML is for layout purposes only. JS eventListeners are used for calling functions. Any inline CSS or JS are for development and testing. -->
+<!-- IDs are not used in the Template Literals. Template Literals are often repeated items. If IDs are used in Template Lieterals it should be noted. -->
+<!-- Comments should be used in the HTML to show where Template Literals are used to build HTML. -->
+<!-- Typical naming conventions (exceptions should be easy to understand): Functions = fxAction; IDs = namePurpose; Classes = htmltagPurpose. -->
+<!DOCTYPE html>
+<html lang="en-US" class="drk-thm">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width" />
+    <title>Report Assistant</title>
+    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- JS -->
+    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+
+  <body id="bodyID">
+    <header class="headerHome">
+      <div style="display: flex; height: 40px; line-height: 40px; vertical-align: middle; margin-left: 10px">
+        <div class="divHeaderTopLeft">
+          <div class="divHeaderTextLeft">Stephen Hurst</div>
+          <div class="divHeaderTextLeft">&#8226;</div>
+          <div id="BL04" class="divHeaderTextLeft">Seymour District</div>
+          <div class="divHeaderTextLeft">&#8226;</div>
+          <div class="divHeaderTextLeft">NSTM Team Leader</div>
+          <!-- <div class="divHeaderTextLeft">&#8226;</div> -->
+          <!-- <div class="divHeaderTextLeft">November 2023</div> -->
+          <!-- <div class="divHeaderTextLeft" style="font-size: 20px; padding-left: 5px;"><a class="aPageArrows" href="#">&#10094;</a></div> -->
+          <!-- <div class="divHeaderTextLeft" style="font-size: 20px;"><a class="aPageArrows" href="#">&#10095;</a></div> -->
+        </div>
+
+        <div class="divHeaderTopRight">
+          <button class="buttonHeader material-symbols-outlined" type="button">search</button>
+          <a id="backButton" class="aHome" tabindex="-1" href="http://localhost:3000/settings.html"
+            ><button class="buttonHeader material-symbols-outlined" type="button">tune</button></a
+          >
+          |
+          <button class="buttonHeader material-symbols-outlined" type="button">mark_email_read</button>
+          <a id="backButton" class="aHome" tabindex="-1" href="http://localhost:3000/login.html"
+            ><button class="buttonHeader material-symbols-outlined" type="button">logout</button></a
+          >
+          | <button class="buttonHeader material-symbols-outlined" type="button">dock_to_left</button>
+          <!-- split -->
+          <button id="divFullscreen" class="buttonHeader material-symbols-outlined" type="button">fullscreen</button>
+          <div class="divThemeBackground">
+            <button id="divTheme" class="divThemeButton drk-thm" type="button">D</button>
+            <!-- Theme button -->
+          </div>
+          <!-- Theme button background -->
+        </div>
+      </div>
+      <div class="divHeaderBottom">
+        <div class="divHeaderBottomLeft">
+          <div class="divHeaderTextLeft">
+            Bridges (<a id="bridgePendingID" class="aSet" tabindex="-1" href="http://localhost:3000/inspections.html">10</a>,
+            <a id="bridgeInProgressID" class="aSet" tabindex="-1" href="http://localhost:3000/inspections.html">&nbsp;2</a>,
+            <a id="bridgeSubmittedID" class="aSet" tabindex="-1" href="http://localhost:3000/inspections.html">&nbsp;2</a>)
+          </div>
+          <div class="divHeaderTextLeft">&#8226;</div>
+          <div class="divHeaderTextLeft">Culverts (13, 0, 0)</div>
+          <div class="divHeaderTextLeft">&#8226;</div>
+          <div class="divHeaderTextLeft">Retraining Walls (5, 0, 0)</div>
+          <div class="divHeaderTextLeft">&#8226;</div>
+          <div class="divHeaderTextLeft">
+            Totals (<a id="totalPendingID" class="aSet" tabindex="-1" href="http://localhost:3000/inspections.html">28</a>,
+            <a id="totalInProgressID" class="aSet" tabindex="-1" href="http://localhost:3000/inspections.html">&nbsp;2</a>,
+            <a id="totalSubmittedID" class="aSet" tabindex="-1" href="http://localhost:3000/inspections.html">&nbsp;2</a>)
+          </div>
+        </div>
+
+        <div class="divHeaderBottomRight">
+          <div class="divHeaderTextBottomRight">Aprovals (0) &#8226; Late (0)</div>
+        </div>
+      </div>
+    </header>
+    <main class="drk-thm">
+      <div class="divGridContainer">
+        <div class="divGridItem">
+          <div class="divHomeWorkflowBoxes">
+            Inspection
+            <hr class="hrHome" />
+            <a class="aPageLinks" href="http://localhost:3000/inspections.html">
+              <li class="liHome">Inspections & Reports</li>
+            </a>
+            <a class="aPageLinks" href="http://localhost:3000/schedules.html">
+              <li class="liHome">Schedules</li>
+            </a>
+          </div>
+          <div class="divHomeWorkflowBoxes">
+            Asset Data
+            <hr class="hrHome" />
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Filters & Queries</li>
+            </a>
+            <br />
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Bridge Assets</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Culvert Assets</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Retaining Wall Assets</li>
+            </a>
+            <br />
+            <a class="aPageLinks" href="#">
+              <li class="liHome">NSTM</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Scour Critical</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Special</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Underwater</li>
+            </a>
+          </div>
+        </div>
+
+        <div class="divGridItem">
+          <div class="divHomeWorkflowBoxes">
+            Inspection Management
+            <hr class="hrHome" />
+            <a class="aPageLinks" href="#">
+              <li class="liHome">QAQC</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Reporting</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Workloads & Personnel</li>
+            </a>
+          </div>
+
+          <div class="divHomeWorkflowBoxes">
+            Asset Management
+            <hr class="hrHome" />
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Contracts</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">IDIQ</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Programming</li>
+            </a>
+          </div>
+
+          <div class="divHomeWorkflowBoxes">
+            Database Management
+            <hr class="hrHome" />
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Database Tools</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Forms</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">SQL</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Users</li>
+            </a>
+          </div>
+        </div>
+
+        <div class="divGridItem">
+          <div class="divHomeWorkflowBoxes">
+            Tools
+            <hr class="hrHome" />
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Asset Builder</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Channel Profiles</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Critical Finds</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Element Calculations</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Load Ratings</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Maintenance Requests</li>
+            </a>
+            <a class="aPageLinks" href="#">
+              <li class="liHome">Plans</li>
+            </a>
+          </div>
+          <div class="divHomeWorkflowBoxes">
+            Links
+            <hr class="hrHome" />
+            <a class="aPageLinks" target="”_tab”" rel="noreferrer" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf">
+              <li class="liHome">SNBI</li>
+            </a>
+            <a class="aPageLinks" target="”_tab”" rel="noreferrer" href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm">
+              <li class="liHome">INDOT BIM</li>
+            </a>
+            <a
+              class="aPageLinks"
+              target="”_tab”"
+              rel="noreferrer"
+              href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+            >
+              <li class="liHome">Coding Guide</li>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="divFooterSpacer"></div>
+    </main>
+
+    <footer class="footerHome">
+      <div class="divwrap">
+        <div class="div3" style="display: flex">
+          <span class="spanclass1">
+            <a tabindex="-1" href="iterate-logo.html" target="_blank" rel="noreferrer">
+              <img class="iterateimg" src=".\media\logo-rings-only-purple.png" alt="iterate logo" />
+            </a>
+          </span>
+          <span class="spanclass2"
+            ><span class="iteclass">ite<span class="rateclass">rate</span> <span class="customdataclass"> //bridge Inspection software</span></span></span
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

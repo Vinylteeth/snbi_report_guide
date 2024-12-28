@@ -1,0 +1,468 @@
+/*   Table of Contents */
+/*............ 1. Basic Elements */
+/*............ 2. Header & Footer */
+/*.............. 2.1 Header Quadrant Flex Layouts */
+/*.............. 2.2 Header Links & Buttons */
+/*.............. 2.3 Footer & Logo */
+/*.............. 2.4 Theme */
+/*............ 3. Main Section */
+/*.............. 3.1 Main Section Grid Layout */
+/*.............. 3.2 Workflow Boxes */
+/*.............. 3.3 Workflow Boxes Links */
+
+/*............ 1. Basic Elements */
+
+html,
+header,
+textarea,
+input,
+button,
+div,
+p,
+li,
+ul {
+  font-family: "Ubuntu", sans-serif;
+  font-family: "DM Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+  font-family: "DM Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0px 10px 10px 10px;
+  margin: 0px 0px 0px 0px;
+  padding: 0;
+  height: 100%;
+}
+
+main {
+  position: fixed;
+  top: 92px;
+  height: calc(100% - 92px - 57px);
+  width: calc(100% - 20px);
+  width: 100%;
+  overflow-y: auto;
+}
+
+/*............ 2. Header & Footer */
+
+.headerHome {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  padding: 10px 0;
+  border: none;
+  border-bottom: solid 2px grey;
+  border-radius: 1px 1px 1px 1px;
+  color: rgb(213 213 213);
+  z-index: 1;
+  overflow: hidden;
+  background-color: rgba(20, 20, 73, 0.9);
+  background-image: url("../media/light-down-blue3.png");
+  background-size: 100px 115px;
+}
+
+.footerHome {
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 20px); /* minus the padding on both sides */
+  width: 100%;
+  height: 35px;
+  padding: 10px 0;
+  border: none;
+  border-top: solid 2px grey;
+  border-radius: 1px 1px 1px 1px;
+  color: rgb(213 213 213);
+  z-index: 1;
+  overflow: hidden;
+  background-color: rgba(20, 20, 73, 0.9);
+  background-image: url("../media/light-down-blue3.png");
+  background-size: 100px 115px;
+}
+
+.divFooterSpacer {
+  /* sits above footer to add a little blank space for extra scrolling */
+  height: 5px;
+  display: block;
+  margin-top: 5px;
+  background-color: none;
+}
+
+/*.............. 2.1 Header Quadrant Layouts */
+
+.divHeaderBottom {
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  margin: 0 10px;
+  /* background-color: green; */
+}
+
+.divHeaderTopLeft {
+  flex: 2;
+  cursor: default;
+  white-space: nowrap;
+  padding-right: 5px;
+  /* background-color: red; */
+}
+
+.divHeaderBottomLeft {
+  flex: 2;
+  cursor: default;
+  white-space: nowrap;
+  padding-right: 5px;
+  /* background-color: pink; */
+}
+
+.divHeaderTopRight {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  cursor: default;
+  white-space: nowrap;
+  padding: 0 5px; /* padding is different due to icons */
+  /* background-color: black; */
+}
+
+.divHeaderBottomRight {
+  flex: 2;
+  cursor: default;
+  display: flex;
+  justify-content: end;
+  white-space: nowrap;
+  padding-right: 5px;
+  /* background-color: purple; */
+}
+
+.divHeaderTextLeft {
+  display: inline-flex;
+  color: rgb(201 201 201);
+  cursor: default;
+  user-select: none;
+  white-space: nowrap;
+  /* background-color: black; */
+}
+
+.divHeaderTextBottomRight {
+  display: inline-flex; /* not sure */
+  color: rgb(201 201 201);
+  cursor: default;
+  user-select: none;
+  white-space: nowrap;
+  text-align: right;
+  /* background-color: black; */
+}
+
+/*.............. 2.2 Header Links & Buttons */
+
+.aPageArrows {
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  text-decoration: none;
+  color: rgb(213 213 213);
+  margin: 0;
+  padding: 0;
+}
+
+.aPageArrows:focus,
+.aPageArrows:hover {
+  color: rgb(202, 199, 18);
+}
+
+.buttonHeader {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  margin: 5px 4px;
+  padding: 0 7px;
+  height: 30px;
+  color: rgb(213 213 213);
+  background-color: rgb(90, 90, 90);
+  border: solid 2px rgb(138, 138, 138);
+  border-radius: 15px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.25s;
+  font-weight: 500;
+}
+
+.buttonHeader:focus,
+.buttonHeader:hover {
+  color: rgb(234, 30, 30);
+  color: rgb(45, 45, 168);
+  color: rgb(202, 199, 18);
+}
+
+.buttonHeader:active {
+  /* transform: rotate(20deg); */
+  left: 4px;
+  top: 0px;
+  color: rgb(234, 30, 30);
+}
+
+.divThemeBackground {
+  margin: 5px;
+  width: 42px;
+  height: 30px;
+  z-index: 1;
+  background: rgb(138, 138, 138);
+  border-radius: 18px;
+  cursor: default;
+}
+
+.divThemeButton {
+  transition: 0.3s;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.divThemeButton.drk-thm:focus,
+.divThemeButton.drk-thm:hover {
+  color: rgb(45, 45, 168);
+  color: rgb(234, 30, 30);
+  color: rgb(202, 199, 18);
+}
+.divThemeButton.lght-thm:focus,
+.divThemeButton.lght-thm:hover {
+  color: rgb(45, 45, 168);
+  color: rgb(234, 30, 30);
+  color: rgb(184, 37, 0);
+  color: rgb(129, 131, 0);
+  color: rgb(202, 199, 18);
+}
+
+.divThemeButton.drk-thm {
+  position: relative;
+  right: -13px;
+  top: -4px;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(213 213 213);
+  background-color: rgb(90, 90, 90);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.divThemeButton.lght-thm {
+  position: relative;
+  right: -4px;
+  top: -4px;
+  width: 26px;
+  height: 26px;
+  color: rgb(33 33 33);
+  background-color: rgb(201, 201, 201);
+  color: rgb(213 213 213);
+  background-color: rgb(90, 90, 90);
+  border-radius: 50%;
+}
+
+.divThemeButton:active {
+  color: rgb(234, 30, 30);
+}
+
+.buttonHeaderOn {
+  color: rgb(44, 185, 39);
+}
+
+/*.............. 2.3 Footer & Logo */
+
+.divwrap {
+  position: absolute;
+  left: 50%; /* Positions the top-left corner inside the parent */
+  transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%); /* Adjusts the position based on width and height (left, top) */
+  width: 320px;
+  height: 30px;
+}
+
+.div3 {
+  margin: auto;
+  width: 290px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  padding-left: 0px; /* Margin (auto) and width values allow the object to be centered horizontally inside parent */
+}
+
+.iterateimg {
+  padding-left: 0px;
+  height: 40px;
+  width: 40px;
+}
+
+.spanclass1 {
+  /* Logo */
+  width: 30px;
+  height: 60px;
+  margin: -6px 0 0 0;
+  padding: 0 0 0 0;
+  border: 3px solid rgb(12, 158, 158, 0);
+}
+.spanclass2 {
+  /* Text */
+  width: 290px;
+  height: 60px;
+  margin: -4px 0 0 0;
+  padding: 4px 0 0 0;
+  border: 3px solid rgba(245, 144, 144, 0);
+}
+.iteclass {
+  color: rgba(158, 38, 158, 0.7);
+  text-shadow: 0 0 4px rgb(0, 0, 0), 3px 3px 4px rgb(0, 0, 0);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+.rateclass {
+  color: rgba(255, 55, 0, 0.7);
+  text-shadow: 0 0 4px rgb(0, 0, 0), 3px 3px 4px rgb(0, 0, 0);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+.customdataclass {
+  font-size: 12px;
+  color: rgb(224, 224, 224);
+  vertical-align: 2px;
+  text-shadow: 0 0 8px rgb(0, 0, 0), 3px 3px 8px rgb(0, 0, 0);
+}
+
+/*.............. 2.4 Theme */
+
+html,
+main {
+  transition: 6s;
+}
+
+html.drk-thm {
+  color: rgb(213 213 213);
+  background: rgb(42 42 42);
+}
+
+html.lght-thm {
+  color: rgb(213 213 213);
+  background: rgb(201, 201, 201);
+}
+
+main.drk-thm {
+  color: rgb(213 213 213);
+  background: rgb(42 42 42);
+  background-color: rgba(42, 42, 42, 0.9);
+  background-image: url("../media/light-down-grey5.png");
+  background-size: 100px 115px;
+}
+
+main.lght-thm {
+  color: rgb(213 213 213);
+  background: rgb(201, 201, 201);
+  background-color: rgba(201, 201, 201, 0.9);
+  background-image: url("../media/light-down-lght100.png");
+  background-size: 100px 115px;
+}
+
+/*............ 3 Main Section */
+
+/*.............. 3.1 Main Section Grid Layout */
+
+.divGridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 0px;
+  row-gap: 0px;
+  background-color: none;
+  padding: 0 3px;
+}
+
+.divGridItem {
+  background-color: none;
+  height: fit-content;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/*.............. 3.2 Workflow Boxes */
+
+.divHomeWorkflowBoxes {
+  background-color: rgb(69, 69, 69);
+  background-color: rgb(79, 79, 79);
+  background-color: rgb(20, 20, 73);
+  color: rgb(201 201 201);
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  height: fit-content;
+  margin: 10px 5px;
+  border: solid 2px grey;
+  border-radius: 1px;
+}
+
+.hrHome {
+  width: 50%;
+}
+.liHome {
+  list-style-type: none;
+  font-size: 20px;
+}
+
+/*.............. 3.3 Workflow Boxes Links */
+
+.aPageLinks {
+  text-decoration: none;
+  color: rgb(213 213 213);
+  margin: 0;
+  padding: 0;
+}
+
+.aPageLinks:focus,
+.aPageLinks:hover {
+  color: rgb(202, 199, 18);
+}
+
+.aSet {
+  text-decoration: none;
+  color: rgb(213 213 213);
+  margin: 0;
+  padding: 0;
+}
+
+.aSet:focus,
+.aSet:hover {
+  color: rgb(202, 199, 18);
+}
+
+/* ------------------------------------------------------------- */
