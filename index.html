@@ -51,17 +51,20 @@
       <!-- Tab content -->
       <div id="Bridge" class="tabcontent" style="display: block">
         <div class="mainContentContainer">
-          <button class="tablinksNested active" onclick="openBridgeComponent(event, 'BridgeApproach')">Approach</button>
+          <button class="tablinksNested active" onclick="openBridgeComponent(event, 'BridgeAlignment')">Alignment</button>
+          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeApproach')">Approach Slabs</button>
           <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeJoints')">Joints</button>
           <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeRailings')">Railings</button>
           <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeDeck')">Deck</button>
           <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeSuper')">Super</button>
+          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeBearings')">Bearings</button>
           <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeSub')">Sub</button>
           <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeCulvert')">Culvert</button>
-          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeBearings')">Bearings</button>
           <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeChannel')">Channel</button>
+          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeScour')">Scour</button>
+          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeWildlife')">Wildlife</button>
         </div>
-        <div id="BridgeApproach" class="tabcontentNested active" style="display: block">
+        <div id="BridgeAlignment" class="tabcontentNested active" style="display: block">
           <div class="mainContentContainer">
             <div class="divDropdownTop divDropdownBorder drk-thm">Approach Roadway Alignment (B.AP.01)</div>
             <div class="divDropdown">
@@ -109,29 +112,816 @@
             </div>
           </div>
         </div>
+        <div id="BridgeApproach" class="tabcontentNested">
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Approach Slabs (B.MAD.01)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Bridge does not have deck joints.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">9</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">8</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">7</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">6</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">5</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">4</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">3</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SERIOUS</span>Some major defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">2</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">CRITICAL</span>Widespread major defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">1</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Joints have failed and are ineffective.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">0</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAILED</span>Joints have failed and present a safety hazard.</p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+            </div>
+          </div>
+        </div>
         <div id="BridgeJoints" class="tabcontentNested">
-          <div class="mainContentContainer" style="height: 200px">Joints</div>
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Bridge Joints (B.C.08)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Bridge does not have deck joints.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">9</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">8</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">7</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">6</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">5</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">4</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">3</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SERIOUS</span>Some major defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">2</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">CRITICAL</span>Widespread major defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">1</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Joints have failed and are ineffective.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">0</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAILED</span>Joints have failed and present a safety hazard.</p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=275">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+            </div>
+          </div>
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Terminal Joints (B.MAD.04)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>The bridge abutments are not integral or semi-integral. The bridge does not have terminal joints.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">G</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">GOOD</span>The terminal joints do not need maintenance, and meet the current standards.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">F</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAIR</span>The terminal joints do not need maintenance, but do not meet the current standards.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">P</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">POOR</span>The terminal joints need maintenance.</p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/memos/2019/19-10%20ta%20Terminal%20Joints.pdf"
+                >Design Memo 19-10</a
+              >
+            </div>
+          </div>
         </div>
         <div id="BridgeRailings" class="tabcontentNested">
-          <div class="mainContentContainer" style="height: 200px">Railings</div>
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Bridge Railings (B.C.05) • Bridge Railing Transitions (B.C.06)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Component does not exist.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">9</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">8</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">7</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">6</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">5</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">4</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">3</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition typically
+                necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">2</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent monitoring,
+                significant load restrictions, and/or corrective actions in order to keep the bridge open.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">1</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation may return the
+                bridge to service.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">0</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is required to
+                restore service.
+              </p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=271">SNBI</a> |
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=271">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+            </div>
+          </div>
         </div>
         <div id="BridgeDeck" class="tabcontentNested">
-          <div class="mainContentContainer" style="height: 200px">Deck</div>
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Deck (B.C.01) • Wearing Surface (B.MAD.02)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Component does not exist.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">9</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">8</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">7</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">6</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">5</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">4</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">3</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition typically
+                necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">2</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent monitoring,
+                significant load restrictions, and/or corrective actions in order to keep the bridge open.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">1</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation may return the
+                bridge to service.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">0</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is required to
+                restore service.
+              </p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=260">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+            </div>
+          </div>
         </div>
         <div id="BridgeSuper" class="tabcontentNested">
-          <div class="mainContentContainer" style="height: 200px">Super</div>
-        </div>
-        <div id="BridgeSub" class="tabcontentNested">
-          <div class="mainContentContainer" style="height: 200px">Sub</div>
-        </div>
-        <div id="BridgeCulvert" class="tabcontentNested">
-          <div class="mainContentContainer" style="height: 200px">Culvert</div>
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Superstructure (B.C.02)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Component does not exist.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">9</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">8</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">7</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">6</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">5</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">4</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">3</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition typically
+                necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">2</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent monitoring,
+                significant load restrictions, and/or corrective actions in order to keep the bridge open.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">1</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation may return the
+                bridge to service.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">0</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is required to
+                restore service.
+              </p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=263">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+            </div>
+          </div>
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Paint (B.MAD.03)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Component does not exist.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">9</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Newly painted.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">8</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>There is very minor surface dulling.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">7</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>There is minor chalking and surface dulling.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">6</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>There are minor areas of rust and chalking.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">5</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAIR</span>There are areas of light rust and minor peeling.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">4</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">POOR</span>There are large areas of light rust and peeling with some pitting.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">3</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">SERIOUS</span>There is greater than 40% loss of paint and large areas of section loss.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">2</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">CRITICAL</span>There is greater than 60% loss of paint and large areas of measurable section loss.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">1</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>There is greater than 75% loss of paint and large areas of measurable section loss.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">0</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAILED</span>The paint has failed and is no longer protecting the bridge.</p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+            </div>
+          </div>
         </div>
         <div id="BridgeBearings" class="tabcontentNested">
-          <div class="mainContentContainer" style="height: 200px">Bearings</div>
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Bridge Bearings (B.C.07)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Component does not exist.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">9</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">8</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">7</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">6</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">5</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">4</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">3</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition typically
+                necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">2</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent monitoring,
+                significant load restrictions, and/or corrective actions in order to keep the bridge open.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">1</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation may return the
+                bridge to service.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">0</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is required to
+                restore service.
+              </p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=273">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+            </div>
+          </div>
+        </div>
+        <div id="BridgeSub" class="tabcontentNested">
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Substructure (B.C.03)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Component does not exist.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">9</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">8</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">7</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">6</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">5</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">4</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">3</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition typically
+                necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">2</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent monitoring,
+                significant load restrictions, and/or corrective actions in order to keep the bridge open.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">1</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation may return the
+                bridge to service.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">0</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is required to
+                restore service.
+              </p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=266">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+            </div>
+          </div>
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Slopewall (B.MAD.05)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Bridge does not have slopewalls.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">G</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">P</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects.</p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+            </div>
+          </div>
+        </div>
+        <div id="BridgeCulvert" class="tabcontentNested">
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Culvert (B.C.04)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Component does not exist.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">9</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">8</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">7</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">6</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">5</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">4</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">3</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition typically
+                necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">2</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent monitoring,
+                significant load restrictions, and/or corrective actions in order to keep the bridge open.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">1</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation may return the
+                bridge to service.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">0</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is required to
+                restore service.
+              </p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=268">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+            </div>
+          </div>
         </div>
         <div id="BridgeChannel" class="tabcontentNested">
-          <div class="mainContentContainer" style="height: 200px">Channel</div>
+          <div class="mainContentContainer">Channel</div>
+          <div class="mainContentContainer">Channel Protection</div>
+        </div>
+        <div id="BridgeScour" class="tabcontentNested">
+          <div class="mainContentContainer">Scour</div>
+          <div class="mainContentContainer">Scour Vulnerability</div>
+        </div>
+        <div id="BridgeWildlife" class="tabcontentNested">
+          <div class="mainContentContainer">Swallows</div>
+          <div class="mainContentContainer">Bats</div>
         </div>
       </div>
 
