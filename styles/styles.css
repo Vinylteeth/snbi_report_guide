@@ -12,6 +12,28 @@
 
 /*............ 1. Basic Elements */
 
+:root {
+  --background-color: rgb(42, 42, 42);
+  --text-color: rgb(213 213 213);
+  --main-color: rgb(20 20 73);
+
+  --inactive-button-color1: rgb(33 33 66);
+  --hover-button-color1: rgb(58 58 88);
+  --active-button-color1: rgb(200 200 200);
+
+  --inactive-button-text-color1: var(--text-color);
+  --hover-button-text-color1: var(--text-color);
+  --active-button-text-color1: rgb(42 42 42);
+
+  --inactive-button-color2: rgb(33 33 106);
+  --hover-button-color2: rgb(58 58 88);
+  --active-button-color2: rgb(200 200 200);
+
+  --inactive-button-text-color2: var(--text-color);
+  --hover-button-text-color2: var(--text-color);
+  --active-button-text-color2: rgb(42 42 42);
+}
+
 html,
 header,
 textarea,
@@ -28,6 +50,7 @@ ul {
   font-size: 16px;
   border: none;
   outline: none;
+  color: var(--text-color);
 }
 
 h1,
@@ -65,10 +88,14 @@ body {
 main {
   position: fixed;
   top: 62px;
-  height: calc(100% - 92px - 57px);
+  height: calc(100% - 62px - 57px);
   width: calc(100% - 20px);
   width: 100%;
   overflow-y: auto;
+  background-color: var(--background-color);
+  background-image: url("../media/light-down-grey5.png");
+  background-size: 100px 115px;
+  color: var(--text-color);
 }
 
 /*............ 2. Header & Footer */
@@ -83,12 +110,12 @@ main {
   border: none;
   border-bottom: solid 2px grey;
   border-radius: 1px 1px 1px 1px;
-  color: rgb(213 213 213);
   z-index: 1;
   overflow: hidden;
-  background-color: rgba(20, 20, 73, 0.9);
+  background-color: var(--main-color);
   background-image: url("../media/light-down-blue3.png");
   background-size: 100px 115px;
+  color: var(--text-color);
 }
 
 .footer {
@@ -101,12 +128,12 @@ main {
   border: none;
   border-top: solid 2px grey;
   border-radius: 1px 1px 1px 1px;
-  color: rgb(213 213 213);
   z-index: 1;
   overflow: hidden;
-  background-color: rgba(20, 20, 73, 0.9);
+  background-color: var(--main-color);
   background-image: url("../media/light-down-blue3.png");
   background-size: 100px 115px;
+  color: var(--text-color);
 }
 
 .divFooterSpacer {
@@ -117,96 +144,12 @@ main {
   background-color: none;
 }
 
-/*.............. 2.3 Footer & Logo */
-
-.divwrap {
-  position: absolute;
-  left: 50%; /* Positions the top-left corner inside the parent */
-  transform: translate(-50%, 0%);
-  -ms-transform: translate(-50%, 0%); /* Adjusts the position based on width and height (left, top) */
-  width: 320px;
-  height: 30px;
-}
-
-.div3 {
-  margin: auto;
-  width: 290px;
-  height: 40px;
-  text-align: center;
-  display: flex;
-  padding-left: 0px; /* Margin (auto) and width values allow the object to be centered horizontally inside parent */
-}
-
-.iterateimg {
-  padding-left: 0px;
-  height: 40px;
-  width: 40px;
-}
-
-.spanclass1 {
-  /* Logo */
-  width: 30px;
-  height: 60px;
-  margin: -6px 0 0 0;
-  padding: 0 0 0 0;
-  border: 3px solid rgb(12, 158, 158, 0);
-}
-.spanclass2 {
-  /* Text */
-  width: 290px;
-  height: 60px;
-  margin: -4px 0 0 0;
-  padding: 4px 0 0 0;
-  border: 3px solid rgba(245, 144, 144, 0);
-}
-.iteclass {
-  color: rgba(158, 38, 158, 0.7);
-  text-shadow: 0 0 4px rgb(0, 0, 0), 3px 3px 4px rgb(0, 0, 0);
-  font-family: "Ubuntu", sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-}
-.rateclass {
-  color: rgba(255, 55, 0, 0.7);
-  text-shadow: 0 0 4px rgb(0, 0, 0), 3px 3px 4px rgb(0, 0, 0);
-  font-family: "Ubuntu", sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-}
-.customdataclass {
-  font-size: 12px;
-  color: rgb(224, 224, 224);
-  vertical-align: 2px;
-  text-shadow: 0 0 8px rgb(0, 0, 0), 3px 3px 8px rgb(0, 0, 0);
-}
-
-/*.............. 2.4 Theme */
-
-html.themeDark {
-  color: rgb(213 213 213);
-  background: rgb(42 42 42);
-}
-
-main.themeDark {
-  color: rgb(213 213 213);
-  background: rgb(42 42 42);
-  background-color: rgba(42, 42, 42, 0.9);
-  background-image: url("../media/light-down-grey5.png");
-  background-size: 100px 115px;
-}
-
 /*............ 3 Main Section */
 
 /*.............. 3.2 Workflow Boxes */
 
-.mainContentContainer {
-  background-color: rgb(69, 69, 69);
-  background-color: rgb(79, 79, 79);
-  background-color: rgb(20, 20, 73);
-  /* color: rgb(202, 199, 18); */
-  color: rgb(201 201 201);
+.main-content-containers {
   padding: 10px 20px;
-  /* font-size: 20px; */
   text-align: left;
   height: fit-content;
   margin: 10px 5px;
@@ -215,6 +158,7 @@ main.themeDark {
   background-color: rgba(20, 20, 73, 0.9);
   background-image: url("../media/light-down-blue3.png");
   background-size: 100px 115px;
+  color: rgb(201 201 201);
 }
 
 /* ------------------------------------------------------------- */
@@ -228,41 +172,60 @@ main.themeDark {
 }
 
 /* Style the buttons that are used to open the tab content */
-.tabmain button,
-.tabcontent button {
-  background-color: rgba(42, 42, 42, 0.4);
-  color: rgb(213 213 213);
+button {
   border: none;
   outline: none;
   cursor: pointer;
   padding: 8px 16px;
   margin: 2px 0;
   transition: 0.3s;
+  background-color: var(--inactive-button-color1);
+  color: var(--inactive-button-text-color1);
 }
 
-/* .tabcontent button {
-  font-size: 14px;
-} */
+.alt-buttons {
+  background-color: var(--inactive-button-color2);
+  color: var(--inactive-button-text-color2);
+}
 
 /* Change background color of buttons on hover */
-.tabmain button:hover,
-.tabcontent button:hover {
-  background: rgb(42 42 42);
-  background: rgba(255, 255, 255, 0.2);
-  color: rgb(213 213 213);
+button:hover {
+  background-color: var(--hover-button-color1);
+  color: var(--hover-button-text-color1);
+}
+
+.alt-buttons:hover {
+  background-color: var(--hover-button-color2);
+  color: var(--hover-button-text-color2);
 }
 
 /* Create an active/current tablink class */
-.tabmain button.active,
-.tabcontent button.active {
-  background: rgb(42 42 42);
-  background-color: rgba(213, 213, 213, 0.8);
-  color: rgb(42 42 42);
+button.active {
+  background-color: var(--active-button-color1);
+  color: var(--active-button-text-color1);
+}
+
+.alt-buttons.active {
+  background-color: var(--active-button-color2);
+  color: var(--active-button-text-color2);
 }
 
 /* Style the tab content */
-.tabcontent,
-.tabcontentNested {
+.asset-containers,
+.bridge-component-containers,
+.bridge-alignment-containers,
+.bridge-approach-containers,
+.bridge-joints-containers,
+.bridge-railings-containers,
+.bridge-deck-containers,
+.bridge-super-containers,
+.bridge-sub-containers,
+.bridge-bearings-containers,
+.bridge-culvert-containers,
+.bridge-channel-containers,
+.bridge-scour-containers,
+.bridge-overtopping-containers,
+.bridge-wildlife-containers {
   display: none;
 }
 
@@ -273,7 +236,7 @@ main.themeDark {
   border-top: solid 1px grey;
   display: flex;
   cursor: pointer;
-  background-color: rgba(42, 42, 42, 0.4);
+  background-color: rgb(20 20 20 / 0.7);
 }
 
 .divDropdown:hover {
@@ -288,7 +251,7 @@ main.themeDark {
   min-height: 25px;
   padding: 5px 10px;
   color: rgb(172, 172, 172);
-  color: rgb(213 213 213);
+  color: var(--text-color);
   /* background-color: rgb(41, 44, 58); */
   /* background-color: rgb(20, 20, 73); */
   /* background-color: rgba(42, 42, 42, 0.4); */
@@ -298,16 +261,27 @@ main.themeDark {
   text-align: left;
 }
 
+.guideParagraph {
+  /* margin: 20px 15px; */
+  padding: 20px;
+  background-color: rgb(20 20 20 / 0.7);
+}
+
+.ulModal {
+  padding: 5px 20px;
+  margin: 0 5px;
+}
+
 .divDropdownBottom.drk-thm {
   min-height: 25px;
   padding: 20px;
   padding: 5px;
-  color: rgb(213 213 213);
+  color: var(--text-color);
   color: rgb(144, 144, 144);
   /* background-color: rgb(41, 44, 58); */
   /* background-color: rgb(20, 20, 73); */
   /* background-color: rgba(42, 42, 42, 0.4); */
-  color: rgb(213 213 213);
+  color: var(--text-color);
   border-top: solid 2px grey;
   cursor: default;
   text-align: left;
@@ -318,7 +292,7 @@ main.themeDark {
   width: 15px;
   max-width: 15px;
   min-width: 15px;
-  color: rgb(213 213 213);
+  color: var(--text-color);
   font-weight: 500;
   background-color: rgba(45, 45, 168, 0.9);
 }
@@ -441,7 +415,7 @@ main.themeDark {
 }
 
 .aModalFooterLink {
-  color: rgb(213 213 213);
+  color: var(--text-color);
   text-decoration: none;
   padding: 2px 5px;
   margin: 0 2px;
@@ -455,8 +429,71 @@ main.themeDark {
 .aModalFooterLink:hover,
 .aModalFooterLink:active,
 .aModalFooterLink:focus {
-  color: rgb(213 213 213);
+  color: var(--text-color);
   text-decoration: none;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 1px;
+}
+
+/*.............. 2.3 Footer & Logo */
+
+.divwrap {
+  position: absolute;
+  left: 50%; /* Positions the top-left corner inside the parent */
+  transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%); /* Adjusts the position based on width and height (left, top) */
+  width: 320px;
+  height: 30px;
+}
+
+.div3 {
+  margin: auto;
+  width: 290px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  padding-left: 0px; /* Margin (auto) and width values allow the object to be centered horizontally inside parent */
+}
+
+.iterateimg {
+  padding-left: 0px;
+  height: 40px;
+  width: 40px;
+}
+
+.spanclass1 {
+  /* Logo */
+  width: 30px;
+  height: 60px;
+  margin: -6px 0 0 0;
+  padding: 0 0 0 0;
+  border: 3px solid rgb(12, 158, 158, 0);
+}
+.spanclass2 {
+  /* Text */
+  width: 290px;
+  height: 60px;
+  margin: -4px 0 0 0;
+  padding: 4px 0 0 0;
+  border: 3px solid rgba(245, 144, 144, 0);
+}
+.iteclass {
+  color: rgba(158, 38, 158, 0.7);
+  text-shadow: 0 0 4px rgb(0, 0, 0), 3px 3px 4px rgb(0, 0, 0);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+.rateclass {
+  color: rgba(255, 55, 0, 0.7);
+  text-shadow: 0 0 4px rgb(0, 0, 0), 3px 3px 4px rgb(0, 0, 0);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+.customdataclass {
+  font-size: 12px;
+  color: rgb(224, 224, 224);
+  vertical-align: 2px;
+  text-shadow: 0 0 8px rgb(0, 0, 0), 3px 3px 8px rgb(0, 0, 0);
 }

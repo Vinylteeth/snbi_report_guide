@@ -12,7 +12,7 @@
 <!-- Guide selections with good language. -->
 
 <!DOCTYPE html>
-<html lang="en-US" class="themeDark">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta name="viewpoint" content="width=device-width" />
@@ -37,65 +37,87 @@
   </head>
 
   <body>
+    <!-- ------------------------------------------------------------- Header ------------------------------------------------------------- -->
+
     <header class="header">
       <!-- <div style="display: flex; height: 40px; line-height: 40px; vertical-align: middle; margin-left: 10px">Bridge | Culvert | Walls</div>
       <div style="display: flex; height: 40px; line-height: 40px; vertical-align: middle; margin-left: 10px">Superstructure | Reinforced Concrete Slab | Spalling</div> -->
       <div class="tabmain">
-        <button class="tablinks active" onclick="openAsset(event, 'Bridge')">Bridge</button>
-        <button class="tablinks" onclick="openAsset(event, 'Culvert')">Culvert</button>
-        <button class="tablinks" onclick="openAsset(event, 'Walls')">Walls</button>
+        <button class="asset-buttons active" onclick="openAssetTab(event, 'bridge-asset-tab')">Bridge</button>
+        <button class="asset-buttons" onclick="openAssetTab(event, 'culvert-asset-tab')">Culvert</button>
+        <button class="asset-buttons" onclick="openAssetTab(event, 'wall-asset-tab')">Wall</button>
       </div>
     </header>
 
-    <main class="themeDark">
+    <!-- ------------------------------------------------------------- Main ------------------------------------------------------------- -->
+
+    <main>
       <!-- Tab content -->
-      <div id="Bridge" class="tabcontent" style="display: block">
-        <div class="mainContentContainer">
-          <button class="tablinksNested active" onclick="openBridgeComponent(event, 'BridgeAlignment')">Alignment</button>
-          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeApproach')">Approach Slabs</button>
-          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeJoints')">Joints</button>
-          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeRailings')">Railings</button>
-          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeDeck')">Deck</button>
-          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeSuper')">Super</button>
-          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeBearings')">Bearings</button>
-          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeSub')">Sub</button>
-          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeCulvert')">Culvert</button>
-          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeChannel')">Channel</button>
-          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeScour')">Scour</button>
-          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeOvertopping')">Overtopping</button>
-          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeWildlife')">Wildlife</button>
+      <div id="bridge-asset-tab" class="asset-containers" style="display: block">
+        <div class="main-content-containers">
+          <button class="bridge-component-buttons active" onclick="openBridgeComponent(event, 'bridge-alignment-tab')">Alignment</button>
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-approach-slabs-tab')">Approach Slabs</button>
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-joints-tab')">Joints</button>
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-railings-tab')">Railings</button>
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-deck-tab')">Deck</button>
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-super-tab')">Super</button>
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-bearings-tab')">Bearings</button>
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-sub-tab')">Sub</button>
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-culvert-tab')">Culvert</button>
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-channel-tab')">Channel</button>
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-scour-tab')">Scour</button>
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-overtopping-tab')">Overtopping</button>
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-wildlife-tab')">Wildlife</button>
         </div>
-        <div id="BridgeAlignment" class="tabcontentNested active" style="display: block">
-          <div class="mainContentContainer">
+        <div id="bridge-alignment-tab" class="bridge-component-containers active" style="display: block">
+          <div class="main-content-containers">
             <div class="divDropdownTop divDropdownBorder drk-thm">
-              <button class="tablinksGuide" onclick="openBridgeAlignment1(event, 'BridgeAlignment')">Approach Roadway Alignment (B.AP.01)</button>
-              <button class="tablinksGuide" onclick="openBridgeAlignment1(event, 'BridgeAlignment')">Rating Table</button>
-              <button class="tablinksGuide" onclick="openBridgeAlignment1(event, 'BridgeAlignment')">Example Comments</button>
+              <button class="bridge-alignment-buttons active" onclick="openBridgeAlignment(event, 'bridge-alignment-pg1')">Approach Roadway Alignment (B.AP.01)</button>
+              <button class="bridge-alignment-buttons" onclick="openBridgeAlignment(event, 'bridge-alignment-pg2')">Rating Table</button>
+              <button class="bridge-alignment-buttons" onclick="openBridgeAlignment(event, 'bridge-alignment-pg3')">Example Comments</button>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">N</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>The bridge does not carry vehicular traffic and does not have an operating speed.
-              </p>
+
+            <div id="bridge-alignment-pg1" class="bridge-alignment-containers active" style="display: block">
+              <div class="guideParagraph">
+                <p>Do not consider speed reductions due to the bridge width or intersecting highways when reporting this item.</p>
+                <br />
+                <p>The operating speed reduction is in comparison to the posted speed limit for the highway segment:</p>
+                <ul class="ulModal">
+                  <li>Use code G when the operating speed is no different at the bridge than the rest of the highway segment that crosses the bridge.</li>
+                  <li>Use code F when the operating speed is noticeably different at the bridge than the rest of the highway segment that crosses the bridge.</li>
+                  <li>Use code P when the operating speed is substantially different at the bridge than the rest of the highway segment that crosses the bridge.</li>
+                </ul>
+              </div>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">G</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">GOOD</span>The operating speed at the bridge is no different than the rest of the highway segment.
-              </p>
+
+            <div id="bridge-alignment-pg2" class="bridge-alignment-containers">
+              <div class="divDropdown">
+                <span class="spanDropdownRating">N</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>The bridge does not carry vehicular traffic and does not have an operating speed.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">G</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">GOOD</span>The operating speed at the bridge is no different than the rest of the highway segment.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">F</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">FAIR</span>The operating speed at the bridge is noticeably different compared to the rest of the highway segment.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">P</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">POOR</span>The operating speed at the bridge is substantially different compared to the rest of the highway segment.
+                </p>
+              </div>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">F</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">FAIR</span>The operating speed at the bridge is noticeably different compared to the rest of the highway segment.
-              </p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">P</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">POOR</span>The operating speed at the bridge is substantially different compared to the rest of the highway segment.
-              </p>
-            </div>
+
+            <div id="bridge-alignment-pg3" class="bridgea-lignment-containers"></div>
             <div class="divDropdownBottom divDropdownBorder drk-thm">
               <h3 class="h3Footer">Links:</h3>
               <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=318">SNBI</a>
@@ -117,53 +139,72 @@
             </div>
           </div>
         </div>
-        <div id="BridgeApproach" class="tabcontentNested">
-          <div class="mainContentContainer">
-            <div class="divDropdownTop divDropdownBorder drk-thm">Approach Slabs (B.MAD.01)</div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">N</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Bridge does not have deck joints.</p>
+        <div id="bridge-approach-slabs-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
+            <div class="divDropdownTop divDropdownBorder drk-thm">
+              <button class="bridge-approach-buttons active" onclick="openBridgeApproach(event, 'bridge-approach-pg1')">Approach Slabs (B.MAD.01)</button>
+              <button class="bridge-approach-buttons" onclick="openBridgeApproach(event, 'bridge-approach-pg2')">Rating Table</button>
+              <button class="bridge-approach-buttons" onclick="openBridgeApproach(event, 'bridge-approach-pg3')">Example Comments</button>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">9</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+            <div id="bridge-approach-pg1" class="bridge-approach-containers active" style="display: block">
+              <div class="guideParagraph">
+                <p>
+                  Use destructive or non-destructive testing results or visual condition indicators of materials covering the surfaces being assessed when top is not visible for
+                  assessment. Past inspection reports and repair records may also provide supplemental information to aid in the determination of the condition rating.
+                </p>
+                <br />
+                <p>Consider the settlement of the approach slab. Use any indicators present to determine the stability of the soil beneath the slab.</p>
+                <br />
+                <p>Consider the roughness and ride provided by the approach slab.</p>
+              </div>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">8</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+            <div id="bridge-approach-pg2" class="bridge-approach-containers">
+              <div class="divDropdown">
+                <span class="spanDropdownRating">N</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Bridge does not have deck joints.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">9</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">8</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">7</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">6</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">5</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">4</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">3</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SERIOUS</span>Some major defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">2</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">CRITICAL</span>Widespread major defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">1</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Joints have failed and are ineffective.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">0</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAILED</span>Joints have failed and present a safety hazard.</p>
+              </div>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">7</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">6</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">5</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects.</p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">4</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects.</p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">3</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SERIOUS</span>Some major defects.</p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">2</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">CRITICAL</span>Widespread major defects.</p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">1</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Joints have failed and are ineffective.</p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">0</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAILED</span>Joints have failed and present a safety hazard.</p>
-            </div>
+            <div id="bridge-approach-pg3" class="bridge-approach-containers"></div>
             <div class="divDropdownBottom divDropdownBorder drk-thm">
               <h3 class="h3Footer">Links:</h3>
               <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf">SNBI</a>
@@ -185,100 +226,126 @@
             </div>
           </div>
         </div>
-        <div id="BridgeJoints" class="tabcontentNested">
-          <div class="mainContentContainer">
-            <div class="divDropdownTop divDropdownBorder drk-thm">Bridge Joints (B.C.08)</div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">N</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Bridge does not have deck joints.</p>
+        <div id="bridge-joints-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
+            <div class="divDropdownTop divDropdownBorder drk-thm">
+              <button class="bridge-joints-buttons active" onclick="openBridgeJoints(event, 'bridge-joints-pg1')">Bridge Joints (B.C.08)</button>
+              <button class="bridge-joints-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg2')">Rating Table</button>
+              <button class="bridge-joints-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg3')">Example Comments</button>
+              <button class="bridge-joints-buttons alt-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg4')">Terminal Joints (B.MAD.04)</button>
+              <button class="bridge-joints-buttons alt-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg5')">Rating Table</button>
+              <button class="bridge-joints-buttons alt-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg6')">Example Comments</button>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">9</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+            <div id="bridge-joints-pg1" class="bridge-joints-containers active" style="display: block">
+              <div class="guideParagraph">
+                <p>
+                  This item addresses the condition of all types and shapes of bridge deck joints. The condition assessment includes all aspects of the joints such as any seals,
+                  headers (metal or concrete), connections, and other metal members.
+                </p>
+                <br />
+                <p>When a joint is designed as an open joint, leakage or lack of a seal is not considered a defect.</p>
+                <br />
+                <p>
+                  Do not consider the condition of protective coatings and other protection systems when determining the condition rating code for this item, except to the extent
+                  that problems with the protective coating system are indicative of problems with the underlying joint material.
+                </p>
+                <br />
+                <p>In cases where the joint is not visible, the condition can be assessed based on other indirect indicators of the condition.</p>
+              </div>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">8</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+            <div id="bridge-joints-pg2" class="bridge-joints-containers">
+              <div class="divDropdown">
+                <span class="spanDropdownRating">N</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Bridge does not have deck joints.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">9</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">8</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">7</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">6</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">5</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">4</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">3</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SERIOUS</span>Some major defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">2</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">CRITICAL</span>Widespread major defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">1</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Joints have failed and are ineffective.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">0</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAILED</span>Joints have failed and present a safety hazard.</p>
+              </div>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">7</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+            <div id="bridge-joints-pg3" class="bridge-joints-containers"></div>
+            <div id="bridge-joints-pg4" class="bridge-joints-containers">
+              <div class="guideParagraph">
+                <p>
+                  Terminal joints are designed to accommodate thermal movements of integral and semi-integral abutments by allowing expansion to occur between the approach slabs
+                  and the approach pavement. Terminal joints are only required for integral or semi-integral bridges.
+                </p>
+                <br />
+                <p>
+                  Previous terminal joint design details for Portland Cement Concrete Pavement (PCCP) used 2 feet of asphalt at the ends of the approach, and there was no design
+                  detail for HMA pavement adjacent to bridges with approach slabs having integral or semi-integral abutments. Both cases have proven problematic, so to improve
+                  functionality, new terminal joint design details were introduced in September 2019 with Design Memo 19-10, RSP 503-R-692, and RPD 503-R-692d (now E 503-BATJ
+                  series).
+                </p>
+                <br />
+                <p>Consider the pavement roughness and ride at the transition between the approach slabs and the approach pavement.</p>
+              </div>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">6</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+            <div id="bridge-joints-pg5" class="bridge-joints-containers">
+              <div class="divDropdown">
+                <span class="spanDropdownRating">N</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>The bridge abutments are not integral or semi-integral. The bridge does not have terminal joints.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">G</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">GOOD</span>The terminal joints do not need maintenance, and meet the current standards.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">F</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">FAIR</span>The terminal joints do not need maintenance, but do not meet the current standards.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">P</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">POOR</span>The terminal joints need maintenance.</p>
+              </div>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">5</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects.</p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">4</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects.</p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">3</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SERIOUS</span>Some major defects.</p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">2</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">CRITICAL</span>Widespread major defects.</p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">1</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Joints have failed and are ineffective.</p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">0</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAILED</span>Joints have failed and present a safety hazard.</p>
-            </div>
+            <div id="bridge-joints-pg6" class="bridge-joints-containers"></div>
+
             <div class="divDropdownBottom divDropdownBorder drk-thm">
               <h3 class="h3Footer">Links:</h3>
               <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=275">SNBI</a>
-              <a
-                class="aModalFooterLink"
-                rel="noopener noreferrer"
-                target="”_tab”"
-                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
-                >BIM</a
-              >
-              <a
-                id="footerStop"
-                class="aModalFooterLink"
-                rel="noopener noreferrer"
-                target="”_tab”"
-                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
-                >Coding Guide</a
-              >
-            </div>
-          </div>
-          <div class="mainContentContainer">
-            <div class="divDropdownTop divDropdownBorder drk-thm">Terminal Joints (B.MAD.04)</div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">N</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>The bridge abutments are not integral or semi-integral. The bridge does not have terminal joints.
-              </p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">G</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">GOOD</span>The terminal joints do not need maintenance, and meet the current standards.
-              </p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">F</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">FAIR</span>The terminal joints do not need maintenance, but do not meet the current standards.
-              </p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">P</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">POOR</span>The terminal joints need maintenance.</p>
-            </div>
-            <div class="divDropdownBottom divDropdownBorder drk-thm">
-              <h3 class="h3Footer">Links:</h3>
-              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf">SNBI</a>
               <a
                 class="aModalFooterLink"
                 rel="noopener noreferrer"
@@ -305,69 +372,174 @@
             </div>
           </div>
         </div>
-        <div id="BridgeRailings" class="tabcontentNested">
-          <div class="mainContentContainer">
-            <div class="divDropdownTop divDropdownBorder drk-thm">Bridge Railings (B.C.05) • Bridge Railing Transitions (B.C.06)</div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">N</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Component does not exist.</p>
+        <div id="bridge-railings-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
+            <div class="divDropdownTop divDropdownBorder drk-thm">
+              <button class="bridge-railings-buttons active" onclick="openBridgeRailings(event, 'bridge-railings-pg1')">Bridge Railings (B.C.05)</button>
+              <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg2')">Rating Table</button>
+              <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg3')">Example Comments</button>
+              <button class="bridge-railings-buttons alt-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg4')">Bridge Railing Transitions (B.C.06)</button>
+              <button class="bridge-railings-buttons alt-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg5')">Rating Table</button>
+              <button class="bridge-railings-buttons alt-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg6')">Example Comments</button>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">9</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+            <div id="bridge-railings-pg1" class="bridge-railings-containers active" style="display: block">
+              <div class="guideParagraph">
+                <p>
+                  This item addresses the condition of all types and shapes of bridge railings (parapets, median barriers, or structure mounted) located on the bridge or that cross
+                  over buried structures. The condition assessment includes the portions of the railings, posts, blocking, and curbs that are part of the bridge railing system.
+                </p>
+                <br />
+
+                <p>Do not consider pedestrian railings when coding this item, except to the extent that the pedestrian railing is integral to the traffic barrier.</p>
+                <br />
+
+                <p>
+                  Do not consider the condition of protective coatings and other protection systems when determining the condition rating code for this item, except to the extent
+                  that problems with the protective coating system are indicative of problems with the underlying railing material.
+                </p>
+              </div>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">8</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+            <div id="bridge-railings-pg2" class="bridge-railings-containers active">
+              <div class="divDropdown">
+                <span class="spanDropdownRating">N</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Component does not exist.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">9</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">8</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">7</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">6</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">5</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">4</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is affected.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">3</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition typically
+                  necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">2</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent monitoring,
+                  significant load restrictions, and/or corrective actions in order to keep the bridge open.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">1</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation may return the
+                  bridge to service.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">0</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is required to
+                  restore service.
+                </p>
+              </div>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">7</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+            <div id="bridge-railings-pg3" class="bridge-railings-containers active"></div>
+            <div id="bridge-railings-pg4" class="bridge-railings-containers active">
+              <div class="guideParagraph">
+                <p>
+                  This item addresses the condition of the transition from the bridge railing to the approach guardrail. The condition assessment includes the portions of the
+                  railings, posts, blocking, and curbs that are part of the bridge railing transitions.
+                </p>
+                <br />
+
+                <p>
+                  Do not consider the condition of protective coatings and other protection systems when determining the condition rating code for this item, except to the extent
+                  that problems with the protective coating system are indicative of problems with the underlying railing transition material.
+                </p>
+              </div>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">6</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+            <div id="bridge-railings-pg5" class="bridge-railings-containers active">
+              <div class="divDropdown">
+                <span class="spanDropdownRating">N</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Component does not exist.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">9</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">8</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">7</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">6</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">5</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">4</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is affected.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">3</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition typically
+                  necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">2</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent monitoring,
+                  significant load restrictions, and/or corrective actions in order to keep the bridge open.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">1</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation may return the
+                  bridge to service.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">0</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is required to
+                  restore service.
+                </p>
+              </div>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">5</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
-              </p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">4</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is affected.
-              </p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">3</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition typically
-                necessitates more frequent monitoring, load restrictions, and/or corrective actions.
-              </p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">2</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent monitoring,
-                significant load restrictions, and/or corrective actions in order to keep the bridge open.
-              </p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">1</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation may return the
-                bridge to service.
-              </p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">0</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is required to
-                restore service.
-              </p>
-            </div>
+            <div id="bridge-railings-pg6" class="bridge-railings-containers active"></div>
+
             <div class="divDropdownBottom divDropdownBorder drk-thm">
               <h3 class="h3Footer">Links:</h3>
               <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=271">SNBI</a> |
@@ -390,69 +562,145 @@
             </div>
           </div>
         </div>
-        <div id="BridgeDeck" class="tabcontentNested">
-          <div class="mainContentContainer">
-            <div class="divDropdownTop divDropdownBorder drk-thm">Deck (B.C.01) • Wearing Surface (B.MAD.02)</div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">N</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Component does not exist.</p>
+        <div id="bridge-deck-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
+            <div class="divDropdownTop divDropdownBorder drk-thm">
+              <button class="bridge-deck-buttons active" onclick="openBridgeDeck(event, 'bridge-deck-pg1')">Deck (B.C.01)</button>
+              <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg2')">Rating Table</button>
+              <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg3')">Example Comments</button>
+              <button class="bridge-deck-buttons alt-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg4')">Wearing Surface (B.MAD.02)</button>
+              <button class="bridge-deck-buttons alt-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg5')">Rating Table</button>
+              <button class="bridge-deck-buttons alt-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg6')">Example Comments</button>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">9</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+            <div id="bridge-deck-pg1" class="bridge-deck-containers active" style="display: block">guide</div>
+            <div id="bridge-deck-pg2" class="bridge-deck-containers">
+              <div class="divDropdown">
+                <span class="spanDropdownRating">N</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Component does not exist.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">9</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">8</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">7</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">6</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">5</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">4</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is affected.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">3</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition typically
+                  necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">2</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent monitoring,
+                  significant load restrictions, and/or corrective actions in order to keep the bridge open.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">1</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation may return the
+                  bridge to service.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">0</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is required to
+                  restore service.
+                </p>
+              </div>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">8</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+            <div id="bridge-deck-pg3" class="bridge-deck-containers">comments</div>
+            <div id="bridge-deck-pg4" class="bridge-deck-containers">guide</div>
+            <div id="bridge-deck-pg5" class="bridge-deck-containers">
+              <div class="divDropdown">
+                <span class="spanDropdownRating">N</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Component does not exist.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">9</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">8</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some inherent defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">7</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">6</span>
+                <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">5</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">4</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is affected.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">3</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition typically
+                  necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">2</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent monitoring,
+                  significant load restrictions, and/or corrective actions in order to keep the bridge open.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">1</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation may return the
+                  bridge to service.
+                </p>
+              </div>
+              <div class="divDropdown">
+                <span class="spanDropdownRating">0</span>
+                <p class="pDropdownDescription drk-thm">
+                  <span class="spanDropdownCondition drk-thm">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is required to
+                  restore service.
+                </p>
+              </div>
             </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">7</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">6</span>
-              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">5</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
-              </p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">4</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is affected.
-              </p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">3</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition typically
-                necessitates more frequent monitoring, load restrictions, and/or corrective actions.
-              </p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">2</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent monitoring,
-                significant load restrictions, and/or corrective actions in order to keep the bridge open.
-              </p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">1</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation may return the
-                bridge to service.
-              </p>
-            </div>
-            <div class="divDropdown">
-              <span class="spanDropdownRating">0</span>
-              <p class="pDropdownDescription drk-thm">
-                <span class="spanDropdownCondition drk-thm">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is required to
-                restore service.
-              </p>
-            </div>
+            <div id="bridge-deck-pg6" class="bridge-deck-containers">comments</div>
+
             <div class="divDropdownBottom divDropdownBorder drk-thm">
               <h3 class="h3Footer">Links:</h3>
               <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=260">SNBI</a>
@@ -482,8 +730,8 @@
             </div>
           </div>
         </div>
-        <div id="BridgeSuper" class="tabcontentNested">
-          <div class="mainContentContainer">
+        <div id="bridge-super-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
             <div class="divDropdownTop divDropdownBorder drk-thm">Superstructure (B.C.02)</div>
             <div class="divDropdown">
               <span class="spanDropdownRating">N</span>
@@ -565,7 +813,7 @@
               >
             </div>
           </div>
-          <div class="mainContentContainer">
+          <div class="main-content-containers">
             <div class="divDropdownTop divDropdownBorder drk-thm">Paint (B.MAD.03)</div>
             <div class="divDropdown">
               <span class="spanDropdownRating">N</span>
@@ -638,8 +886,8 @@
             </div>
           </div>
         </div>
-        <div id="BridgeBearings" class="tabcontentNested">
-          <div class="mainContentContainer">
+        <div id="bridge-bearings-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
             <div class="divDropdownTop divDropdownBorder drk-thm">Bridge Bearings (B.C.07)</div>
             <div class="divDropdown">
               <span class="spanDropdownRating">N</span>
@@ -722,8 +970,8 @@
             </div>
           </div>
         </div>
-        <div id="BridgeSub" class="tabcontentNested">
-          <div class="mainContentContainer">
+        <div id="bridge-sub-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
             <div class="divDropdownTop divDropdownBorder drk-thm">Substructure (B.C.03)</div>
             <div class="divDropdown">
               <span class="spanDropdownRating">N</span>
@@ -805,7 +1053,7 @@
               >
             </div>
           </div>
-          <div class="mainContentContainer">
+          <div class="main-content-containers">
             <div class="divDropdownTop divDropdownBorder drk-thm">Slopewall (B.MAD.05)</div>
             <div class="divDropdown">
               <span class="spanDropdownRating">N</span>
@@ -840,8 +1088,8 @@
             </div>
           </div>
         </div>
-        <div id="BridgeCulvert" class="tabcontentNested">
-          <div class="mainContentContainer">
+        <div id="bridge-culvert-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
             <div class="divDropdownTop divDropdownBorder drk-thm">Culvert (B.C.04)</div>
             <div class="divDropdown">
               <span class="spanDropdownRating">N</span>
@@ -924,8 +1172,8 @@
             </div>
           </div>
         </div>
-        <div id="BridgeChannel" class="tabcontentNested">
-          <div class="mainContentContainer">
+        <div id="bridge-channel-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
             <div class="divDropdownTop divDropdownBorder drk-thm">Channel (B.C.09)</div>
             <div class="divDropdown">
               <span class="spanDropdownRating">N</span>
@@ -1005,7 +1253,7 @@
               >
             </div>
           </div>
-          <div class="mainContentContainer">
+          <div class="main-content-containers">
             <div class="divDropdownTop divDropdownBorder drk-thm">Channel Protection (B.C.10)</div>
             <div class="divDropdown">
               <span class="spanDropdownRating">N</span>
@@ -1086,8 +1334,8 @@
             </div>
           </div>
         </div>
-        <div id="BridgeScour" class="tabcontentNested">
-          <div class="mainContentContainer">
+        <div id="bridge-scour-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
             <div class="divDropdownTop divDropdownBorder drk-thm">Scour (B.C.11)</div>
             <div class="divDropdown">
               <span class="spanDropdownRating">N</span>
@@ -1169,7 +1417,7 @@
               >
             </div>
           </div>
-          <div class="mainContentContainer">
+          <div class="main-content-containers">
             <div class="divDropdownTop divDropdownBorder drk-thm">Scour Vulnerability (B.AP.03)</div>
             <div class="divDropdown">
               <span class="spanDropdownRating">0</span>
@@ -1238,8 +1486,8 @@
             </div>
           </div>
         </div>
-        <div id="BridgeOvertopping" class="tabcontentNested">
-          <div class="mainContentContainer">
+        <div id="bridge-overtopping-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
             <div class="divDropdownTop divDropdownBorder drk-thm">Overtopping Likelihood (B.AP.02)</div>
             <div class="divDropdown">
               <span class="spanDropdownRating">N</span>
@@ -1294,8 +1542,8 @@
             </div>
           </div>
         </div>
-        <div id="BridgeWildlife" class="tabcontentNested">
-          <div class="mainContentContainer">
+        <div id="bridge-wildlife-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
             <div class="divDropdownTop divDropdownBorder drk-thm">Swallows (B.MAD.06)</div>
             <div class="divDropdown">
               <span class="spanDropdownRating">N</span>
@@ -1340,7 +1588,7 @@
               >
             </div>
           </div>
-          <div class="mainContentContainer">
+          <div class="main-content-containers">
             <div class="divDropdownTop divDropdownBorder drk-thm">Bats (B.MAD.07)</div>
             <div class="divDropdown">
               <span class="spanDropdownRating">N</span>
@@ -1392,18 +1640,20 @@
         </div>
       </div>
 
-      <div id="Culvert" class="tabcontent mainContentContainer">
+      <div id="culvert-asset-tab" class="asset-containers main-content-containers">
         <h3>Culverts</h3>
         <p>Any INDOT maintained structure that runs beneath or adjacent to the state highway system and spans 4 to 20 feet.</p>
       </div>
 
-      <div id="Walls" class="tabcontent mainContentContainer">
+      <div id="wall-asset-tab" class="asset-containers main-content-containers">
         <h3>Walls</h3>
         <p>Any INDOT maintained wall acting to stabalize earthwork projects.</p>
       </div>
 
       <div class="divFooterSpacer"></div>
     </main>
+
+    <!-- ------------------------------------------------------------- Footer ------------------------------------------------------------- -->
 
     <footer class="footer">
       <div class="divwrap">
