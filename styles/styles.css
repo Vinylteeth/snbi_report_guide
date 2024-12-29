@@ -212,6 +212,9 @@ main.themeDark {
   margin: 10px 5px;
   border: solid 2px grey;
   border-radius: 1px;
+  background-color: rgba(20, 20, 73, 0.9);
+  background-image: url("../media/light-down-blue3.png");
+  background-size: 100px 115px;
 }
 
 /* ------------------------------------------------------------- */
@@ -245,15 +248,15 @@ main.themeDark {
 .tabmain button:hover,
 .tabcontent button:hover {
   background: rgb(42 42 42);
-  background-color: rgb(213 213 213);
-  color: rgb(42 42 42);
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(213 213 213);
 }
 
 /* Create an active/current tablink class */
 .tabmain button.active,
 .tabcontent button.active {
   background: rgb(42 42 42);
-  background-color: rgb(213 213 213);
+  background-color: rgba(213, 213, 213, 0.8);
   color: rgb(42 42 42);
 }
 
@@ -286,8 +289,8 @@ main.themeDark {
   padding: 5px 10px;
   color: rgb(172, 172, 172);
   color: rgb(213 213 213);
-  background-color: rgb(41, 44, 58);
-  background-color: rgb(20, 20, 73);
+  /* background-color: rgb(41, 44, 58); */
+  /* background-color: rgb(20, 20, 73); */
   /* background-color: rgba(42, 42, 42, 0.4); */
   color: rgb(213 213 213);
   border-bottom: solid 2px grey;
@@ -301,8 +304,8 @@ main.themeDark {
   padding: 5px;
   color: rgb(213 213 213);
   color: rgb(144, 144, 144);
-  background-color: rgb(41, 44, 58);
-  background-color: rgb(20, 20, 73);
+  /* background-color: rgb(41, 44, 58); */
+  /* background-color: rgb(20, 20, 73); */
   /* background-color: rgba(42, 42, 42, 0.4); */
   color: rgb(213 213 213);
   border-top: solid 2px grey;

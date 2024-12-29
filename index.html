@@ -62,11 +62,16 @@
           <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeCulvert')">Culvert</button>
           <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeChannel')">Channel</button>
           <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeScour')">Scour</button>
+          <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeOvertopping')">Overtopping</button>
           <button class="tablinksNested" onclick="openBridgeComponent(event, 'BridgeWildlife')">Wildlife</button>
         </div>
         <div id="BridgeAlignment" class="tabcontentNested active" style="display: block">
           <div class="mainContentContainer">
-            <div class="divDropdownTop divDropdownBorder drk-thm">Approach Roadway Alignment (B.AP.01)</div>
+            <div class="divDropdownTop divDropdownBorder drk-thm">
+              <button class="tablinksGuide" onclick="openBridgeAlignment1(event, 'BridgeAlignment')">Approach Roadway Alignment (B.AP.01)</button>
+              <button class="tablinksGuide" onclick="openBridgeAlignment1(event, 'BridgeAlignment')">Rating Table</button>
+              <button class="tablinksGuide" onclick="openBridgeAlignment1(event, 'BridgeAlignment')">Example Comments</button>
+            </div>
             <div class="divDropdown">
               <span class="spanDropdownRating">N</span>
               <p class="pDropdownDescription drk-thm">
@@ -366,7 +371,7 @@
             <div class="divDropdownBottom divDropdownBorder drk-thm">
               <h3 class="h3Footer">Links:</h3>
               <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=271">SNBI</a> |
-              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=271">SNBI</a>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=272">SNBI</a>
               <a
                 class="aModalFooterLink"
                 rel="noopener noreferrer"
@@ -465,6 +470,14 @@
                 target="”_tab”"
                 href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
                 >Coding Guide</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/Part7-Wearing%20Surfaces_REV_05182022.pdf"
+                >BIM - Part 7</a
               >
             </div>
           </div>
@@ -808,7 +821,7 @@
             </div>
             <div class="divDropdownBottom divDropdownBorder drk-thm">
               <h3 class="h3Footer">Links:</h3>
-              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page">SNBI</a>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf">SNBI</a>
               <a
                 class="aModalFooterLink"
                 rel="noopener noreferrer"
@@ -912,16 +925,470 @@
           </div>
         </div>
         <div id="BridgeChannel" class="tabcontentNested">
-          <div class="mainContentContainer">Channel</div>
-          <div class="mainContentContainer">Channel Protection</div>
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Channel (B.C.09)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Bridge does not cross over water.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">9</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>No defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">8</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Inherent defects only.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">7</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">6</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">5</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAIR</span>Moderate defects; bridge and approach roadway are not threatened.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">4</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects; bridge and/or approach roadway is threatened.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">3</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major defects; bridge or approach roadway is seriously threatened. Condition typically necessitates more
+                frequent monitoring, load restrictions, and/or corrective actions.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">2</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major defects. Bridge or approach roadway is severely threatened. Condition typically necessitates
+                frequent monitoring, significant load restrictions, and/or corrective actions in order to keep the bridge open.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">1</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Bridge is closed to traffic due to channel condition. Channel rehabilitation may return the
+                bridge to service.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">0</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAILED</span>Bridge is closed due to channel condition, and is beyond corrective action. Bridge location or design can
+                no longer accommodate the channel, and bridge replacement is needed to restore service.
+              </p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=278">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+            </div>
+          </div>
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Channel Protection (B.C.10)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Bridge does not cross over water or channel protection devices do not exist.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">9</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>Isolated inherent defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">8</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Some minor defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">7</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">6</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate defects.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">5</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAIR</span>Some moderate defects; performance of the channel protection is not affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">4</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major defects; performance of channel protection is affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">3</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major defects; performance of channel protection is seriously affected. Condition typically necessitates
+                more frequent monitoring or corrective actions.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">2</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major defects; channel protection is severely compromised. Condition typically necessitates more frequent
+                monitoring or corrective actions.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">1</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Channel protection has failed, but corrective action could restore it to working condition.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">0</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">FAILED</span>Channel protection is beyond repair and must be replaced.</p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=280">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+            </div>
+          </div>
         </div>
         <div id="BridgeScour" class="tabcontentNested">
-          <div class="mainContentContainer">Scour</div>
-          <div class="mainContentContainer">Scour Vulnerability</div>
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Scour (B.C.11)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Bridge does not cross over water.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">9</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">EXCELLENT</span>No scour.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">8</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY GOOD</span>Insignificant scour.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">7</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">GOOD</span>Some minor scour.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">6</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">SATISFACTORY</span>Widespread minor or isolated moderate scour.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">5</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAIR</span>Moderate scour; strength and stability of the bridge are not affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">4</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">POOR</span>Widespread moderate or isolated major scour; strength and/or stability of the bridge is affected.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">3</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">SERIOUS</span>Major scour; strength and/or stability of the bridge is seriously affected. Condition typically
+                necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">2</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">CRITICAL</span>Major scour; strength and/or stability of the bridge is severely compromised. Condition typically
+                necessitates frequent monitoring, significant load restrictions, and/or corrective actions to keep the bridge open.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">1</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">IMMINENT FAILURE</span>Bridge is closed to traffic due to scour condition. Channel rehabilitation may return the bridge
+                to service.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">0</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">FAILED</span>Bridge is closed due to scour condition, and is beyond corrective action. Bridge replacement is needed to
+                restore service.
+              </p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=282">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+            </div>
+          </div>
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Scour Vulnerability (B.AP.03)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">0</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT COMPLETE</span>Scour appraisal has not been completed.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">A</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">STABLE</span>Scour appraisal completed. Bridge determined to be stable for scour.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">B</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">COUNTERMEASURES</span>Scour appraisal completed. Bridge determined to be stable for scour, dependent upon designed, and
+                functioning countermeasures.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">C</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">TEMPORARY COUNTERMEASURES</span>Scour appraisal completed. Bridge could become unstable for scour. Temporary (not
+                designed) countermeasure installed to mitigate scour. Bridge is scour critical.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">D</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">UNSTABLE</span>Scour appraisal completed. Bridge is, or may become, unstable for scour. Bridge is scour critical.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">E</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">NOT COMPLETED</span>Scour appraisal has not been completed. Temporary (not designed) countermeasure installed to
+                mitigate scour.
+              </p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">U</span>
+              <p class="pDropdownDescription drk-thm">
+                <span class="spanDropdownCondition drk-thm">UNKNOWN</span>Scour appraisal has not been completed due to unknown foundations.
+              </p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=320">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+              <a id="footerStop" class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="http://www.fhwa.dot.gov/engineering/hydraulics/index.cfm"
+                >FHWA Hydraulics</a
+              >
+            </div>
+          </div>
+        </div>
+        <div id="BridgeOvertopping" class="tabcontentNested">
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Overtopping Likelihood (B.AP.02)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NOT APPLICABLE</span>Bridge does not cross over water.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">0</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NEVER</span>The bridge is never overtopped.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">1</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">REMOTE</span>Once every 100 years or less frequently.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">2</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY LOW</span>Once every 51 to 99 years.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">3</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">LOW</span>Once every 26 to 50 years.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">4</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">MODERATE</span>Once every 11 to 25 years.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">5</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">HIGH</span>Once every 3 to 10 years.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">6</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">VERY HIGH</span>Once every 2 years or more frequently.</p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=319">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+            </div>
+          </div>
         </div>
         <div id="BridgeWildlife" class="tabcontentNested">
-          <div class="mainContentContainer">Swallows</div>
-          <div class="mainContentContainer">Bats</div>
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Swallows (B.MAD.06)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NO</span>No swallows or nests were observed.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">Y</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">YES</span>Swallows and/or nests were observed.</p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/Part9-Enviromental%20Concerns.pdf"
+                >BIM - Part 9</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/indot/engineering/files/INDOT-Protected-Species-Guidance-March-2021.pdf"
+                >Protected Species Guidance</a
+              >
+            </div>
+          </div>
+          <div class="mainContentContainer">
+            <div class="divDropdownTop divDropdownBorder drk-thm">Bats (B.MAD.07)</div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">N</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">NO</span>No bats were seen or heard.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">Y</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">YES</span>Bats and/or guano were observed.</p>
+            </div>
+            <div class="divDropdown">
+              <span class="spanDropdownRating">H</span>
+              <p class="pDropdownDescription drk-thm"><span class="spanDropdownCondition drk-thm">HEARD</span>Bats heard nesting at bridge or inside bridge components.</p>
+            </div>
+            <div class="divDropdownBottom divDropdownBorder drk-thm">
+              <h3 class="h3Footer">Links:</h3>
+              <a class="aModalFooterLink" rel="noopener noreferrer" target="”_tab”" href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf">SNBI</a>
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+                >BIM</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+                >Coding Guide</a
+              >
+              <a
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/Part9-Enviromental%20Concerns.pdf"
+                >BIM - Part 9</a
+              >
+              <a
+                id="footerStop"
+                class="aModalFooterLink"
+                rel="noopener noreferrer"
+                target="”_tab”"
+                href="https://www.in.gov/indot/engineering/files/INDOT-Protected-Species-Guidance-March-2021.pdf"
+                >Protected Species Guidance</a
+              >
+            </div>
+          </div>
         </div>
       </div>
 
