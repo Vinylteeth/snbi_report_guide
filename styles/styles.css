@@ -14,12 +14,12 @@
 
 :root {
   --background-color: rgb(42, 42, 42);
-  --text-color: rgb(213 213 213);
+  --text-color: rgb(192 192 192);
   --main-color: rgb(20 20 73);
 
   --inactive-button-color1: rgb(33 33 66);
   --hover-button-color1: rgb(58 58 88);
-  --active-button-color1: rgb(200 200 200);
+  --active-button-color1: rgb(182 182 182);
 
   --inactive-button-text-color1: var(--text-color);
   --hover-button-text-color1: var(--text-color);
@@ -496,4 +496,18 @@ button.active {
   color: rgb(224, 224, 224);
   vertical-align: 2px;
   text-shadow: 0 0 8px rgb(0, 0, 0), 3px 3px 8px rgb(0, 0, 0);
+}
+
+.pModalExamples {
+  padding: 0 15px;
+  margin-bottom: 3px;
+  color: rgb(172, 172, 172);
+  text-indent: -15px;
+  border-bottom: solid 2px rgba(128, 128, 128, 0.2);
+  transition: 0.2s;
+  color: var(--text-color);
+}
+
+.pModalExamples:active {
+  color: rgb(123, 131, 189);
 }
