@@ -168,3 +168,195 @@ function openBridgeDeck(evt, componentName) {
 
 //
 //
+
+function openBridgeSuper(evt, componentName) {
+  // Declare all variables
+  var i, bridgesupercontainers, bridgesuperbuttons;
+
+  // Get all elements with class="bridge-component-containers" and hide them
+  bridgesupercontainers = document.getElementsByClassName("bridge-super-containers");
+  for (i = 0; i < bridgesupercontainers.length; i++) {
+    bridgesupercontainers[i].style.display = "none";
+  }
+
+  // Get all elements with class="bridge-component-buttons" and remove the class "active"
+  bridgesuperbuttons = document.getElementsByClassName("bridge-super-buttons");
+  for (i = 0; i < bridgesuperbuttons.length; i++) {
+    bridgesuperbuttons[i].className = bridgesuperbuttons[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(componentName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+//
+//
+
+function openBridgeBearings(evt, componentName) {
+  // Declare all variables
+  var i, bridgebearingscontainers, bridgebearingsbuttons;
+
+  // Get all elements with class="bridge-component-containers" and hide them
+  bridgebearingscontainers = document.getElementsByClassName("bridge-bearings-containers");
+  for (i = 0; i < bridgebearingscontainers.length; i++) {
+    bridgebearingscontainers[i].style.display = "none";
+  }
+
+  // Get all elements with class="bridge-component-buttons" and remove the class "active"
+  bridgebearingsbuttons = document.getElementsByClassName("bridge-bearings-buttons");
+  for (i = 0; i < bridgebearingsbuttons.length; i++) {
+    bridgebearingsbuttons[i].className = bridgebearingsbuttons[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(componentName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+//
+//
+
+function openBridgeSub(evt, componentName) {
+  // Declare all variables
+  var i, bridgesubcontainers, bridgesubbuttons;
+
+  // Get all elements with class="bridge-component-containers" and hide them
+  bridgesubcontainers = document.getElementsByClassName("bridge-sub-containers");
+  for (i = 0; i < bridgesubcontainers.length; i++) {
+    bridgesubcontainers[i].style.display = "none";
+  }
+
+  // Get all elements with class="bridge-component-buttons" and remove the class "active"
+  bridgesubbuttons = document.getElementsByClassName("bridge-sub-buttons");
+  for (i = 0; i < bridgesubbuttons.length; i++) {
+    bridgesubbuttons[i].className = bridgesubbuttons[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(componentName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+//
+//
+
+function openBridgeCulvert(evt, componentName) {
+  // Declare all variables
+  var i, bridgeculvertcontainers, bridgeculvertbuttons;
+
+  // Get all elements with class="bridge-component-containers" and hide them
+  bridgeculvertcontainers = document.getElementsByClassName("bridge-culvert-containers");
+  for (i = 0; i < bridgeculvertcontainers.length; i++) {
+    bridgeculvertcontainers[i].style.display = "none";
+  }
+
+  // Get all elements with class="bridge-component-buttons" and remove the class "active"
+  bridgeculvertbuttons = document.getElementsByClassName("bridge-culvert-buttons");
+  for (i = 0; i < bridgeculvertbuttons.length; i++) {
+    bridgeculvertbuttons[i].className = bridgeculvertbuttons[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(componentName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+//
+//
+
+function openBridgeChannel(evt, componentName) {
+  // Declare all variables
+  var i, bridgechannelcontainers, bridgechannelbuttons;
+
+  // Get all elements with class="bridge-component-containers" and hide them
+  bridgechannelcontainers = document.getElementsByClassName("bridge-channel-containers");
+  for (i = 0; i < bridgechannelcontainers.length; i++) {
+    bridgechannelcontainers[i].style.display = "none";
+  }
+
+  // Get all elements with class="bridge-component-buttons" and remove the class "active"
+  bridgechannelbuttons = document.getElementsByClassName("bridge-channel-buttons");
+  for (i = 0; i < bridgechannelbuttons.length; i++) {
+    bridgechannelbuttons[i].className = bridgechannelbuttons[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(componentName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+//
+//
+
+function openBridgeScour(evt, componentName) {
+  // Declare all variables
+  var i, bridgescourcontainers, bridgescourbuttons;
+
+  // Get all elements with class="bridge-component-containers" and hide them
+  bridgescourcontainers = document.getElementsByClassName("bridge-scour-containers");
+  for (i = 0; i < bridgescourcontainers.length; i++) {
+    bridgescourcontainers[i].style.display = "none";
+  }
+
+  // Get all elements with class="bridge-component-buttons" and remove the class "active"
+  bridgescourbuttons = document.getElementsByClassName("bridge-scour-buttons");
+  for (i = 0; i < bridgescourbuttons.length; i++) {
+    bridgescourbuttons[i].className = bridgescourbuttons[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(componentName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+//
+//
+
+function openBridgeOvertopping(evt, componentName) {
+  // Declare all variables
+  var i, bridgeovertoppingcontainers, bridgeovertoppingbuttons;
+
+  // Get all elements with class="bridge-component-containers" and hide them
+  bridgeovertoppingcontainers = document.getElementsByClassName("bridge-overtopping-containers");
+  for (i = 0; i < bridgeovertoppingcontainers.length; i++) {
+    bridgeovertoppingcontainers[i].style.display = "none";
+  }
+
+  // Get all elements with class="bridge-component-buttons" and remove the class "active"
+  bridgeovertoppingbuttons = document.getElementsByClassName("bridge-overtopping-buttons");
+  for (i = 0; i < bridgeovertoppingbuttons.length; i++) {
+    bridgeovertoppingbuttons[i].className = bridgeovertoppingbuttons[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(componentName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+//
+//
+
+function openBridgeWildlife(evt, componentName) {
+  // Declare all variables
+  var i, bridgewildlifecontainers, bridgewildlifebuttons;
+
+  // Get all elements with class="bridge-component-containers" and hide them
+  bridgewildlifecontainers = document.getElementsByClassName("bridge-wildlife-containers");
+  for (i = 0; i < bridgewildlifecontainers.length; i++) {
+    bridgewildlifecontainers[i].style.display = "none";
+  }
+
+  // Get all elements with class="bridge-component-buttons" and remove the class "active"
+  bridgewildlifebuttons = document.getElementsByClassName("bridge-wildlife-buttons");
+  for (i = 0; i < bridgewildlifebuttons.length; i++) {
+    bridgewildlifebuttons[i].className = bridgewildlifebuttons[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(componentName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+//
+//
