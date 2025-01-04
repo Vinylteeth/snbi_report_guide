@@ -25,6 +25,15 @@
 
   --main-background: url("../media/light-down-black2.svg");
   --main-background-overlay: rgb(42 42 42 / 0.9);
+
+  /* theme */
+  --main-color: rgba(58, 73, 95, 0.9);
+  --content-color: rgba(34, 34, 34, 0.7);
+  --main-background-overlay: rgba(54, 54, 54, 0.9);
+  --inactive-button-color1: rgb(47, 47, 77);
+  --hover-button-color1: rgb(40, 40, 65);
+  --inactive-button-color2: rgb(65, 99, 79);
+  --hover-button-color2: rgb(58, 88, 74);
 }
 
 html,
@@ -286,10 +295,11 @@ button.active {
 .content-container-links-line-links {
   color: var(--text-color);
   text-decoration: none;
-  padding: 2px 5px;
+  padding: 4px 8px;
   margin: 0 2px;
-  background: rgb(33, 33, 99);
-  border-radius: 1px;
+  /* background: rgb(33, 33, 99); */
+  background-color: var(--inactive-button-color1);
+  border-radius: 0px;
   white-space: nowrap;
   display: inline-block;
   user-select: none;
@@ -301,6 +311,7 @@ button.active {
   color: var(--text-color);
   text-decoration: none;
   background: rgba(255, 255, 255, 0.2);
+  background-color: var(--hover-button-color1);
   border-radius: 1px;
 }
 
@@ -368,6 +379,7 @@ button.active {
 }
 .ite-text {
   color: rgba(158, 38, 158, 0.7);
+  color: rgba(167, 84, 167, 0.7);
   text-shadow: 0 0 4px rgb(0, 0, 0), 3px 3px 4px rgb(0, 0, 0);
   font-family: "Ubuntu", sans-serif;
   font-size: 24px;
@@ -375,6 +387,7 @@ button.active {
 }
 .rate-text {
   color: rgba(255, 55, 0, 0.7);
+  color: rgba(241, 89, 47, 0.7);
   text-shadow: 0 0 4px rgb(0, 0, 0), 3px 3px 4px rgb(0, 0, 0);
   font-family: "Ubuntu", sans-serif;
   font-size: 24px;
