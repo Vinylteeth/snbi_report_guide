@@ -34,6 +34,7 @@
   --hover-button-color1: rgb(40, 40, 65);
   --inactive-button-color2: rgb(65, 99, 79);
   --hover-button-color2: rgb(58, 88, 74);
+  --text-color: rgb(233, 233, 233);
 }
 
 html,
@@ -53,6 +54,11 @@ ul {
   border: none;
   outline: none;
   color: var(--text-color);
+}
+
+ul {
+  margin: 0 0 0 -15px;
+  text-indent: -5px;
 }
 
 h1,
@@ -315,6 +321,21 @@ button.active {
   border-radius: 1px;
 }
 
+.culvert-numeric-ratings-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.culvert-rating-flex-items {
+  width: 500px;
+  height: 260px;
+}
+
+.paragraph-rating {
+  margin: 0 0 5px 0;
+}
+
 /* Hidden initially */
 .asset-containers,
 .bridge-component-containers,
@@ -330,7 +351,9 @@ button.active {
 .bridge-channel-containers,
 .bridge-scour-containers,
 .bridge-overtopping-containers,
-.bridge-wildlife-containers {
+.bridge-wildlife-containers,
+.culvert-item-containers,
+.wall-item-containers {
   display: none;
 }
 
@@ -343,6 +366,7 @@ button.active {
   -ms-transform: translate(-50%, 0%); /* Adjusts the position based on width and height (left, top) */
   width: 320px;
   height: 30px;
+  cursor: default;
 }
 
 .inner-container {

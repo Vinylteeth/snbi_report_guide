@@ -360,3 +360,51 @@ function openBridgeWildlife(evt, componentName) {
 
 //
 //
+
+function openCulvertItem(evt, componentName) {
+  // Declare all variables
+  var i, culvertitemcontainers, culvertitembuttons;
+
+  // Get all elements with class="culvert-item-containers" and hide them
+  culvertitemcontainers = document.getElementsByClassName("culvert-item-containers");
+  for (i = 0; i < culvertitemcontainers.length; i++) {
+    culvertitemcontainers[i].style.display = "none";
+  }
+
+  // Get all elements with class="culvert-item-buttons" and remove the class "active"
+  culvertitembuttons = document.getElementsByClassName("culvert-item-buttons");
+  for (i = 0; i < culvertitembuttons.length; i++) {
+    culvertitembuttons[i].className = culvertitembuttons[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(componentName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+//
+//
+
+function openWallItem(evt, componentName) {
+  // Declare all variables
+  var i, wallitemcontainers, wallitembuttons;
+
+  // Get all elements with class="wall-item-containers" and hide them
+  wallitemcontainers = document.getElementsByClassName("wall-item-containers");
+  for (i = 0; i < wallitemcontainers.length; i++) {
+    wallitemcontainers[i].style.display = "none";
+  }
+
+  // Get all elements with class="wall-item-buttons" and remove the class "active"
+  wallitembuttons = document.getElementsByClassName("wall-item-buttons");
+  for (i = 0; i < wallitembuttons.length; i++) {
+    wallitembuttons[i].className = wallitembuttons[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(componentName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+//
+//

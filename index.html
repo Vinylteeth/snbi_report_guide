@@ -2516,14 +2516,683 @@
         </div>
       </div>
 
-      <div id="culvert-asset-tab" class="asset-containers main-content-containers">
-        <h3>Culverts</h3>
-        <p>Any INDOT maintained structure that runs beneath or adjacent to the state highway system and spans 4 to 20 feet.</p>
+      <div id="culvert-asset-tab" class="asset-containers">
+        <div class="main-content-containers">
+          <button class="culvert-item-buttons active" onclick="openCulvertItem(event, 'culvert-rating-guidance-concrete-tab')">Rating Guidance - Concrete</button>
+          <button class="culvert-item-buttons" onclick="openCulvertItem(event, 'culvert-rating-guidance-steel-tab')">Rating Guidance - Steel</button>
+          <button class="culvert-item-buttons" onclick="openCulvertItem(event, 'culvert-naming-convention-tab')">Naming Convention</button>
+          <button class="culvert-item-buttons" onclick="openCulvertItem(event, 'culvert-report-walkthrough-tab')">Report Walkthrough</button>
+        </div>
+        <div id="culvert-rating-guidance-concrete-tab" class="culvert-item-containers active" style="display: block">
+          <div class="culvert-numeric-ratings-container">
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">9 (72-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">New condition</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">8 (72-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">No flow restrictions</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">No scour and/or erosion</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some hairline cracking</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some areas of discoloration</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some insignificant spalling</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">7 (72-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Some minor misalignments between segments</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some light scaling and/or abrasion</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Isolated delamination</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Isolated minor, shallow-depth spalling</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Isolated minor-width cracking with white efflorescence</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some insignificant sediment (less than 20%)</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some insignificant to minor scour and/or erosion</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">6 (36-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Isolated minor to moderate spalling with exposed rebar</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some delamination</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some minor- to moderate-width cracking with white efflorescence</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some minor to moderate scour and/or erosion</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Flow restricted by 20-30%</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">5 (36-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">No significant roadway or shoulder safety hazards</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">No loss of bearing</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">No structural concerns</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Heavy efflorescence present</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Moderate to major rust staining</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Widespread minor spalling with exposed rebar</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some moderate spalling with exposed rebar</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some moderate to heavy spalling to the first layer of rebar</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some areas of map cracking</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Heavy deterioration in the headwalls and wingwalls</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Moderate to heavy scour and/or erosion</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Flow restricted by 40-50%</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">4 (12-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">No holes or significant settlement in the roadway</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Strength and/or performance is affected</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Minor to moderate loss of bearing</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some significant settlement between segments</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Wide cracking</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Widespread moderate to major spalling</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Deep spalling to the second layer of rebar</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Heavy corrosion with notable section loss in the reinforcing steel</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Moderate to major scour and/or erosion</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Flow restricted by 50-60%</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Sinkholes in the shoulder indicating loss of fill</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Structurally significant deformations</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">3 (12-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Strength and/or performance is seriously affected</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Moderate to major loss of bearing</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Crushing of concrete</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Significant spalling and deterioration</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some major scour and/or erosion</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Flow restricted by 60%-70%</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">2 (12-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Collapse does not present a serious threat to the public</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Actively collapsing or filling in</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Buried</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">1 (12-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Requires immediate action to keep the road open</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Presents a serious threat to the public</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">0 (Inspected as needed)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Requires immediate action to close the road</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Cannot be repaired and must be replaced</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">Notes:</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Slightly less consideration should be given for the end portions not under fill.</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">
+                    The difference between a 2 and a 1 is largely based on the amount of cover. A structure that has enough cover that a collapse would not impact the roadway can
+                    be rated a 2. A structure whose collapse would impact the roadway must be rated a 1, and action must be taken immediately upon discovery.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items"><p class="paragraph-rating">Links:</p></div>
+          </div>
+        </div>
+        <div id="culvert-rating-guidance-steel-tab" class="culvert-item-containers">
+          <div class="culvert-numeric-ratings-container">
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">9 (36-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">New condition</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">8 (36-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">No rust</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">No flow restrictions</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">No scour and/or erosion at the pipe</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some areas of discoloration</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some loss of protective coating</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some insignificant dents</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">7 (36-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">No measurable section loss</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">No separation between segments</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some minor to moderate loss of protective coating in the flow line</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some freckled rust</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some minor dents</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some insignificant sediment (less than 20%)</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some insignificant to minor scour and/or erosion at the pipe</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">6 (36-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">No significant perforations</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Very minor deformations</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Very minor separation between segments</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Minor to moderate impact damage at pipe ends</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some areas of moderate corrosion</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some rust scaling is present</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some minor to moderate scour and/or erosion at the pipe</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Flow restricted by 20-30%</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">5 (36-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">No significant roadway or shoulder safety hazards</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Minor separation between segments (less than 1 inch)</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some minor settlement or movement at the anchors</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Heavy corrosion in the flow line</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Widespread rust scaling</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Areas of minor to moderate section loss</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some minor perforations (visible to 0.5-inch diameter holes)</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Perforations are only capable of pulling insignificant amounts of fill</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Moderate to heavy scour and/or erosion at the pipe</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Flow restricted by 40-50%</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">4 (12-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Moderate separation between segments (more than 1 inch)</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some moderate settlement or movement at the anchors</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Heavy corrosion in the flow line</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Widespread rust scaling with noticeable section loss</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Scattered minor perforations</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some moderate perforations (0.5- to 2-inch diameter holes)</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Perforations are only capable of pulling small amounts of fill</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Moderate to major scour and/or erosion at the pipe</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Flow restricted by 50-60%</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Sinkholes in the shoulder indicating loss of fill</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Structurally significant deformations</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">3 (12-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Scattered moderate perforations</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some heavy perforations (greater than 2- inch diameter holes)</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Perforations capable of pulling moderate volumes of fill</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Some major scour and/or erosion at the pipe</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Flow restricted by 60%-70%</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">2 (12-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Collapse does not present a serious threat to the public</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Significant distortion</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Noticeable buckling of the pipe walls</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Actively collapsing or filling in</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Buried</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">1 (12-month frequency)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Requires immediate action to keep the road open</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Presents a serious threat to the public</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">0 (Inspected as needed)</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Requires immediate action to close the road</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Cannot be repaired and must be replaced</p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items">
+              <p class="paragraph-rating">Notes:</p>
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Slightly less consideration should be given for the end portions not under fill.</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">
+                    The difference between a 2 and a 1 is largely based on the amount of cover. A structure that has enough cover that a collapse would not impact the roadway can
+                    be rated a 2. A structure whose collapse would impact the roadway must be rated a 1, and action must be taken immediately upon discovery.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="main-content-containers culvert-rating-flex-items"><p class="paragraph-rating">Links:</p></div>
+          </div>
+        </div>
+        <div id="culvert-naming-convention-tab" class="culvert-item-containers">
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Preferred CV Suffixes and Naming Conventions:</p>
+            <div class="content-container-paragraphs">
+              <p class="paragraph-rating-list">
+                SB, NB, EB, WB: Under southbound, northbound, eastbound, or westbound only. This is for culverts that have an opening in the median.
+              </p>
+              <p class="paragraph-rating-list">SBR, NBR, EBR, WBR: Under southbound, northbound, eastbound, or westbound ramp only.</p>
+              <p class="paragraph-rating-list">
+                ADJ: Adjacent to the road (can add NB, SB, EB, WB to designate directional travel side of the road, e.g., NBADJ would mean the culvert is under a road adjacent to
+                the northbound lanes)
+              </p>
+              <p class="paragraph-rating-list">
+                CR: One end is under a County Road (can add NB, SB, EB, WB to designate directional travel side of the road, e.g., NBCR would mean the culvert runs under a county
+                road adjacent to the northbound lanes)
+              </p>
+              <p class="paragraph-rating-list">
+                SPC: Special notes on the location can be found in the report (catch basin, only has one open end, part of a complex system, confined space, etc.)
+              </p>
+              <p class="paragraph-rating-list">Combinations are possible: SB-SBCR, NB-NBR, EBR-EBCR, WBADJ-SPC</p>
+            </div>
+          </div>
+        </div>
+        <div id="culvert-report-walkthrough-tab" class="culvert-item-containers">
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Writing the report:</p>
+            <div class="content-container-paragraphs">
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Change the to and from report dates in the report</p>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Update the Culvert Rating and Channel Rating along with their comments</p>
+                  <ul>
+                    <li>
+                      <p class="paragraph-rating-list">Add maintenance items to your comments (i.e. A deficiency was submitted for erosion)</p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Add any special notes to the Inspection Summary</p>
+                  <ul>
+                    <li>
+                      <p class="paragraph-rating-list">Prefer items that do not change and that you would share with anyone (i.e. location)</p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Add any team communication notes to the comments box under the Task Info tab</p>
+                  <ul>
+                    <li>
+                      <p class="paragraph-rating-list">
+                        o Parking, best way down, hazards, temporary conditions or things you might not want to advertise (i.e. high water, programmed, under construction, cannot
+                        locate north end)
+                      </p>
+                    </li>
+                    <li>
+                      <p class="paragraph-rating-list">Not needed on most structures</p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">If it is a 4 or below you can check SPMS to see if it is programmed</p>
+                  <ul>
+                    <li>
+                      <p class="paragraph-rating-list">If not, add it to a list to be sent to Asset</p>
+                    </li>
+                    <li>
+                      <p class="paragraph-rating-list">If yes, add the word programmed to the comments box under the Task Info tab</p>
+                      <ul>
+                        <li>
+                          <p class="paragraph-rating-list">The designation number and date are not valuable because they could change</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <br />
+
+            <p class="paragraph-rating">Before you approve the report:</p>
+            <div class="content-container-paragraphs">
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Generate the report</p>
+                </li>
+              </ul>
+            </div>
+            <br />
+
+            <p class="paragraph-rating">After you have processed the report go to the asset view:</p>
+            <div class="content-container-paragraphs">
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Add a photo to the asset and set it as the default</p>
+                  <ul>
+                    <li>
+                      <p class="paragraph-rating-list">Can drag a photo from the browser tab to the add many screen</p>
+                    </li>
+                    <li>
+                      <p class="paragraph-rating-list">View the photo and click the 3 dots to set as default</p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Update the inspection date and inspection frequency</p>
+                  <ul>
+                    <li>
+                      <p class="paragraph-rating-list">Only full concrete rated 7 or higher can be 72 months</p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Update the material type (Kind of Material)</p>
+                  <ul>
+                    <li>
+                      <p class="paragraph-rating-list">Steel</p>
+                    </li>
+                    <li>
+                      <p class="paragraph-rating-list">Concrete</p>
+                    </li>
+                    <li>
+                      <p class="paragraph-rating-list">Masonry</p>
+                    </li>
+                    <li>
+                      <p class="paragraph-rating-list">Aluminum, Wrought Iron, Cast Iron</p>
+                    </li>
+                    <li>
+                      <p class="paragraph-rating-list">Polymer Lined</p>
+                    </li>
+                  </ul>
+                </li>
+
+                <p class="paragraph-rating-list">* Use steel if it is both steel and concrete so frequencies can be verified</p>
+              </ul>
+            </div>
+            <br />
+
+            <p class="paragraph-rating">Helpful updates for identification:</p>
+            <div class="content-container-paragraphs">
+              <ul>
+                <li>
+                  <p class="paragraph-rating-list">Update the GPS if you know it is wrong</p>
+                  <ul>
+                    <li>
+                      <p class="paragraph-rating-list">On interstates where the CV goes under both directions, put it on the up-station side (NB side or the EB side).</p>
+                    </li>
+                    <li>
+                      <p class="paragraph-rating-list">On SRs the middle of the road is fine unless there is a median or split, then put it on the up-station side.</p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Update the structure type (Type of Structure)</p>
+                  <ul>
+                    <li>
+                      <p class="paragraph-rating-list">Use other for CVs with additional treatments</p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="paragraph-rating-list">Update the skew if it is significantly skewed and the skew makes it easier to find or identify</p>
+                  <ul>
+                    <li>
+                      <p class="paragraph-rating-list">0 is perpendicular to the road</p>
+                    </li>
+                    <li>
+                      <p class="paragraph-rating-list">45 is significant and would help identify the structure in the field</p>
+                    </li>
+                    <li>
+                      <p class="paragraph-rating-list">90 is parallel to the road (adjacent)</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div id="wall-asset-tab" class="asset-containers main-content-containers">
-        <h3>Walls</h3>
-        <p>Any INDOT maintained wall acting to stabalize earthwork projects.</p>
+      <div id="wall-asset-tab" class="asset-containers">
+        <div class="main-content-containers">
+          <button class="wall-item-buttons active" onclick="openWallItem(event, 'wall-rating-guidelines-tab')">Rating Guidance</button>
+          <button class="wall-item-buttons" onclick="openWallItem(event, 'wall-naming-conventions-tab')">Naming Convention</button>
+        </div>
+        <div id="wall-rating-guidelines-tab" class="wall-item-containers active" style="display: block">
+          <div class="wall-numeric-ratings-container">
+            <div class="main-content-containers wall-rating-flex-items">Rating stuff goes here.</div>
+          </div>
+        </div>
+        <div id="wall-naming-conventions-tab" class="wall-item-containers">
+          <div class="wall-numeric-ratings-container">
+            <div class="main-content-containers wall-rating-flex-items">Naming stuff goes here.</div>
+          </div>
+        </div>
       </div>
 
       <div class="footer-spacer"></div>
