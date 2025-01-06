@@ -67,17 +67,19 @@
           <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-channel-tab')">Channel</button>
           <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-scour-tab')">Scour</button>
           <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-overtopping-tab')">Overtopping</button>
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-wildlife-tab')">Wildlife</button>
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-wildlife-tab')">Wildlife</button> |
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-review-tab')">Review</button>
         </div>
         <div id="bridge-alignment-tab" class="bridge-component-containers active" style="display: block">
           <div class="main-content-containers">
             <div class="content-container-tabs">
-              <button class="bridge-alignment-buttons active" onclick="openBridgeAlignment(event, 'bridge-alignment-pg1')">Approach Roadway Alignment (B.AP.01)</button>
-              <button class="bridge-alignment-buttons" onclick="openBridgeAlignment(event, 'bridge-alignment-pg2')">Rating Table</button>
-              <button class="bridge-alignment-buttons" onclick="openBridgeAlignment(event, 'bridge-alignment-pg3')">Example Comments</button>
+              <button class="bridge-alignment-buttons" onclick="openBridgeAlignment(event, 'bridge-alignment-pg1')">Approach Roadway Alignment (B.AP.01)</button>
+              <button class="bridge-alignment-buttons active" onclick="openBridgeAlignment(event, 'bridge-alignment-pg2')">Rating Table</button>
+              <button class="bridge-alignment-buttons" onclick="openBridgeAlignment(event, 'bridge-alignment-pg3')">Example Comments</button> |
+              <button class="bridge-alignment-buttons" onclick="openBridgeAlignment(event, 'bridge-alignment-pg4')">Maintenance</button>
             </div>
 
-            <div id="bridge-alignment-pg1" class="bridge-alignment-containers active" style="display: block">
+            <div id="bridge-alignment-pg1" class="bridge-alignment-containers">
               <div class="content-container-paragraphs">
                 <p>Do not consider speed reductions due to the bridge width or intersecting highways when reporting this item.</p>
                 <br />
@@ -90,7 +92,7 @@
               </div>
             </div>
 
-            <div id="bridge-alignment-pg2" class="bridge-alignment-containers">
+            <div id="bridge-alignment-pg2" class="bridge-alignment-containers active" style="display: block">
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">N</span>
                 <p class="content-container-rating-description-and-condition-bubble">
@@ -165,15 +167,27 @@
               >
             </div>
           </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Alignment Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BAP01-textarea" class="textarea-comments" name="Approach Roadway Alignment" rows="1" oninput="expandTextarea(event, 'BAP01-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="bridge-approach-slabs-tab" class="bridge-component-containers">
           <div class="main-content-containers">
             <div class="content-container-tabs">
-              <button class="bridge-approach-buttons active" onclick="openBridgeApproach(event, 'bridge-approach-pg1')">Approach Slabs (B.MAD.01)</button>
-              <button class="bridge-approach-buttons" onclick="openBridgeApproach(event, 'bridge-approach-pg2')">Rating Table</button>
-              <button class="bridge-approach-buttons" onclick="openBridgeApproach(event, 'bridge-approach-pg3')">Example Comments</button>
+              <button class="bridge-approach-buttons" onclick="openBridgeApproach(event, 'bridge-approach-pg1')">Approach Slabs (B.MAD.01)</button>
+              <button class="bridge-approach-buttons active" onclick="openBridgeApproach(event, 'bridge-approach-pg2')">Rating Table</button>
+              <button class="bridge-approach-buttons" onclick="openBridgeApproach(event, 'bridge-approach-pg3')">Example Comments</button> |
+              <button class="bridge-approach-buttons" onclick="openBridgeApproach(event, 'bridge-approach-pg4')">Elements</button>
+              <button class="bridge-approach-buttons" onclick="openBridgeApproach(event, 'bridge-approach-pg5')">Maintenance</button>
             </div>
-            <div id="bridge-approach-pg1" class="bridge-approach-containers active" style="display: block">
+            <div id="bridge-approach-pg1" class="bridge-approach-containers">
               <div class="content-container-paragraphs">
                 <p>
                   Use destructive or non-destructive testing results or visual condition indicators of materials covering the surfaces being assessed when top is not visible for
@@ -185,11 +199,11 @@
                 <p>Consider the roughness and ride provided by the approach slab.</p>
               </div>
             </div>
-            <div id="bridge-approach-pg2" class="bridge-approach-containers">
+            <div id="bridge-approach-pg2" class="bridge-approach-containers active" style="display: block">
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">N</span>
                 <p class="content-container-rating-description-and-condition-bubble">
-                  <span class="content-container-rating-condition-bubble">NOT APPLICABLE</span>Bridge does not have deck joints.
+                  <span class="content-container-rating-condition-bubble">NOT APPLICABLE</span>Bridge does not have approach slabs.
                 </p>
               </div>
               <div class="content-container-rating-lines">
@@ -237,13 +251,13 @@
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">1</span>
                 <p class="content-container-rating-description-and-condition-bubble">
-                  <span class="content-container-rating-condition-bubble">IMMINENT FAILURE</span>Joints have failed and are ineffective.
+                  <span class="content-container-rating-condition-bubble">IMMINENT FAILURE</span>Approach slabs have failed and are ineffective.
                 </p>
               </div>
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">0</span>
                 <p class="content-container-rating-description-and-condition-bubble">
-                  <span class="content-container-rating-condition-bubble">FAILED</span>Joints have failed and present a safety hazard.
+                  <span class="content-container-rating-condition-bubble">FAILED</span>Approach slabs have failed and present a safety hazard.
                 </p>
               </div>
             </div>
@@ -290,18 +304,30 @@
               >
             </div>
           </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Approach Slab Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BMAD01-textarea" class="textarea-comments" name="Approach Slab" rows="1" oninput="expandTextarea(event, 'BMAD01-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="bridge-joints-tab" class="bridge-component-containers">
           <div class="main-content-containers">
             <div class="content-container-tabs">
-              <button class="bridge-joints-buttons active" onclick="openBridgeJoints(event, 'bridge-joints-pg1')">Bridge Joints (B.C.08)</button>
-              <button class="bridge-joints-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg2')">Rating Table</button>
+              <button class="bridge-joints-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg1')">Bridge Joints (B.C.08)</button>
+              <button class="bridge-joints-buttons active" onclick="openBridgeJoints(event, 'bridge-joints-pg2')">Rating Table</button>
               <button class="bridge-joints-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg3')">Example Comments</button>
               <button class="bridge-joints-buttons alt-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg4')">Terminal Joints (B.MAD.04)</button>
               <button class="bridge-joints-buttons alt-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg5')">Rating Table</button>
-              <button class="bridge-joints-buttons alt-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg6')">Example Comments</button>
+              <button class="bridge-joints-buttons alt-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg6')">Example Comments</button> |
+              <button class="bridge-joints-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg7')">Elements</button>
+              <button class="bridge-joints-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg8')">Maintenance</button>
             </div>
-            <div id="bridge-joints-pg1" class="bridge-joints-containers active" style="display: block">
+            <div id="bridge-joints-pg1" class="bridge-joints-containers">
               <div class="content-container-paragraphs">
                 <p>
                   This item addresses the condition of all types and shapes of bridge deck joints. The condition assessment includes all aspects of the joints such as any seals,
@@ -318,7 +344,7 @@
                 <p>In cases where the joint is not visible, the condition can be assessed based on other indirect indicators of the condition.</p>
               </div>
             </div>
-            <div id="bridge-joints-pg2" class="bridge-joints-containers">
+            <div id="bridge-joints-pg2" class="bridge-joints-containers active" style="display: block">
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">N</span>
                 <p class="content-container-rating-description-and-condition-bubble">
@@ -490,18 +516,40 @@
               >
             </div>
           </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Bridge Joints Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BC08-textarea" class="textarea-comments" name="Bridge Joints" rows="1" oninput="expandTextarea(event, 'BC08-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Terminal Joints Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BMAD04-textarea" class="textarea-comments" name="Terminal Joints" rows="1" oninput="expandTextarea(event, 'BMAD04-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="bridge-railings-tab" class="bridge-component-containers">
           <div class="main-content-containers">
             <div class="content-container-tabs">
-              <button class="bridge-railings-buttons active" onclick="openBridgeRailings(event, 'bridge-railings-pg1')">Bridge Railings (B.C.05)</button>
-              <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg2')">Rating Table</button>
+              <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg1')">Bridge Railings (B.C.05)</button>
+              <button class="bridge-railings-buttons active" onclick="openBridgeRailings(event, 'bridge-railings-pg2')">Rating Table</button>
               <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg3')">Example Comments</button>
               <button class="bridge-railings-buttons alt-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg4')">Bridge Railing Transitions (B.C.06)</button>
               <button class="bridge-railings-buttons alt-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg5')">Rating Table</button>
-              <button class="bridge-railings-buttons alt-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg6')">Example Comments</button>
+              <button class="bridge-railings-buttons alt-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg6')">Example Comments</button> |
+              <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg7')">Elements</button>
+              <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg8')">Maintenance</button>
             </div>
-            <div id="bridge-railings-pg1" class="bridge-railings-containers active" style="display: block">
+            <div id="bridge-railings-pg1" class="bridge-railings-containers">
               <div class="content-container-paragraphs">
                 <p>
                   This item addresses the condition of all types and shapes of bridge railings (parapets, median barriers, or structure mounted) located on the bridge or that cross
@@ -518,7 +566,7 @@
                 </p>
               </div>
             </div>
-            <div id="bridge-railings-pg2" class="bridge-railings-containers active">
+            <div id="bridge-railings-pg2" class="bridge-railings-containers active" style="display: block">
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">N</span>
                 <p class="content-container-rating-description-and-condition-bubble">
@@ -731,18 +779,40 @@
               >
             </div>
           </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Bridge Railing Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BC05-textarea" class="textarea-comments" name="Bridge Railing" rows="1" oninput="expandTextarea(event, 'BC05-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Bridge Railing Transition Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BC06-textarea" class="textarea-comments" name="Bridge Railing Transitions" rows="1" oninput="expandTextarea(event, 'BC06-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="bridge-deck-tab" class="bridge-component-containers">
           <div class="main-content-containers">
             <div class="content-container-tabs">
-              <button class="bridge-deck-buttons active" onclick="openBridgeDeck(event, 'bridge-deck-pg1')">Deck (B.C.01)</button>
-              <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg2')">Rating Table</button>
+              <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg1')">Deck (B.C.01)</button>
+              <button class="bridge-deck-buttons active" onclick="openBridgeDeck(event, 'bridge-deck-pg2')">Rating Table</button>
               <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg3')">Example Comments</button>
               <button class="bridge-deck-buttons alt-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg4')">Wearing Surface (B.MAD.02)</button>
               <button class="bridge-deck-buttons alt-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg5')">Rating Table</button>
-              <button class="bridge-deck-buttons alt-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg6')">Example Comments</button>
+              <button class="bridge-deck-buttons alt-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg6')">Example Comments</button> |
+              <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg7')">Elements</button>
+              <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg8')">Maintenance</button>
             </div>
-            <div id="bridge-deck-pg1" class="bridge-deck-containers active" style="display: block">
+            <div id="bridge-deck-pg1" class="bridge-deck-containers">
               <div class="content-container-paragraphs">
                 <p>
                   Use destructive or non-destructive testing results or visual condition indicators of materials covering the surfaces being assessed when top, underside or both
@@ -764,7 +834,7 @@
                 <p>The deck and superstructure condition ratings are the same for slab bridges.</p>
               </div>
             </div>
-            <div id="bridge-deck-pg2" class="bridge-deck-containers">
+            <div id="bridge-deck-pg2" class="bridge-deck-containers active" style="display: block">
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">N</span>
                 <p class="content-container-rating-description-and-condition-bubble">
@@ -977,18 +1047,40 @@
               >
             </div>
           </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Deck Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BC01-textarea" class="textarea-comments" name="Deck" rows="1" oninput="expandTextarea(event, 'BC01-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Wearing Surface Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BMAD02-textarea" class="textarea-comments" name="Wearing Surface" rows="1" oninput="expandTextarea(event, 'BMAD02-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="bridge-super-tab" class="bridge-component-containers">
           <div class="main-content-containers">
             <div class="content-container-tabs">
-              <button class="bridge-super-buttons active" onclick="openBridgeSuper(event, 'bridge-super-pg1')">Superstructure (B.C.02)</button>
-              <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg2')">Rating Table</button>
+              <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg1')">Superstructure (B.C.02)</button>
+              <button class="bridge-super-buttons active" onclick="openBridgeSuper(event, 'bridge-super-pg2')">Rating Table</button>
               <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg3')">Example Comments</button>
               <button class="bridge-super-buttons alt-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg4')">Paint (B.MAD.03)</button>
               <button class="bridge-super-buttons alt-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg5')">Rating Table</button>
-              <button class="bridge-super-buttons alt-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg6')">Example Comments</button>
+              <button class="bridge-super-buttons alt-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg6')">Example Comments</button> |
+              <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg7')">Elements</button>
+              <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg8')">Maintenance</button>
             </div>
-            <div id="bridge-super-pg1" class="bridge-super-containers active" style="display: block">
+            <div id="bridge-super-pg1" class="bridge-super-containers">
               <div class="content-container-paragraphs">
                 <p>
                   Consider primary load carrying members when determining the condition rating code for this item, which includes cross-frames and diaphragms for curved girder
@@ -1030,7 +1122,7 @@
                 </p>
               </div>
             </div>
-            <div id="bridge-super-pg2" class="bridge-super-containers">
+            <div id="bridge-super-pg2" class="bridge-super-containers active" style="display: block">
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">N</span>
                 <p class="content-container-rating-description-and-condition-bubble">
@@ -1228,15 +1320,37 @@
               >
             </div>
           </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Superstructure Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BC02-textarea" class="textarea-comments" name="Superstructure" rows="1" oninput="expandTextarea(event, 'BC02-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Paint Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BMAD03-textarea" class="textarea-comments" name="Paint" rows="1" oninput="expandTextarea(event, 'BMAD03-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="bridge-bearings-tab" class="bridge-component-containers">
           <div class="main-content-containers">
             <div class="content-container-tabs">
-              <button class="bridge-bearings-buttons active" onclick="openBridgeBearings(event, 'bridge-bearings-pg1')">Bridge Bearings (B.C.07)</button>
-              <button class="bridge-bearings-buttons" onclick="openBridgeBearings(event, 'bridge-bearings-pg2')">Rating Table</button>
-              <button class="bridge-bearings-buttons" onclick="openBridgeBearings(event, 'bridge-bearings-pg3')">Example Comments</button>
+              <button class="bridge-bearings-buttons" onclick="openBridgeBearings(event, 'bridge-bearings-pg1')">Bridge Bearings (B.C.07)</button>
+              <button class="bridge-bearings-buttons active" onclick="openBridgeBearings(event, 'bridge-bearings-pg2')">Rating Table</button>
+              <button class="bridge-bearings-buttons" onclick="openBridgeBearings(event, 'bridge-bearings-pg3')">Example Comments</button> |
+              <button class="bridge-bearings-buttons" onclick="openBridgeBearings(event, 'bridge-bearings-pg4')">Elements</button>
+              <button class="bridge-bearings-buttons" onclick="openBridgeBearings(event, 'bridge-bearings-pg5')">Maintenance</button>
             </div>
-            <div id="bridge-bearings-pg1" class="bridge-bearings-containers active" style="display: block">
+            <div id="bridge-bearings-pg1" class="bridge-bearings-containers">
               <div class="content-container-paragraphs">
                 <p>This item addresses the condition of all types and shapes of bridge bearings.</p>
                 <br />
@@ -1251,7 +1365,7 @@
                 </p>
               </div>
             </div>
-            <div id="bridge-bearings-pg2" class="bridge-bearings-containers">
+            <div id="bridge-bearings-pg2" class="bridge-bearings-containers active" style="display: block">
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">N</span>
                 <p class="content-container-rating-description-and-condition-bubble">
@@ -1377,18 +1491,30 @@
               >
             </div>
           </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Bridge Bearings Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BC07-textarea" class="textarea-comments" name="Bridge Bearings" rows="1" oninput="expandTextarea(event, 'BC07-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="bridge-sub-tab" class="bridge-component-containers">
           <div class="main-content-containers">
             <div class="content-container-tabs">
-              <button class="bridge-sub-buttons active" onclick="openBridgeSub(event, 'bridge-sub-pg1')">Substructure (B.C.03)</button>
-              <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg2')">Rating Table</button>
+              <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg1')">Substructure (B.C.03)</button>
+              <button class="bridge-sub-buttons active" onclick="openBridgeSub(event, 'bridge-sub-pg2')">Rating Table</button>
               <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg3')">Example Comments</button>
               <button class="bridge-sub-buttons alt-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg4')">Slopewall (B.MAD.05)</button>
               <button class="bridge-sub-buttons alt-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg5')">Rating Table</button>
-              <button class="bridge-sub-buttons alt-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg6')">Example Comments</button>
+              <button class="bridge-sub-buttons alt-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg6')">Example Comments</button> |
+              <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg7')">Elements</button>
+              <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg8')">Maintenance</button>
             </div>
-            <div id="bridge-sub-pg1" class="bridge-sub-containers active" style="display: block">
+            <div id="bridge-sub-pg1" class="bridge-sub-containers">
               <div class="content-container-paragraphs">
                 <p>
                   For bridges that have substructures not visible for inspection, use appropriate visual condition indicators from the superstructure or surrounding foundation
@@ -1429,7 +1555,7 @@
                 </p>
               </div>
             </div>
-            <div id="bridge-sub-pg2" class="bridge-sub-containers">
+            <div id="bridge-sub-pg2" class="bridge-sub-containers active" style="display: block">
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">N</span>
                 <p class="content-container-rating-description-and-condition-bubble">
@@ -1583,15 +1709,37 @@
               >
             </div>
           </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Substructure Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BC03-textarea" class="textarea-comments" name="Substructure" rows="1" oninput="expandTextarea(event, 'BC03-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Slopewall Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BMAD05-textarea" class="textarea-comments" name="Slopewall" rows="1" oninput="expandTextarea(event, 'BMAD05-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="bridge-culvert-tab" class="bridge-component-containers">
           <div class="main-content-containers">
             <div class="content-container-tabs">
-              <button class="bridge-culvert-buttons active" onclick="openBridgeCulvert(event, 'bridge-culvert-pg1')">Culvert (B.C.04)</button>
-              <button class="bridge-culvert-buttons" onclick="openBridgeCulvert(event, 'bridge-culvert-pg2')">Rating Table</button>
-              <button class="bridge-culvert-buttons" onclick="openBridgeCulvert(event, 'bridge-culvert-pg3')">Example Comments</button>
+              <button class="bridge-culvert-buttons" onclick="openBridgeCulvert(event, 'bridge-culvert-pg1')">Culvert (B.C.04)</button>
+              <button class="bridge-culvert-buttons active" onclick="openBridgeCulvert(event, 'bridge-culvert-pg2')">Rating Table</button>
+              <button class="bridge-culvert-buttons" onclick="openBridgeCulvert(event, 'bridge-culvert-pg3')">Example Comments</button> |
+              <button class="bridge-culvert-buttons" onclick="openBridgeCulvert(event, 'bridge-culvert-pg4')">Elements</button>
+              <button class="bridge-culvert-buttons" onclick="openBridgeCulvert(event, 'bridge-culvert-pg5')">Maintenance</button>
             </div>
-            <div id="bridge-culvert-pg1" class="bridge-culvert-containers active" style="display: block">
+            <div id="bridge-culvert-pg1" class="bridge-culvert-containers">
               <div class="content-container-paragraphs">
                 <p>
                   For culverts that have components not visible for inspection, use appropriate visual condition indicators from the roadway or surrounding foundation materials to
@@ -1631,7 +1779,7 @@
                 </p>
               </div>
             </div>
-            <div id="bridge-culvert-pg2" class="bridge-culvert-containers">
+            <div id="bridge-culvert-pg2" class="bridge-culvert-containers active" style="display: block">
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">N</span>
                 <p class="content-container-rating-description-and-condition-bubble">
@@ -1753,18 +1901,30 @@
               >
             </div>
           </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Culvert Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BC04-textarea" class="textarea-comments" name="Culvert" rows="1" oninput="expandTextarea(event, 'BC04-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="bridge-channel-tab" class="bridge-component-containers">
           <div class="main-content-containers">
             <div class="content-container-tabs">
-              <button class="bridge-channel-buttons active" onclick="openBridgeChannel(event, 'bridge-channel-pg1')">Channel (B.C.09)</button>
-              <button class="bridge-channel-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg2')">Rating Table</button>
+              <button class="bridge-channel-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg1')">Channel (B.C.09)</button>
+              <button class="bridge-channel-buttons active" onclick="openBridgeChannel(event, 'bridge-channel-pg2')">Rating Table</button>
               <button class="bridge-channel-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg3')">Example Comments</button>
               <button class="bridge-channel-buttons alt-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg4')">Channel Protection (B.C.10)</button>
               <button class="bridge-channel-buttons alt-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg5')">Rating Table</button>
-              <button class="bridge-channel-buttons alt-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg6')">Example Comments</button>
+              <button class="bridge-channel-buttons alt-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg6')">Example Comments</button> |
+              <button class="bridge-channel-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg7')">Elements</button>
+              <button class="bridge-channel-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg8')">Maintenance</button>
             </div>
-            <div id="bridge-channel-pg1" class="bridge-channel-containers active" style="display: block">
+            <div id="bridge-channel-pg1" class="bridge-channel-containers">
               <div class="content-container-paragraphs">
                 <p>
                   This item is used to provide a condition rating for the channel at the bridge. Consider the channel upstream and downstream only insofar as it threatens the
@@ -1781,7 +1941,7 @@
                 </p>
               </div>
             </div>
-            <div id="bridge-channel-pg2" class="bridge-channel-containers">
+            <div id="bridge-channel-pg2" class="bridge-channel-containers active" style="display: block">
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">N</span>
                 <p class="content-container-rating-description-and-condition-bubble">
@@ -2021,18 +2181,38 @@
               >
             </div>
           </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Channel Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BC09-textarea" class="textarea-comments" name="Channel" rows="1" oninput="expandTextarea(event, 'BC09-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Channel Protection Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BC10-textarea" class="textarea-comments" name="Channel Protection" rows="1" oninput="expandTextarea(event, 'BC10-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="bridge-scour-tab" class="bridge-component-containers">
           <div class="main-content-containers">
             <div class="content-container-tabs">
-              <button class="bridge-scour-buttons active" onclick="openBridgeScour(event, 'bridge-scour-pg1')">Scour (B.C.11)</button>
-              <button class="bridge-scour-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg2')">Rating Table</button>
+              <button class="bridge-scour-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg1')">Scour (B.C.11)</button>
+              <button class="bridge-scour-buttons active" onclick="openBridgeScour(event, 'bridge-scour-pg2')">Rating Table</button>
               <button class="bridge-scour-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg3')">Example Comments</button>
               <button class="bridge-scour-buttons alt-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg4')">Scour Vulnerability (B.AP.03)</button>
               <button class="bridge-scour-buttons alt-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg5')">Rating Table</button>
               <button class="bridge-scour-buttons alt-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg6')">Example Comments</button>
             </div>
-            <div id="bridge-scour-pg1" class="bridge-scour-containers active" style="display: block">
+            <div id="bridge-scour-pg1" class="bridge-scour-containers">
               <div class="content-container-paragraphs">
                 <p>Refer to Item B.AP.03 (Scour Vulnerability) to verify if the bridge has been determined to be stable or unstable for appraised scour conditions.</p>
                 <br />
@@ -2049,7 +2229,7 @@
                 </p>
               </div>
             </div>
-            <div id="bridge-scour-pg2" class="bridge-scour-containers">
+            <div id="bridge-scour-pg2" class="bridge-scour-containers active" style="display: block">
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">N</span>
                 <p class="content-container-rating-description-and-condition-bubble">
@@ -2269,15 +2449,35 @@
               >
             </div>
           </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Scour Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BC11-textarea" class="textarea-comments" name="Scour" rows="1" oninput="expandTextarea(event, 'BC11-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Scour Vulnerability Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BAP03-textarea" class="textarea-comments" name="Scour Vulnerability" rows="1" oninput="expandTextarea(event, 'BAP03-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="bridge-overtopping-tab" class="bridge-component-containers">
           <div class="main-content-containers">
             <div class="content-container-tabs">
-              <button class="bridge-overtopping-buttons active" onclick="openBridgeOvertopping(event, 'bridge-overtopping-pg1')">Overtopping Likelihood (B.AP.02)</button>
-              <button class="bridge-overtopping-buttons" onclick="openBridgeOvertopping(event, 'bridge-overtopping-pg2')">Rating Table</button>
+              <button class="bridge-overtopping-buttons" onclick="openBridgeOvertopping(event, 'bridge-overtopping-pg1')">Overtopping Likelihood (B.AP.02)</button>
+              <button class="bridge-overtopping-buttons active" onclick="openBridgeOvertopping(event, 'bridge-overtopping-pg2')">Rating Table</button>
               <button class="bridge-overtopping-buttons" onclick="openBridgeOvertopping(event, 'bridge-overtopping-pg3')">Example Comments</button>
             </div>
-            <div id="bridge-overtopping-pg1" class="bridge-overtopping-containers active" style="display: block">
+            <div id="bridge-overtopping-pg1" class="bridge-overtopping-containers">
               <div class="content-container-paragraphs">
                 <p>An overtopping occurrence is when the waterway overtops the riding surface carried on the bridge.</p>
                 <br />
@@ -2296,7 +2496,7 @@
                 <p>This item does not apply to the likelihood of the waterway overtopping approach roadways.</p>
               </div>
             </div>
-            <div id="bridge-overtopping-pg2" class="bridge-overtopping-containers">
+            <div id="bridge-overtopping-pg2" class="bridge-overtopping-containers active" style="display: block">
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">N</span>
                 <p class="content-container-rating-description-and-condition-bubble">
@@ -2392,25 +2592,33 @@
               >
             </div>
           </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Overtopping Likelihood Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BAP02-textarea" class="textarea-comments" name="Overtopping Likelihood" rows="1" oninput="expandTextarea(event, 'BAP02-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="bridge-wildlife-tab" class="bridge-component-containers">
           <div class="main-content-containers">
             <div class="content-container-tabs">
-              <button class="bridge-wildlife-buttons active" onclick="openBridgeWildlife(event, 'bridge-wildlife-pg1')">Swallows (B.MAD.06)</button>
-              <button class="bridge-wildlife-buttons" onclick="openBridgeWildlife(event, 'bridge-wildlife-pg2')">Rating Table</button>
+              <button class="bridge-wildlife-buttons" onclick="openBridgeWildlife(event, 'bridge-wildlife-pg1')">Swallows (B.MAD.06)</button>
+              <button class="bridge-wildlife-buttons active" onclick="openBridgeWildlife(event, 'bridge-wildlife-pg2')">Rating Table</button>
               <button class="bridge-wildlife-buttons" onclick="openBridgeWildlife(event, 'bridge-wildlife-pg3')">Example Comments</button>
               <button class="bridge-wildlife-buttons alt-buttons" onclick="openBridgeWildlife(event, 'bridge-wildlife-pg4')">Bats (B.MAD.07)</button>
               <button class="bridge-wildlife-buttons alt-buttons" onclick="openBridgeWildlife(event, 'bridge-wildlife-pg5')">Rating Table</button>
               <button class="bridge-wildlife-buttons alt-buttons" onclick="openBridgeWildlife(event, 'bridge-wildlife-pg6')">Example Comments</button>
             </div>
-            <div id="bridge-wildlife-pg1" class="bridge-wildlife-containers active" style="display: block">
+            <div id="bridge-wildlife-pg1" class="bridge-wildlife-containers">
               <div class="content-container-paragraphs">
-                <p>
-                  Information on swallows can be found in Part 9 of the INDOT BIM and in the INDOT Protected Species Guidance. Both documents are linked below and in the footer.
-                </p>
+                <p>Information on swallows can be found in Part 9 of the INDOT BIM and in the INDOT Protected Species Guidance. Both documents are linked below.</p>
               </div>
             </div>
-            <div id="bridge-wildlife-pg2" class="bridge-wildlife-containers">
+            <div id="bridge-wildlife-pg2" class="bridge-wildlife-containers active" style="display: block">
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">N</span>
                 <p class="content-container-rating-description-and-condition-bubble">
@@ -2432,7 +2640,7 @@
             </div>
             <div id="bridge-wildlife-pg4" class="bridge-wildlife-containers">
               <div class="content-container-paragraphs">
-                <p>Information on bats can be found in Part 9 of the INDOT BIM and in the INDOT Protected Species Guidance. Both documents are linked below and in the footer.</p>
+                <p>Information on bats can be found in Part 9 of the INDOT BIM and in the INDOT Protected Species Guidance. Both documents are linked below.</p>
                 <br />
                 <p>
                   Bridge/structure inspections must be completed by qualified individuals. In order to become a qualified individual, the INDOT Bat Training must be completed.
@@ -2512,6 +2720,31 @@
                 >Protected Species Guidance</a
               >
             </div>
+          </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Swallows Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BMAD06-textarea" class="textarea-comments" name="Swallows" rows="1" oninput="expandTextarea(event, 'BMAD06-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-content-containers">
+            <p class="paragraph-rating">Bats Comments:</p>
+            <div class="content-container-paragraphs">
+              <div class="textarea-containers">
+                <div class="textarea-mirrors">
+                  <textarea id="BMAD07-textarea" class="textarea-comments" name="Bats" rows="1" oninput="expandTextarea(event, 'BMAD07-textarea')"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="bridge-review-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
+            <!-- <div class="content-container-tabs"></div> -->
           </div>
         </div>
       </div>

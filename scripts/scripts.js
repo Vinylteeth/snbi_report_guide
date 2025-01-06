@@ -408,3 +408,15 @@ function openWallItem(evt, componentName) {
 
 //
 //
+
+//
+//
+
+function expandTextarea(evt, componentName) {
+  // Declare all variables
+  var elem = document.getElementById(componentName); // Get the textarea element to use its properties.
+  elem.parentNode.dataset.replicatedValue = elem.value; // Match the parent element value to it (divTextAreaMirror class = value/comment).
+}
+
+//
+//
