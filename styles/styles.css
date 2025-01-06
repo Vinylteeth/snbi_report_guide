@@ -322,6 +322,21 @@ button.active {
   height: 260px;
 }
 
+.element-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.element-flex-items {
+  width: 500px;
+  height: 160px;
+}
+
+.paragraph-element-list {
+  text-indent: 25px hanging;
+}
+
 .paragraph-rating {
   margin: 0 0 5px 0;
 }
@@ -343,7 +358,8 @@ button.active {
 .bridge-overtopping-containers,
 .bridge-wildlife-containers,
 .culvert-item-containers,
-.wall-item-containers {
+.wall-item-containers,
+.element-content-containers {
   display: none;
 }
 

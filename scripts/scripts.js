@@ -409,6 +409,30 @@ function openWallItem(evt, componentName) {
 //
 //
 
+function openElementItem(evt, componentName) {
+  // Declare all variables
+  var i, elementitemcontainers, elementitembuttons;
+
+  // Get all elements with class="element-item-containers" and hide them
+  elementitemcontainers = document.getElementsByClassName("element-content-containers");
+  for (i = 0; i < elementitemcontainers.length; i++) {
+    elementitemcontainers[i].style.display = "none";
+  }
+
+  // Get all elements with class="element-item-buttons" and remove the class "active"
+  elementitembuttons = document.getElementsByClassName("element-item-buttons");
+  for (i = 0; i < elementitembuttons.length; i++) {
+    elementitembuttons[i].className = elementitembuttons[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(componentName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+//
+//
+
 //
 //
 

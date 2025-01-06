@@ -68,6 +68,8 @@
           <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-scour-tab')">Scour</button>
           <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-overtopping-tab')">Overtopping</button>
           <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-wildlife-tab')">Wildlife</button> |
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-elements-tab')">Elements</button>
+          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-maintenance-tab')">Maintenance</button> |
           <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-review-tab')">Review</button>
         </div>
         <div id="bridge-alignment-tab" class="bridge-component-containers active" style="display: block">
@@ -81,6 +83,16 @@
 
             <div id="bridge-alignment-pg1" class="bridge-alignment-containers">
               <div class="content-container-paragraphs">
+                <p>
+                  This item identifies bridges that do not function adequately due to the horizontal or vertical alignment of the bridge and approach roadway. It is not intended
+                  that the alignment be compared to current standards, but rather to the existing roadway alignment.
+                </p>
+                <br />
+                <p>
+                  The basic criterion is how the alignment of the bridge and approach roadway relates to the general highway alignment for the section of highway the bridge
+                  carries.
+                </p>
+                <br />
                 <p>Do not consider speed reductions due to the bridge width or intersecting highways when reporting this item.</p>
                 <br />
                 <p>The operating speed reduction is in comparison to the posted speed limit for the highway segment:</p>
@@ -814,6 +826,10 @@
             </div>
             <div id="bridge-deck-pg1" class="bridge-deck-containers">
               <div class="content-container-paragraphs">
+                <p>This item represents the condition of the deck as determined from the inspection of all deck surfaces (top, underside, and edges).</p>
+                <br />
+                <p>Visual assessments may be supplemented with non-destructive or destructive testing results.</p>
+                <br />
                 <p>
                   Use destructive or non-destructive testing results or visual condition indicators of materials covering the surfaces being assessed when top, underside or both
                   surfaces are not visible for assessment. Past inspection reports and repair records may also provide supplemental information to aid in the determination of the
@@ -1082,6 +1098,8 @@
             </div>
             <div id="bridge-super-pg1" class="bridge-super-containers">
               <div class="content-container-paragraphs">
+                <p>This item represents the condition of the superstructure as determined from the inspection of all superstructure members.</p>
+                <br />
                 <p>
                   Consider primary load carrying members when determining the condition rating code for this item, which includes cross-frames and diaphragms for curved girder
                   bridges. Consider secondary members only if they adversely impact the primary members. Visual assessments may be supplemented with non-destructive or destructive
@@ -1516,6 +1534,8 @@
             </div>
             <div id="bridge-sub-pg1" class="bridge-sub-containers">
               <div class="content-container-paragraphs">
+                <p>This item addresses the condition of piers, abutments, piles, footings, and other substructure members.</p>
+                <br />
                 <p>
                   For bridges that have substructures not visible for inspection, use appropriate visual condition indicators from the superstructure or surrounding foundation
                   materials to determine the applicable code. Visual assessments may be supplemented with non-destructive or destructive testing results.
@@ -1741,6 +1761,9 @@
             </div>
             <div id="bridge-culvert-pg1" class="bridge-culvert-containers">
               <div class="content-container-paragraphs">
+                <p>This item addresses the condition of culverts. The condition assessment includes footings, piles, and other foundation members when present.</p>
+                <br />
+
                 <p>
                   For culverts that have components not visible for inspection, use appropriate visual condition indicators from the roadway or surrounding foundation materials to
                   determine the applicable code. Visual assessments may be supplemented with non-destructive or destructive testing results.
@@ -2740,6 +2763,334 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div id="bridge-elements-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
+            <button class="element-item-buttons active" onclick="openElementItem(event, 'element-concrete-tab')">Concrete</button>
+            <button class="element-item-buttons" onclick="openElementItem(event, 'element-steel-tab')">Steel</button>
+            <button class="element-item-buttons" onclick="openElementItem(event, 'element-masonry-tab')">Masonry</button>
+            <button class="element-item-buttons" onclick="openElementItem(event, 'element-timber-tab')">Timber</button>
+            <!-- <div class="content-container-tabs"></div> -->
+          </div>
+
+          <div id="element-concrete-tab" class="element-content-containers active" style="display: block">
+            <div class="culvert-numeric-ratings-container">
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Delamination, Spall, Patched Area (1080):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Delaminated. Spall 1 in. or less deep or 6 in. or less in diameter. Patched area that is sound.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">
+                      CS3 - pall greater than 1 in. deep or greater than 6 in. diameter. Patched area that is unsound or showing distress. Does not warrant structural review.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Exposed Rebar (1090):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Present without measurable section loss.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Present with measurable section loss but does not warrant structural review.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Efflorescence, Rust Staining (1120):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Surface white without build-up or leaching without rust staining.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Heavy build-up with rust staining.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Cracking (1130):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Unsealed moderate-width cracks, or unsealed moderate pattern (map) cracking.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Wide cracks or heavy pattern (map) cracking.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Abrasion, Wear (1190):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Abrasion or wearing has exposed coarse aggregate but the aggregate remains secure in the concrete.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Coarse aggregate is loose or has popped out of the concrete matrix because of abrasion.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Settlement (4000):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Exists within tolerable limits or arrested with no observed structural distress.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Exceeds tolerable limits but does not warrant structural review.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Scour (6000):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Exists within tolerable limits or has been arrested with effective countermeasures.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">
+                      CS3 - Exceeds tolerable limits but is less than the critical limits determined by scour evaluation and does not warrant a structural review.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="element-steel-tab" class="element-content-containers">
+            <div class="culvert-numeric-ratings-container">
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Corrosion (1000):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Freckled rust. Corrosion of the steel has initiated.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Section loss is evident, or pack rust is present but does not warrant structural review.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Cracking (1010):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Crack that has self-arrested or has been arrested with effective arrest holes, doubling plates, or similar.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Identified crack that is not arrested but does not warrant structural review.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Connection (1020):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Loose fasteners or pack rust without distortion present but the connection is in place and functioning as intended.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">
+                      CS3 - Missing bolts, rivets, or fasteners; broken welds; or pack rust with distortion but does not warrant a structural review.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Distortion (1900):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Distortion not requiring mitigation or mitigated distortion.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Distortion that requires mitigation that has not been addressed but does not warrant a structural review.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="element-masonry-tab" class="element-content-containers">
+            <div class="culvert-numeric-ratings-container">
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Delamination, Spall, Patched Area (1080):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Delaminated. Spall 1 in. or less deep or 6 in. or less in diameter. Patched area that is sound.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">
+                      CS3 - Spall greater than 1 in. deep or greater than 6 in. diameter. Patched area that is unsound or showing distress. Does not warrant structural review.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Efflorescence, Rust Staining (1120):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Surface white without build-up or leaching without rust staining.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Heavy build-up with rust staining.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Mortar Breakdown (1610):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Cracking or voids in less than 10% of joints.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Cracking or voids in 10% or more of the joints.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Split, Spall (1620):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Block or stone has split or spalled with no shifting.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Block or stone has split or spalled with shifting but does not warrant a structural review.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Patched Area (1630):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Sound patch.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Unsound patch</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Masonry Displacement (1640):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Block or stone has shifted slightly out of alignment.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Block or stone has shifted significantly out of alignment or is missing but does not warrant structural review.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Distortion (1900):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Distortion not requiring mitigation or mitigated distortion.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Distortion that requires mitigation that has not been addressed but does not warrant a structural review.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="element-timber-tab" class="element-content-containers">
+            <div class="culvert-numeric-ratings-container">
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Connection (1020):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Loose fasteners or pack rust without distortion present but the connection is in place and functioning as intended.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">
+                      CS3 - Missing bolts, rivets, or fasteners; broken welds; or pack rust with distortion but does not warrant a structural review.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Decay, Section Loss (1140):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Affects less than 10% of the member section.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Affects 10% or more of the member but does not warrant structural review.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Check, Shake (1150):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Penetrates 5%-50% of the thickness of the member and not in a tension zone.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">
+                      CS3 - Penetrates more than 50% of the thickness of the member or penetrates more than 5% of the thickness of the member in the tension zone. Does not warrant
+                      structural review.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Crack (1160):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Crack that has been arrested through effective measures.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Identified crack that is not arrested but does not require structural review.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Split, Delamination (1170):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Length less than the member depth or arrested with effective actions taken to mitigate.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Length equal to or greater than the member depth but does not require structural review.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="main-content-containers element-flex-items">
+                <p class="paragraph-rating">Abrasion, Wear (1180):</p>
+                <ul>
+                  <li>
+                    <p class="paragraph-element-list">CS2 - Section loss less than 10% of the member thickness.</p>
+                  </li>
+                  <li>
+                    <p class="paragraph-element-list">CS3 - Section loss 10% or more of the member thickness but does not warrant structural review.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="bridge-maintenance-tab" class="bridge-component-containers">
+          <div class="main-content-containers">
+            <!-- <div class="content-container-tabs"></div> -->
           </div>
         </div>
         <div id="bridge-review-tab" class="bridge-component-containers">
