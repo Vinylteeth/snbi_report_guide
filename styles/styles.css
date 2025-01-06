@@ -311,34 +311,172 @@ button.active {
   border-radius: 1px;
 }
 
-.culvert-numeric-ratings-container {
+.paragraph-rating {
+  margin: 0 0 5px 0;
+}
+
+.element-content-cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.culvert-rating-flex-items {
-  width: 500px;
-  height: 260px;
-}
-
-.element-flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.element-flex-items {
-  width: 500px;
+.element-content-cards {
+  width: 550px;
   height: 160px;
+  min-height: fit-content;
+  text-align: left;
+  margin: 10px 5px;
+  padding-bottom: 5px;
+  border: solid 2px grey;
+  border-radius: 1px;
+  background-color: var(--main-color);
 }
 
-.paragraph-element-list {
+.element-content-cards li {
+  margin: 8px 10px;
+}
+
+.element-card-header {
+  margin: -2px -2px 5px -2px;
+  background-color: var(--hover-button-color1);
+  padding: 10px 4px 4px 4px;
+  border-bottom: solid 1px grey;
+  border-radius: 1px;
+}
+
+.element-card-paragraph {
   text-indent: 25px hanging;
 }
 
-.paragraph-rating {
-  margin: 0 0 5px 0;
+.culvert-content-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.culvert-content-cards {
+  width: 550px;
+  height: 280px;
+  min-height: fit-content;
+  text-align: left;
+  margin: 10px 5px;
+  padding-bottom: 5px;
+  border: solid 2px grey;
+  border-radius: 1px;
+  background-color: var(--main-color);
+}
+
+.culvert-content-cards li {
+  margin: 0px 10px;
+}
+
+.culvert-card-header {
+  margin: -2px -2px 8px -2px;
+  background-color: var(--hover-button-color1);
+  padding: 10px 4px 4px 4px;
+  border-bottom: solid 1px grey;
+  border-radius: 1px;
+}
+
+.culvert-card-paragraph {
+  text-indent: 25px hanging;
+}
+
+.naming-conventions-content-cards-container {
+  display: block;
+  /* flex-wrap: wrap;
+  justify-content: space-around; */
+}
+
+.naming-conventions-card-header {
+  margin: -2px -2px 8px -2px;
+  background-color: var(--hover-button-color1);
+  padding: 10px 4px 4px 4px;
+  border-bottom: solid 1px grey;
+  border-radius: 1px;
+}
+
+.naming-conventions-content-cards {
+  min-height: fit-content;
+  text-align: left;
+  margin: 10px 5px;
+  padding-bottom: 5px;
+  border: solid 2px grey;
+  border-radius: 1px;
+  background-color: var(--main-color);
+}
+
+.naming-conventions-content-cards li {
+  margin: 8px 10px;
+}
+
+.naming-conventions-card-paragraph {
+  text-indent: 25px hanging;
+}
+
+.maintenance-content-cards-container {
+  display: block;
+  /* flex-wrap: wrap;
+  justify-content: space-around; */
+}
+
+.maintenance-card-header {
+  margin: -2px -2px 8px -2px;
+  background-color: var(--hover-button-color1);
+  padding: 10px 4px 4px 4px;
+  border-bottom: solid 1px grey;
+  border-radius: 1px;
+}
+
+.maintenance-content-cards {
+  min-height: fit-content;
+  text-align: left;
+  margin: 10px 5px;
+  padding-bottom: 5px;
+  border: solid 2px grey;
+  border-radius: 1px;
+  background-color: var(--main-color);
+}
+
+.maintenance-content-cards li {
+  margin: 8px 10px;
+}
+
+.maintenance-card-paragraph {
+  text-indent: 25px hanging;
+}
+
+.report-walkthrough-content-cards-container {
+  display: block;
+  /* flex-wrap: wrap;
+  justify-content: space-around; */
+}
+
+.report-walkthrough-card-header {
+  margin: -2px -2px 8px -2px;
+  background-color: var(--hover-button-color1);
+  padding: 10px 4px 4px 4px;
+  border-bottom: solid 1px grey;
+  border-radius: 1px;
+}
+
+.report-walkthrough-content-cards {
+  min-height: fit-content;
+  text-align: left;
+  margin: 10px 5px;
+  padding-bottom: 5px;
+  border: solid 2px grey;
+  border-radius: 1px;
+  background-color: var(--main-color);
+}
+
+.report-walkthrough-content-cards li {
+  margin: 8px 10px;
+}
+
+.report-walkthrough-card-paragraph {
+  text-indent: 25px hanging;
 }
 
 /* Hidden initially */
