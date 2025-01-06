@@ -164,6 +164,7 @@ button {
   transition: 0.3s;
   background-color: var(--inactive-button-color1);
   color: var(--inactive-button-text-color1);
+  /* box-shadow: 1px 1px 1px rgb(124 124 124 / 0.5); */
 }
 
 .alt-buttons {
@@ -477,6 +478,36 @@ button.active {
 
 .report-walkthrough-card-paragraph {
   text-indent: 25px hanging;
+}
+
+.component-maintenance-container {
+  display: flex;
+  background-color: var(--content-background-color);
+  border-bottom: solid 2px rgba(128, 128, 128, 0.2);
+}
+
+.component-maintenance-button1,
+.component-maintenance-button2,
+.component-maintenance-button3,
+.component-maintenance-button4 {
+  margin: 4px 5px;
+}
+
+.component-maintenance-button1 {
+  background-color: gray;
+}
+.component-maintenance-button2 {
+  background-color: rgb(19, 114, 19);
+}
+.component-maintenance-button3 {
+  background-color: rgb(177, 177, 33);
+}
+.component-maintenance-button4 {
+  background-color: rgb(158, 33, 33);
+}
+
+.component-maintenance-item {
+  padding: 12px 0 0 10px;
 }
 
 /* Hidden initially */
