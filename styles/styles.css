@@ -3,15 +3,15 @@
 :root {
   /* theme blue-grey*/
   --main-background: url("../media/light-down-black2.svg");
-  --main-background-overlay: rgba(54, 54, 54, 0.9);
-  --main-color: rgba(58, 73, 95, 0.9);
-  --text-color: rgb(233, 233, 233);
-  --content-background-color: rgba(34, 34, 34, 0.7);
+  --main-background-overlay: rgb(54 54 54 / 0.9);
+  --main-color: rgb(58 73 95 / 0.9);
+  --text-color: rgb(233 233 233);
+  --content-background-color: rgb(34 34 34 / 0.7);
 
   /* primary buttons - background */
   --active-button-color1: rgb(182 182 182);
-  --hover-button-color1: rgb(40, 40, 65);
-  --inactive-button-color1: rgb(47, 47, 77);
+  --hover-button-color1: rgb(40 40 65);
+  --inactive-button-color1: rgb(47 47 77);
   /* primary buttons - text */
   --active-button-text-color1: rgb(42 42 42);
   --hover-button-text-color1: var(--text-color);
@@ -19,8 +19,8 @@
 
   /* secondary buttons - background */
   --active-button-color2: rgb(200 200 200);
-  --hover-button-color2: rgb(58, 88, 74);
-  --inactive-button-color2: rgb(65, 99, 79);
+  --hover-button-color2: rgb(58 88 74);
+  --inactive-button-color2: rgb(65 99 79);
   /* secondary buttons - text */
   --active-button-text-color2: rgb(42 42 42);
   --hover-button-text-color2: var(--text-color);
@@ -316,6 +316,8 @@ button.active {
   margin: 0 0 5px 0;
 }
 
+/* cards */
+
 .element-content-cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -341,7 +343,7 @@ button.active {
 .element-card-header {
   margin: -2px -2px 5px -2px;
   background-color: var(--hover-button-color1);
-  padding: 10px 4px 4px 4px;
+  padding: 10px 4px 4px 8px;
   border-bottom: solid 1px grey;
   border-radius: 1px;
 }
@@ -375,7 +377,7 @@ button.active {
 .culvert-card-header {
   margin: -2px -2px 8px -2px;
   background-color: var(--hover-button-color1);
-  padding: 10px 4px 4px 4px;
+  padding: 10px 4px 4px 8px;
   border-bottom: solid 1px grey;
   border-radius: 1px;
 }
@@ -393,7 +395,7 @@ button.active {
 .naming-conventions-card-header {
   margin: -2px -2px 8px -2px;
   background-color: var(--hover-button-color1);
-  padding: 10px 4px 4px 4px;
+  padding: 10px 4px 4px 8px;
   border-bottom: solid 1px grey;
   border-radius: 1px;
 }
@@ -457,7 +459,7 @@ button.active {
 .report-walkthrough-card-header {
   margin: -2px -2px 8px -2px;
   background-color: var(--hover-button-color1);
-  padding: 10px 4px 4px 4px;
+  padding: 10px 4px 4px 8px;
   border-bottom: solid 1px grey;
   border-radius: 1px;
 }
@@ -479,6 +481,8 @@ button.active {
 .report-walkthrough-card-paragraph {
   text-indent: 25px hanging;
 }
+
+/* maintenance tab*/
 
 .component-maintenance-container {
   display: flex;
@@ -507,6 +511,42 @@ button.active {
 }
 
 .component-maintenance-item {
+  padding: 12px 0 0 10px;
+}
+
+/* elements tab*/
+
+.elements-segment-header {
+  margin: 8px 0px 0px 0px;
+  background-color: var(--hover-button-color1);
+  padding: 10px 4px 4px 8px;
+  border-bottom: solid 1px grey;
+  border-radius: 1px;
+}
+
+.component-elements-container {
+  display: flex;
+  background-color: var(--content-background-color);
+  border-bottom: solid 2px rgba(128, 128, 128, 0.2);
+}
+
+.component-elements-button2,
+.component-elements-button3,
+.component-elements-button4 {
+  margin: 4px 5px;
+}
+
+.component-elements-button2 {
+  background-color: rgb(177, 177, 33);
+}
+.component-elements-button3 {
+  background-color: rgb(146, 90, 16);
+}
+.component-elements-button4 {
+  background-color: rgb(158, 33, 33);
+}
+
+.component-elements-item {
   padding: 12px 0 0 10px;
 }
 

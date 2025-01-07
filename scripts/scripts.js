@@ -433,6 +433,34 @@ function openElementItem(evt, componentName) {
 //
 //
 
+function openBridgeComponentMaintenance(evt, componentName) {
+  // Declare all variables
+  var idName = evt.target.id;
+  var elem = evt.target.className;
+  var defColor = elem.slice(-1);
+  var divDefect = evt.target.parentNode.querySelector("div");
+  var divDefectName = divDefect.innerHTML;
+  var divLower = divDefectName.toLowerCase();
+  if (defColor == 1) {
+    defColor = "grey";
+  } else if (defColor == 2) {
+    defColor = "green";
+  } else if (defColor == 3) {
+    defColor = "yellow";
+  } else {
+    defColor = "red";
+  }
+  var copyText = "A " + defColor + " deficiency was submitted for " + divLower + ".";
+  var myString =
+    'This was copied to the clipboard: "' +
+    copyText +
+    '" This submission is from ' +
+    idName +
+    ". This will eventually be added to the Review page and the plural form will be corrected.";
+  navigator.clipboard.writeText(copyText);
+  alert(myString);
+}
+
 //
 //
 
