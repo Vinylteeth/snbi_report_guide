@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width" />
+    <title>Super Tab</title>
+    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/foundations.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <!-- JS -->
+    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="./scripts/modules/snbi.mjs" defer></script>
+    <script src="./scripts/modules/modal.mjs" defer></script>
+    <script src="./scripts/modules/assetdata.mjs" defer></script>
+    <script src="./scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DMCSSans:opsz@9..40&family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MaterialCSSymbolsCSOutlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+  <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
+    <div id="bridge-super-tab" class="bridge-component-containers active" style="display: block">
+        <div class="main-content-containers">
+          <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg1')">Superstructure (B.C.02)</button>
+          <button class="bridge-super-buttons active" onclick="openBridgeSuper(event, 'bridge-super-pg2')">Rating Table</button>
+          <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg3')">Example Comments</button>
+          <button class="bridge-super-buttons alt-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg4')">Paint (B.C.02a)</button>
+          <button class="bridge-super-buttons alt-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg5')">Rating Table</button>
+          <button class="bridge-super-buttons alt-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg6')">Example Comments</button> |
+          <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg7')">Elements</button>
+          <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg8')">Maintenance</button>
+        </div>
+        <div class="main-content-containers">
+          <div id="bridge-super-pg1" class="bridge-super-containers">
+            <div class="content-container-paragraphs">
+              <p>This item represents the condition of the superstructure as determined from the inspection of all superstructure members.</p>
+              <br />
+              <p>
+                Consider primary load carrying members when determining the condition rating code for this item, which includes cross-frames and diaphragms for curved girder
+                bridges. Consider secondary members only if they adversely impact the primary members. Visual assessments may be supplemented with non-destructive or destructive
+                testing results.
+              </p>
+              <br />
+              <p>The superstructure includes:</p>
+              <ul class="content-container-paragraphs-ul">
+                <li>members above the bearings for bridges with non-integral superstructure and substructure;</li>
+                <li>girders/beams for integral superstructures;</li>
+                <li>members above the spring line for arch bridges;</li>
+                <li>slabs of concrete rigid frame bridges; and</li>
+                <li>legs, knees and girders for concrete and steel rigid K-Frame or Delta-Frame bridges.</li>
+              </ul>
+              <br />
+              <p>Consider the condition of integral headwalls and wingwalls to the first expansion joint.</p>
+              <br />
+              <p>
+                Do not consider the condition of bearings when determining the condition rating code for this item except to the extent that the bearings are causing distress in
+                the superstructure.
+              </p>
+              <br />
+              <p>
+                Do not consider the condition of protective coating systems when determining the condition rating code for this item except to the extent that problems with the
+                protective coating system are indicative of problems with the underlying superstructure material. A well-formed patina on weathering steel is considered a
+                protective coating and is not considered a defect.
+              </p>
+              <br />
+              <p>
+                Do not consider the presence of drift, debris, and soil accumulation when determining the condition rating code for this item, except to the extent that these
+                items are causing distress in the superstructure.
+              </p>
+              <br />
+              <p>
+                Superstructure types without substructures may be affected by scour. When observed conditions are not consistent with the scour design or the assumptions used in
+                the scour appraisal, scour is considered when reporting the code for this item. In this case, observed conditions also indicate a need to reevaluate Item B.AP.03
+                (Scour Vulnerability). Observed scour that is less than the tolerable limit determined in the scour appraisal does not affect this item.
+              </p>
+            </div>
+          </div>
+          <div id="bridge-super-pg2" class="bridge-super-containers active" style="display: block">
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">N</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">NOT APPLICABLE</span>Component does not exist.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">9</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">EXCELLENT</span>Isolated inherent defects.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">8</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">VERY GOOD</span>Some inherent defects.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">7</span>
+              <p class="content-container-rating-description-and-condition-bubble"><span class="content-container-rating-condition-bubble">GOOD</span>Some minor defects.</p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">6</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">SATISFACTORY</span>Widespread minor or isolated moderate defects.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">5</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">4</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is
+                affected.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">3</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition
+                typically necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">2</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent
+                monitoring, significant load restrictions, and/or corrective actions in order to keep the bridge open.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">1</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation
+                may return the bridge to service.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">0</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is
+                required to restore service.
+              </p>
+            </div>
+          </div>
+          <div id="bridge-super-pg3" class="bridge-super-containers">
+            <div class="content-container-paragraphs">
+              <p class="content-container-comment-lines">There are no deficiencies to report.</p>
+              <p class="content-container-comment-lines">The superstructure is a deck/slab. See the deck comments.</p>
+              <p class="content-container-comment-lines">There is minor cracking and delamination in the beam ends at the abutments beneath the joints.</p>
+              <p class="content-container-comment-lines">There are scattered areas of minor pitting in the steel beams.</p>
+              <p class="content-container-comment-lines">There is heavy section loss and rust scale in the beam ends at the abutments under the joints.</p>
+              <p class="content-container-comment-lines">There is a moderate perforation in the web of Beam 1 at the west abutment.</p>
+              <p class="content-container-comment-lines">There are exposed strands in Beam 1 at the west abutment.</p>
+              <p class="content-container-comment-lines">There is a large spall in the load path of Beam 1 at the west abutment.</p>
+              <p class="content-container-comment-lines">There is a moderate, diagonal crack running up toward the center of the beam (indicating shear failure).</p>
+            </div>
+          </div>
+          <div id="bridge-super-pg4" class="bridge-super-containers">
+            <div class="content-container-paragraphs">
+              <p>Consider surface dulling, chalking, rust and peeling when evaluating the condition rating.</p>
+              <br />
+              <p>At stages of advanced deterioration, consider any section loss in the painted material.</p>
+            </div>
+          </div>
+          <div id="bridge-super-pg5" class="bridge-super-containers">
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">N</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">NOT APPLICABLE</span>Component does not exist.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">9</span>
+              <p class="content-container-rating-description-and-condition-bubble"><span class="content-container-rating-condition-bubble">EXCELLENT</span>Newly painted.</p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">8</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">VERY GOOD</span>There is very minor surface dulling.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">7</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">GOOD</span>There is minor chalking and surface dulling.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">6</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">SATISFACTORY</span>There are minor areas of rust and chalking.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">5</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">FAIR</span>There are areas of light rust and minor peeling.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">4</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">POOR</span>There are large areas of light rust and peeling with some pitting.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">3</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">SERIOUS</span>There is greater than 40% loss of paint and large areas of section loss.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">2</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">CRITICAL</span>There is greater than 60% loss of paint and large areas of measurable section loss.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">1</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">IMMINENT FAILURE</span>There is greater than 75% loss of paint and large areas of measurable section loss.
+              </p>
+            </div>
+            <div class="content-container-rating-lines">
+              <span class="content-container-rating-numerical">0</span>
+              <p class="content-container-rating-description-and-condition-bubble">
+                <span class="content-container-rating-condition-bubble">FAILED</span>The paint has failed and is no longer protecting the bridge.
+              </p>
+            </div>
+          </div>
+          <div id="bridge-super-pg6" class="bridge-super-containers">
+            <div class="content-container-paragraphs">
+              <p class="content-container-comment-lines">There is minor chalking and surface dulling throughout.</p>
+              <p class="content-container-comment-lines">There are scattered areas of light rust and minor peeling.</p>
+            </div>
+          </div>
+          <div id="bridge-super-pg7" class="bridge-super-containers">
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta37" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta37')">CS2</button>
+              <button id="bridge-super-elements-bta38" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta38')">CS3</button>
+              <button id="bridge-super-elements-bta39" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta39')">CS4</button>
+              <div class="component-elements-item">102: Steel Closed Web/Box Girder</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta40" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta40')">CS2</button>
+              <button id="bridge-super-elements-bta41" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta41')">CS3</button>
+              <button id="bridge-super-elements-bta42" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta42')">CS4</button>
+              <div class="component-elements-item">104: Prestressed Concrete Closed Web/Box Girder</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta43" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta43')">CS2</button>
+              <button id="bridge-super-elements-bta44" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta44')">CS3</button>
+              <button id="bridge-super-elements-bta45" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta45')">CS4</button>
+              <div class="component-elements-item">105: Reinforced Concrete Closed Web/Box Girder</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta46" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta46')">CS2</button>
+              <button id="bridge-super-elements-bta47" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta47')">CS3</button>
+              <button id="bridge-super-elements-bta48" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta48')">CS4</button>
+              <div class="component-elements-item">106: Other Closed Web/Box Girder</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta49" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta49')">CS2</button>
+              <button id="bridge-super-elements-bta50" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta50')">CS3</button>
+              <button id="bridge-super-elements-bta51" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta51')">CS4</button>
+              <div class="component-elements-item">107: Steel Girder/Beam</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta52" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta52')">CS2</button>
+              <button id="bridge-super-elements-bta53" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta53')">CS3</button>
+              <button id="bridge-super-elements-bta54" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta54')">CS4</button>
+              <div class="component-elements-item">109: Prestressed Concrete Girder/Beam</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta55" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta55')">CS2</button>
+              <button id="bridge-super-elements-bta56" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta56')">CS3</button>
+              <button id="bridge-super-elements-bta57" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta57')">CS4</button>
+              <div class="component-elements-item">110: Reinforced Concrete Open Girder/Beam</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta58" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta58')">CS2</button>
+              <button id="bridge-super-elements-bta59" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta59')">CS3</button>
+              <button id="bridge-super-elements-bta60" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta60')">CS4</button>
+              <div class="component-elements-item">111: Timber Open Girder/Beam</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta61" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta61')">CS2</button>
+              <button id="bridge-super-elements-bta62" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta62')">CS3</button>
+              <button id="bridge-super-elements-bta63" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta63')">CS4</button>
+              <div class="component-elements-item">112: Other Open Girder/Beam</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta64" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta64')">CS2</button>
+              <button id="bridge-super-elements-bta65" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta65')">CS3</button>
+              <button id="bridge-super-elements-bta66" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta66')">CS4</button>
+              <div class="component-elements-item">113: Steel Stringer</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta67" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta67')">CS2</button>
+              <button id="bridge-super-elements-bta68" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta68')">CS3</button>
+              <button id="bridge-super-elements-bta69" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta69')">CS4</button>
+              <div class="component-elements-item">115: Prestressed Concrete Stringer</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta70" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta70')">CS2</button>
+              <button id="bridge-super-elements-bta71" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta71')">CS3</button>
+              <button id="bridge-super-elements-bta72" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta72')">CS4</button>
+              <div class="component-elements-item">116: Reinforced Concrete Stringer</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta73" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta73')">CS2</button>
+              <button id="bridge-super-elements-bta74" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta74')">CS3</button>
+              <button id="bridge-super-elements-bta75" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta75')">CS4</button>
+              <div class="component-elements-item">117: Timber Stringer</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta76" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta76')">CS2</button>
+              <button id="bridge-super-elements-bta77" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta77')">CS3</button>
+              <button id="bridge-super-elements-bta78" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta78')">CS4</button>
+              <div class="component-elements-item">118: Other Stringer</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta79" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta79')">CS2</button>
+              <button id="bridge-super-elements-bta80" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta80')">CS3</button>
+              <button id="bridge-super-elements-bta81" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta81')">CS4</button>
+              <div class="component-elements-item">120: Steel Truss</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta82" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta82')">CS2</button>
+              <button id="bridge-super-elements-bta83" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta83')">CS3</button>
+              <button id="bridge-super-elements-bta84" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta84')">CS4</button>
+              <div class="component-elements-item">135: Timber Truss</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta85" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta85')">CS2</button>
+              <button id="bridge-super-elements-bta86" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta86')">CS3</button>
+              <button id="bridge-super-elements-bta87" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta87')">CS4</button>
+              <div class="component-elements-item">136: Other Truss</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta88" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta88')">CS2</button>
+              <button id="bridge-super-elements-bta89" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta89')">CS3</button>
+              <button id="bridge-super-elements-bta90" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta90')">CS4</button>
+              <div class="component-elements-item">141: Steel Arch</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta91" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta91')">CS2</button>
+              <button id="bridge-super-elements-bta92" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta92')">CS3</button>
+              <button id="bridge-super-elements-bta93" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta93')">CS4</button>
+              <div class="component-elements-item">142: Other Arch</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta94" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta94')">CS2</button>
+              <button id="bridge-super-elements-bta95" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta95')">CS3</button>
+              <button id="bridge-super-elements-bta96" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta96')">CS4</button>
+              <div class="component-elements-item">143: Prestressed Concrete Arch</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-bta97" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta97')">CS2</button>
+              <button id="bridge-super-elements-bta98" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta98')">CS3</button>
+              <button id="bridge-super-elements-bta99" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta99')">CS4</button>
+              <div class="component-elements-item">144: Reinforced Concrete Arch</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-btb01" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb01')">CS2</button>
+              <button id="bridge-super-elements-btb02" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb02')">CS3</button>
+              <button id="bridge-super-elements-btb03" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb03')">CS4</button>
+              <div class="component-elements-item">145: Masonry Arch</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-btb04" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb04')">CS2</button>
+              <button id="bridge-super-elements-btb05" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb05')">CS3</button>
+              <button id="bridge-super-elements-btb06" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb06')">CS4</button>
+              <div class="component-elements-item">146: Timber Arch</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-btb07" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb07')">CS2</button>
+              <button id="bridge-super-elements-btb08" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb08')">CS3</button>
+              <button id="bridge-super-elements-btb09" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb09')">CS4</button>
+              <div class="component-elements-item">147: Steel Cable-Primary</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-btb10" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb10')">CS2</button>
+              <button id="bridge-super-elements-btb11" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb11')">CS3</button>
+              <button id="bridge-super-elements-btb12" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb12')">CS4</button>
+              <div class="component-elements-item">148: Steel Cable-Secondary</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-btb13" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb13')">CS2</button>
+              <button id="bridge-super-elements-btb14" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb14')">CS3</button>
+              <button id="bridge-super-elements-btb15" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb15')">CS4</button>
+              <div class="component-elements-item">149: Other Cable Secondary</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-btb16" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb16')">CS2</button>
+              <button id="bridge-super-elements-btb17" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb17')">CS3</button>
+              <button id="bridge-super-elements-btb18" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb18')">CS4</button>
+              <div class="component-elements-item">152: Steel Floor Beam</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-btb19" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb19')">CS2</button>
+              <button id="bridge-super-elements-btb20" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb20')">CS3</button>
+              <button id="bridge-super-elements-btb21" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb21')">CS4</button>
+              <div class="component-elements-item">154: Prestressed Concrete Floor Beam</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-btb22" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb22')">CS2</button>
+              <button id="bridge-super-elements-btb23" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb23')">CS3</button>
+              <button id="bridge-super-elements-btb24" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb24')">CS4</button>
+              <div class="component-elements-item">155: Reinforced Concrete Floor Beam</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-btb25" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb25')">CS2</button>
+              <button id="bridge-super-elements-btb26" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb26')">CS3</button>
+              <button id="bridge-super-elements-btb27" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb27')">CS4</button>
+              <div class="component-elements-item">156: Timber Floor Beam</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-btb28" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb28')">CS2</button>
+              <button id="bridge-super-elements-btb29" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb29')">CS3</button>
+              <button id="bridge-super-elements-btb30" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb30')">CS4</button>
+              <div class="component-elements-item">157: Other Floor Beam</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-btb31" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb31')">CS2</button>
+              <button id="bridge-super-elements-btb32" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb32')">CS3</button>
+              <button id="bridge-super-elements-btb33" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb33')">CS4</button>
+              <div class="component-elements-item">161: Steel Pin, Pin and Hanger Assembly, or Both</div>
+            </div>
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-btb34" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb34')">CS2</button>
+              <button id="bridge-super-elements-btb35" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb35')">CS3</button>
+              <button id="bridge-super-elements-btb36" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb36')">CS4</button>
+              <div class="component-elements-item">162: Steel Gusset Plate</div>
+            </div>
+
+            <br />
+            <div class="component-elements-container">
+              <button id="bridge-super-elements-btc91" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btc91')">CS2</button>
+              <button id="bridge-super-elements-btc92" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btc92')">CS3</button>
+              <button id="bridge-super-elements-btc93" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btc93')">CS4</button>
+              <div class="component-elements-item">515: Steel Protective Coating</div>
+            </div>
+          </div>
+
+          <div id="bridge-super-pg8" class="bridge-super-containers">
+            <div class="component-maintenance-container">
+              <button id="bridge-super-maintenance-bt1" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt1')">
+                +
+              </button>
+              <button id="bridge-super-maintenance-bt2" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt2')">
+                +
+              </button>
+              <button id="bridge-super-maintenance-bt3" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt3')">
+                +
+              </button>
+              <button id="bridge-super-maintenance-bt4" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt4')">
+                +
+              </button>
+              <div class="component-maintenance-item">Graffiti Removal</div>
+            </div>
+            <div class="component-maintenance-container">
+              <button id="bridge-super-maintenance-bt5" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt5')">
+                +
+              </button>
+              <button id="bridge-super-maintenance-bt6" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt6')">
+                +
+              </button>
+              <button id="bridge-super-maintenance-bt7" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt7')">
+                +
+              </button>
+              <button id="bridge-super-maintenance-bt8" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt8')">
+                +
+              </button>
+              <div class="component-maintenance-item">Signage Install / Signage Repair</div>
+            </div>
+            <div class="component-maintenance-container">
+              <button id="bridge-super-maintenance-bt9" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt9')">
+                +
+              </button>
+              <button id="bridge-super-maintenance-bt10" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt10')">
+                +
+              </button>
+              <button id="bridge-super-maintenance-bt11" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt11')">
+                +
+              </button>
+              <button id="bridge-super-maintenance-bt12" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt12')">
+                +
+              </button>
+              <div class="component-maintenance-item">Superstructure Cleaning and Flushing</div>
+            </div>
+            <div class="component-maintenance-container">
+              <button id="bridge-super-maintenance-bt13" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt13')">
+                +
+              </button>
+              <button id="bridge-super-maintenance-bt14" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt14')">
+                +
+              </button>
+              <button id="bridge-super-maintenance-bt15" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt15')">
+                +
+              </button>
+              <button id="bridge-super-maintenance-bt16" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt16')">
+                +
+              </button>
+              <div class="component-maintenance-item">Superstructure Repair</div>
+            </div>
+          </div>
+        </div>
+        <div class="main-content-containers">
+          <h3 class="content-container-links-line-label">Links:</h3>
+          <a
+            class="content-container-links-line-links"
+            rel="noopener noreferrer"
+            target="”_tab”"
+            href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=263"
+            >SNBI</a
+          >
+          <a
+            class="content-container-links-line-links"
+            rel="noopener noreferrer"
+            target="”_tab”"
+            href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+            >BIM</a
+          >
+          <a
+            id="footerStop"
+            class="content-container-links-line-links"
+            rel="noopener noreferrer"
+            target="”_tab”"
+            href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+            >Coding Guide</a
+          >
+          <a
+            id="footerStop"
+            class="content-container-links-line-links"
+            rel="noopener noreferrer"
+            target="”_tab”"
+            href="https://www.in.gov/dot/div/contracts/standards/drawings/index.html"
+            >Standard Drawings</a
+          >
+        </div>
+        <div class="main-content-containers">
+          <p class="paragraph-rating">Superstructure Comments:</p>
+          <div class="content-container-paragraphs">
+            <div class="textarea-containers">
+              <div class="textarea-mirrors">
+                <textarea id="BC02-textarea" class="textarea-comments" name="Superstructure" rows="1" oninput="expandTextarea(event, 'BC02-textarea')"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-content-containers">
+          <p class="paragraph-rating">Paint Comments:</p>
+          <div class="content-container-paragraphs">
+            <div class="textarea-containers">
+              <div class="textarea-mirrors">
+                <textarea id="BC02a-textarea" class="textarea-comments" name="Paint" rows="1" oninput="expandTextarea(event, 'BC02a-textarea')"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
+

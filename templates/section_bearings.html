@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width" />
+    <title>Beatings Tab</title>
+    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/foundations.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <!-- JS -->
+    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="./scripts/modules/snbi.mjs" defer></script>
+    <script src="./scripts/modules/modal.mjs" defer></script>
+    <script src="./scripts/modules/assetdata.mjs" defer></script>
+    <script src="./scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DMCSSans:opsz@9..40&family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MaterialCSSymbolsCSOutlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+  <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
+    <div id="bridge-bearings-tab" class="bridge-component-containers active" style="display: block">
+      <div class="main-content-containers">
+        <button class="bridge-bearings-buttons" onclick="openBridgeBearings(event, 'bridge-bearings-pg1')">Bridge Bearings (B.C.07)</button>
+        <button class="bridge-bearings-buttons active" onclick="openBridgeBearings(event, 'bridge-bearings-pg2')">Rating Table</button>
+        <button class="bridge-bearings-buttons" onclick="openBridgeBearings(event, 'bridge-bearings-pg3')">Example Comments</button> |
+        <button class="bridge-bearings-buttons" onclick="openBridgeBearings(event, 'bridge-bearings-pg4')">Elements</button>
+        <button class="bridge-bearings-buttons" onclick="openBridgeBearings(event, 'bridge-bearings-pg5')">Maintenance</button>
+      </div>
+      <div class="main-content-containers">
+        <div id="bridge-bearings-pg1" class="bridge-bearings-containers">
+          <div class="content-container-paragraphs">
+            <p>This item addresses the condition of all types and shapes of bridge bearings.</p>
+            <br />
+            <p>
+              Do not consider the condition of protective coatings and other protection systems when determining the condition rating code for this item, except to the extent
+              that problems with the protective coating system are indicative of problems with the underlying bearing material.
+            </p>
+            <br />
+            <p>
+              In cases where the bearing device is not visible, the condition can be assessed based on alignment, grade across the joint, or other indirect indicators of the
+              condition.
+            </p>
+          </div>
+        </div>
+        <div id="bridge-bearings-pg2" class="bridge-bearings-containers active" style="display: block">
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">N</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">NOT APPLICABLE</span>Component does not exist.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">9</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">EXCELLENT</span>Isolated inherent defects.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">8</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">VERY GOOD</span>Some inherent defects.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">7</span>
+            <p class="content-container-rating-description-and-condition-bubble"><span class="content-container-rating-condition-bubble">GOOD</span>Some minor defects.</p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">6</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">SATISFACTORY</span>Widespread minor or isolated moderate defects.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">5</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">4</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is
+              affected.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">3</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition
+              typically necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">2</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent
+              monitoring, significant load restrictions, and/or corrective actions in order to keep the bridge open.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">1</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation
+              may return the bridge to service.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">0</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is
+              required to restore service.
+            </p>
+          </div>
+        </div>
+        <div id="bridge-bearings-pg3" class="bridge-bearings-containers">
+          <div class="content-container-paragraphs">
+            <p class="content-container-comment-lines">The bearings are adequately positioned beneath the bridge beams and fully supported by the substructure.</p>
+            <p class="content-container-comment-lines">There is minor corrosion in the bearings at the abutments.</p>
+            <p class="content-container-comment-lines">There is moderate corrosion in the bearings at the abutments.</p>
+            <p class="content-container-comment-lines">There is heavy corrosion in the bearings at the abutments.</p>
+            <p class="content-container-comment-lines">There is minor pitting in the bearings at the abutments.</p>
+            <p class="content-container-comment-lines">There is minor pitting in the bearings at the abutments that has been painted over.</p>
+            <p class="content-container-comment-lines">There is moderate pack rust and heavy corrosion in the bearings at the abutments.</p>
+            <p class="content-container-comment-lines">
+              There is rust (lamellar) scaling between the bottom of the bearings and the masonry plates at the bearings under the abutments.
+            </p>
+            <p class="content-container-comment-lines">There is a missing bolt in the masonry plate at bearing 1 under Beam 1 at the west abutment.</p>
+            <p class="content-container-comment-lines">The bearing at Beam 1 at the west abutment has good bearing but is slightly misaligned.</p>
+            <p class="content-container-comment-lines">
+              The rockers at the abutments are leaning toward the backwalls. The temperature was in the 80's at the time of inspection.
+            </p>
+            <p class="content-container-comment-lines">The bridge has integral abutments.</p>
+          </div>
+        </div>
+        <div id="bridge-bearings-pg4" class="bridge-bearings-containers">
+          <div class="component-elements-container">
+            <button id="bridge-bearings-elements-btc67" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc67')">
+              CS2
+            </button>
+            <button id="bridge-bearings-elements-btc68" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc68')">
+              CS3
+            </button>
+            <button id="bridge-bearings-elements-btc69" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc69')">
+              CS4
+            </button>
+            <div class="component-elements-item">310: Elastomeric Bearing</div>
+          </div>
+          <div class="component-elements-container">
+            <button id="bridge-bearings-elements-btc70" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc70')">
+              CS2
+            </button>
+            <button id="bridge-bearings-elements-btc71" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc71')">
+              CS3
+            </button>
+            <button id="bridge-bearings-elements-btc72" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc72')">
+              CS4
+            </button>
+            <div class="component-elements-item">311: Movable Bearing (roller, sliding, etc.)</div>
+          </div>
+          <div class="component-elements-container">
+            <button id="bridge-bearings-elements-btc73" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc73')">
+              CS2
+            </button>
+            <button id="bridge-bearings-elements-btc74" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc74')">
+              CS3
+            </button>
+            <button id="bridge-bearings-elements-btc75" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc75')">
+              CS4
+            </button>
+            <div class="component-elements-item">312: Enclosed/Concealed Bearing</div>
+          </div>
+          <div class="component-elements-container">
+            <button id="bridge-bearings-elements-btc76" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc76')">
+              CS2
+            </button>
+            <button id="bridge-bearings-elements-btc77" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc77')">
+              CS3
+            </button>
+            <button id="bridge-bearings-elements-btc78" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc78')">
+              CS4
+            </button>
+            <div class="component-elements-item">313: Fixed Bearing</div>
+          </div>
+          <div class="component-elements-container">
+            <button id="bridge-bearings-elements-btc79" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc79')">
+              CS2
+            </button>
+            <button id="bridge-bearings-elements-btc80" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc80')">
+              CS3
+            </button>
+            <button id="bridge-bearings-elements-btc81" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc81')">
+              CS4
+            </button>
+            <div class="component-elements-item">314: Pot Bearing</div>
+          </div>
+          <div class="component-elements-container">
+            <button id="bridge-bearings-elements-btc82" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc82')">
+              CS2
+            </button>
+            <button id="bridge-bearings-elements-btc83" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc83')">
+              CS3
+            </button>
+            <button id="bridge-bearings-elements-btc84" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc84')">
+              CS4
+            </button>
+            <div class="component-elements-item">315: Disk Bearing</div>
+          </div>
+          <div class="component-elements-container">
+            <button id="bridge-bearings-elements-btc85" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc85')">
+              CS2
+            </button>
+            <button id="bridge-bearings-elements-btc86" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc86')">
+              CS3
+            </button>
+            <button id="bridge-bearings-elements-btc87" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-bearings-elements-btc87')">
+              CS4
+            </button>
+            <div class="component-elements-item">316: Other Bearing</div>
+          </div>
+        </div>
+
+        <div id="bridge-bearings-pg5" class="bridge-bearings-containers">
+          <div class="component-maintenance-container">
+            <button
+              id="bridge-bearings-maintenance-bt1"
+              class="component-maintenance-button1"
+              onclick="openBridgeComponentMaintenance(event, 'bridge-bearings-maintenance-bt1')"
+            >
+              +
+            </button>
+            <button
+              id="bridge-bearings-maintenance-bt2"
+              class="component-maintenance-button2"
+              onclick="openBridgeComponentMaintenance(event, 'bridge-bearings-maintenance-bt2')"
+            >
+              +
+            </button>
+            <button
+              id="bridge-bearings-maintenance-bt3"
+              class="component-maintenance-button3"
+              onclick="openBridgeComponentMaintenance(event, 'bridge-bearings-maintenance-bt3')"
+            >
+              +
+            </button>
+            <button
+              id="bridge-bearings-maintenance-bt4"
+              class="component-maintenance-button4"
+              onclick="openBridgeComponentMaintenance(event, 'bridge-bearings-maintenance-bt4')"
+            >
+              +
+            </button>
+            <div class="component-maintenance-item">Bearing Repair</div>
+          </div>
+        </div>
+      </div>
+      <div class="main-content-containers">
+        <h3 class="content-container-links-line-label">Links:</h3>
+        <a
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=273"
+          >SNBI</a
+        >
+        <a
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+          >BIM</a
+        >
+        <a
+          id="footerStop"
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+          >Coding Guide</a
+        >
+        <a
+          id="footerStop"
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.in.gov/dot/div/contracts/standards/drawings/index.html"
+          >Standard Drawings</a
+        >
+      </div>
+      <div class="main-content-containers">
+        <p class="paragraph-rating">Bridge Bearings Comments:</p>
+        <div class="content-container-paragraphs">
+          <div class="textarea-containers">
+            <div class="textarea-mirrors">
+              <textarea id="BC07-textarea" class="textarea-comments" name="Bridge Bearings" rows="1" oninput="expandTextarea(event, 'BC07-textarea')"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

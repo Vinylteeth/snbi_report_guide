@@ -20,8 +20,14 @@
     <link rel="icon" href=".\media\logo-rings-only-purple.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/foundations.css" />
+    <link rel="stylesheet" href="styles/components.css" />
     <!-- JS -->
+    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="./scripts/modules/snbi.mjs" defer></script>
+    <script src="./scripts/modules/modal.mjs" defer></script>
+    <script src="./scripts/modules/assetdata.mjs" defer></script>
+    <script src="./scripts/modules/ratingForms.mjs" defer></script>
     <script type="text/javascript" src="./scripts/scripts.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,6 +53,7 @@
         <button class="asset-buttons" onclick="openAssetTab(event, 'culvert-asset-tab')">Culvert</button>
         <button class="asset-buttons" onclick="openAssetTab(event, 'wall-asset-tab')">Wall</button>
       </div>
+      
     </header>
 
     <!-- ------------------------------------------------------------- Main ------------------------------------------------------------- -->
@@ -1841,7 +1848,7 @@
                 <p class="content-container-comment-lines">There are scattered areas of light rust and minor peeling.</p>
               </div>
             </div>
-            <div id="bridge-super-pg7" class="bridge-deck-containers">
+            <div id="bridge-super-pg7" class="bridge-super-containers">
               <div class="component-elements-container">
                 <button id="bridge-super-elements-bta37" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta37')">CS2</button>
                 <button id="bridge-super-elements-bta38" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-super-elements-bta38')">CS3</button>
@@ -2448,14 +2455,16 @@
           </div>
         </div>
         <div id="bridge-sub-tab" class="bridge-component-containers">
-          <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg1')">Substructure (B.C.03)</button>
-          <button class="bridge-sub-buttons active" onclick="openBridgeSub(event, 'bridge-sub-pg2')">Rating Table</button>
-          <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg3')">Example Comments</button>
-          <button class="bridge-sub-buttons alt-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg4')">Slopewall (B.C.03a)</button>
-          <button class="bridge-sub-buttons alt-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg5')">Rating Table</button>
-          <button class="bridge-sub-buttons alt-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg6')">Example Comments</button> |
-          <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg7')">Elements</button>
-          <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg8')">Maintenance</button>
+          <div class="main-content-containers">
+            <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg1')">Substructure (B.C.03)</button>
+            <button class="bridge-sub-buttons active" onclick="openBridgeSub(event, 'bridge-sub-pg2')">Rating Table</button>
+            <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg3')">Example Comments</button>
+            <button class="bridge-sub-buttons alt-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg4')">Slopewall (B.C.03a)</button>
+            <button class="bridge-sub-buttons alt-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg5')">Rating Table</button>
+            <button class="bridge-sub-buttons alt-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg6')">Example Comments</button> |
+            <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg7')">Elements</button>
+            <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg8')">Maintenance</button>
+          </div>
           <div class="main-content-containers">
             <div id="bridge-sub-pg1" class="bridge-sub-containers">
               <div class="content-container-paragraphs">
@@ -3031,7 +3040,7 @@
                 <p class="content-container-comment-lines">The culvert is a concrete box widened by CMPs.</p>
               </div>
             </div>
-            <div id="bridge-culvert-pg4" class="bridge-bearings-containers">
+            <div id="bridge-culvert-pg4" class="bridge-culvert-containers">
               <div class="component-elements-container">
                 <button id="bridge-culvert-elements-btc07" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc07')">
                   CS2
@@ -4050,15 +4059,15 @@
         </div>
         <div id="bridge-elements-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <button class="element-item-buttons active" onclick="openElementItem(event, 'element-elements-tab')">Element List</button> |
-            <button class="element-item-buttons" onclick="openElementItem(event, 'element-concrete-tab')">Concrete</button>
-            <button class="element-item-buttons" onclick="openElementItem(event, 'element-steel-tab')">Steel</button>
-            <button class="element-item-buttons" onclick="openElementItem(event, 'element-masonry-tab')">Masonry</button>
-            <button class="element-item-buttons" onclick="openElementItem(event, 'element-timber-tab')">Timber</button>
+            <button class="bridge-element-buttons active" onclick="openElementItem(event, 'element-elements-tab')">Element List</button> |
+            <button class="bridge-element-buttons" onclick="openElementItem(event, 'element-concrete-tab')">Concrete</button>
+            <button class="bridge-element-buttons" onclick="openElementItem(event, 'element-steel-tab')">Steel</button>
+            <button class="bridge-element-buttons" onclick="openElementItem(event, 'element-masonry-tab')">Masonry</button>
+            <button class="bridge-element-buttons" onclick="openElementItem(event, 'element-timber-tab')">Timber</button>
             <!-- <div class="content-container-tabs"></div> -->
           </div>
 
-          <div id="element-elements-tab" class="element-content-containers active" style="display: block">
+          <div id="element-elements-tab" class="bridge-element-containers active" style="display: block">
             <div class="main-content-containers">
               <div class="elements-segment-header">Approach Slabs:</div>
               <div class="component-elements-container">
@@ -4664,7 +4673,7 @@
             </div>
           </div>
 
-          <div id="element-concrete-tab" class="element-content-containers">
+          <div id="element-concrete-tab" class="bridge-element-containers">
             <div class="element-content-cards-container">
               <div class="element-content-cards">
                 <p class="element-card-header">Delamination, Spall, Patched Area (1080):</p>
@@ -4755,7 +4764,7 @@
               </div>
             </div>
           </div>
-          <div id="element-steel-tab" class="element-content-containers">
+          <div id="element-steel-tab" class="bridge-element-containers">
             <div class="element-content-cards-container">
               <div class="element-content-cards">
                 <p class="element-card-header">Corrosion (1000):</p>
@@ -4808,7 +4817,7 @@
               </div>
             </div>
           </div>
-          <div id="element-masonry-tab" class="element-content-containers">
+          <div id="element-masonry-tab" class="bridge-element-containers">
             <div class="element-content-cards-container">
               <div class="element-content-cards">
                 <p class="element-card-header">Delamination, Spall, Patched Area (1080):</p>
@@ -4897,7 +4906,7 @@
               </div>
             </div>
           </div>
-          <div id="element-timber-tab" class="element-content-containers">
+          <div id="element-timber-tab" class="bridge-element-containers">
             <div class="element-content-cards-container">
               <div class="element-content-cards">
                 <p class="element-card-header">Connection (1020):</p>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width" />
+    <title>Culvert Tab</title>
+    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/foundations.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <!-- JS -->
+    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="./scripts/modules/snbi.mjs" defer></script>
+    <script src="./scripts/modules/modal.mjs" defer></script>
+    <script src="./scripts/modules/assetdata.mjs" defer></script>
+    <script src="./scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DMCSSans:opsz@9..40&family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MaterialCSSymbolsCSOutlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+  <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
+    <div id="bridge-culvert-tab" class="bridge-component-containers active" style="display: block">
+      <div class="main-content-containers">
+        <button class="bridge-culvert-buttons" onclick="openBridgeCulvert(event, 'bridge-culvert-pg1')">Culvert (B.C.04)</button>
+        <button class="bridge-culvert-buttons active" onclick="openBridgeCulvert(event, 'bridge-culvert-pg2')">Rating Table</button>
+        <button class="bridge-culvert-buttons" onclick="openBridgeCulvert(event, 'bridge-culvert-pg3')">Example Comments</button> |
+        <button class="bridge-culvert-buttons" onclick="openBridgeCulvert(event, 'bridge-culvert-pg4')">Elements</button>
+        <button class="bridge-culvert-buttons" onclick="openBridgeCulvert(event, 'bridge-culvert-pg5')">Maintenance</button>
+      </div>
+      <div class="main-content-containers">
+        <div id="bridge-culvert-pg1" class="bridge-culvert-containers">
+          <div class="content-container-paragraphs">
+            <p>This item addresses the condition of culverts. The condition assessment includes footings, piles, and other foundation members when present.</p>
+            <br />
+
+            <p>
+              For culverts that have components not visible for inspection, use appropriate visual condition indicators from the roadway or surrounding foundation materials to
+              determine the applicable code. Visual assessments may be supplemented with non-destructive or destructive testing results.
+            </p>
+            <br />
+
+            <p>
+              Consider the condition of integral wingwalls and headwalls to the first construction or expansion joint when determining the condition rating code for this item.
+            </p>
+            <br />
+
+            <p>
+              Do not consider the condition of protective coatings and other culvert protection systems when determining the condition rating code for this item, except to the
+              extent that these items indicate distress of the culvert, or adversely affect its condition.
+            </p>
+            <br />
+
+            <p>
+              Do not consider the presence of drift, debris, and soil accumulation when determining the condition rating code for this item, except to the extent that these
+              items are causing distress in the culvert.
+            </p>
+            <br />
+
+            <p>The culvert includes:</p>
+            <ul class="content-container-paragraphs-ul">
+              <li>buried pipe or box;</li>
+              <li>footings below the walls of a 3-sided box; and</li>
+              <li>foundation piles exposed by erosion or scour.</li>
+            </ul>
+            <br />
+
+            <p>
+              When observed conditions are not consistent with the scour design or the assumptions used in the scour appraisal, scour is considered in the coding of this item.
+              In this case, observed conditions also indicate a need to reevaluate Item B.AP.03 (Scour Vulnerability). Observed scour that is less than the tolerable limit
+              determined in the scour appraisal does not affect this item.
+            </p>
+          </div>
+        </div>
+        <div id="bridge-culvert-pg2" class="bridge-culvert-containers active" style="display: block">
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">N</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">NOT APPLICABLE</span>Component does not exist.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">9</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">EXCELLENT</span>Isolated inherent defects.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">8</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">VERY GOOD</span>Some inherent defects.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">7</span>
+            <p class="content-container-rating-description-and-condition-bubble"><span class="content-container-rating-condition-bubble">GOOD</span>Some minor defects.</p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">6</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">SATISFACTORY</span>Widespread minor or isolated moderate defects.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">5</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">FAIR</span>Some moderate defects; strength and performance of the component are not affected.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">4</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">POOR</span>Widespread moderate or isolated major defects; strength and/or performance of the component is
+              affected.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">3</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">SERIOUS</span>Major defects; strength and/or performance of the component is seriously affected. Condition
+              typically necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">2</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">CRITICAL</span>Major defects; component is severely compromised. Condition typically necessitates frequent
+              monitoring, significant load restrictions, and/or corrective actions in order to keep the bridge open.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">1</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">IMMINENT FAILURE</span>Bridge is closed to traffic due to component condition. Repair or rehabilitation
+              may return the bridge to service.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">0</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">FAILED</span>Bridge is closed due to component condition, and is beyond corrective action. Replacement is
+              required to restore service.
+            </p>
+          </div>
+        </div>
+        <div id="bridge-culvert-pg3" class="bridge-culvert-containers">
+          <div class="content-container-paragraphs">
+            <p class="content-container-comment-lines">There are no deficiencies to report.</p>
+            <p class="content-container-comment-lines">There is minor corrosion in the flow line.</p>
+            <p class="content-container-comment-lines">There is moderate corrosion with minor pitting in the invert.</p>
+            <p class="content-container-comment-lines">No perforations are visible.</p>
+            <p class="content-container-comment-lines">There are minor deformations to the pipe shape.</p>
+            <p class="content-container-comment-lines">There are minor perforations with rust scaling throughout the flow line.</p>
+            <p class="content-container-comment-lines">There is complete section loss in the pipe invert on the north end for 20'.</p>
+            <p class="content-container-comment-lines">The pipe is pulling fill.</p>
+            <p class="content-container-comment-lines">There is minor sediment in the bottom of the pipe.</p>
+            <p class="content-container-comment-lines">The pipe has been lined.</p>
+            <p class="content-container-comment-lines">The liner is in good condition.</p>
+            <p class="content-container-comment-lines">The culvert is a concrete box widened by CMPs.</p>
+          </div>
+        </div>
+        <div id="bridge-culvert-pg4" class="bridge-culvert-containers">
+          <div class="component-elements-container">
+            <button id="bridge-culvert-elements-btc07" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc07')">
+              CS2
+            </button>
+            <button id="bridge-culvert-elements-btc08" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc08')">
+              CS3
+            </button>
+            <button id="bridge-culvert-elements-btc09" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc09')">
+              CS4
+            </button>
+            <div class="component-elements-item">240: Steel Culvert</div>
+          </div>
+          <div class="component-elements-container">
+            <button id="bridge-culvert-elements-btc10" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc10')">
+              CS2
+            </button>
+            <button id="bridge-culvert-elements-btc11" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc11')">
+              CS3
+            </button>
+            <button id="bridge-culvert-elements-btc12" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc12')">
+              CS4
+            </button>
+            <div class="component-elements-item">241: Reinforced Concrete Culvert</div>
+          </div>
+          <div class="component-elements-container">
+            <button id="bridge-culvert-elements-btc13" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc13')">
+              CS2
+            </button>
+            <button id="bridge-culvert-elements-btc14" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc14')">
+              CS3
+            </button>
+            <button id="bridge-culvert-elements-btc15" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc15')">
+              CS4
+            </button>
+            <div class="component-elements-item">242: Timber Culvert</div>
+          </div>
+          <div class="component-elements-container">
+            <button id="bridge-culvert-elements-btc16" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc16')">
+              CS2
+            </button>
+            <button id="bridge-culvert-elements-btc17" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc17')">
+              CS3
+            </button>
+            <button id="bridge-culvert-elements-btc18" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc18')">
+              CS4
+            </button>
+            <div class="component-elements-item">243: Other Culvert</div>
+          </div>
+          <div class="component-elements-container">
+            <button id="bridge-culvert-elements-btc19" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc19')">
+              CS2
+            </button>
+            <button id="bridge-culvert-elements-btc20" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc20')">
+              CS3
+            </button>
+            <button id="bridge-culvert-elements-btc21" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc21')">
+              CS4
+            </button>
+            <div class="component-elements-item">244: Masonry Culvert</div>
+          </div>
+          <div class="component-elements-container">
+            <button id="bridge-culvert-elements-btc22" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc22')">
+              CS2
+            </button>
+            <button id="bridge-culvert-elements-btc23" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc23')">
+              CS3
+            </button>
+            <button id="bridge-culvert-elements-btc24" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-culvert-elements-btc24')">
+              CS4
+            </button>
+            <div class="component-elements-item">245: Prestressed Concrete Culvert</div>
+          </div>
+        </div>
+
+        <div id="bridge-culvert-pg5" class="bridge-culvert-containers">
+          <div class="component-maintenance-container">
+            <button id="bridge-culvert-maintenance-bt1" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-culvert-maintenance-bt1')">
+              +
+            </button>
+            <button id="bridge-culvert-maintenance-bt2" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-culvert-maintenance-bt2')">
+              +
+            </button>
+            <button id="bridge-culvert-maintenance-bt3" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-culvert-maintenance-bt3')">
+              +
+            </button>
+            <button id="bridge-culvert-maintenance-bt4" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-culvert-maintenance-bt4')">
+              +
+            </button>
+            <div class="component-maintenance-item">Concrete Crack Seal</div>
+          </div>
+          <div class="component-maintenance-container">
+            <button id="bridge-culvert-maintenance-bt5" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-culvert-maintenance-bt5')">
+              +
+            </button>
+            <button id="bridge-culvert-maintenance-bt6" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-culvert-maintenance-bt6')">
+              +
+            </button>
+            <button id="bridge-culvert-maintenance-bt7" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-culvert-maintenance-bt7')">
+              +
+            </button>
+            <button id="bridge-culvert-maintenance-bt8" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-culvert-maintenance-bt8')">
+              +
+            </button>
+            <div class="component-maintenance-item">Superstructure Repair</div>
+          </div>
+          <div class="component-maintenance-container">
+            <button id="bridge-culvert-maintenance-bt9" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-culvert-maintenance-bt9')">
+              +
+            </button>
+            <button
+              id="bridge-culvert-maintenance-bt10"
+              class="component-maintenance-button2"
+              onclick="openBridgeComponentMaintenance(event, 'bridge-culvert-maintenance-bt10')"
+            >
+              +
+            </button>
+            <button
+              id="bridge-culvert-maintenance-bt11"
+              class="component-maintenance-button3"
+              onclick="openBridgeComponentMaintenance(event, 'bridge-culvert-maintenance-bt11')"
+            >
+              +
+            </button>
+            <button
+              id="bridge-culvert-maintenance-bt12"
+              class="component-maintenance-button4"
+              onclick="openBridgeComponentMaintenance(event, 'bridge-culvert-maintenance-bt12')"
+            >
+              +
+            </button>
+            <div class="component-maintenance-item">Substructure Repair</div>
+          </div>
+        </div>
+      </div>
+      <div class="main-content-containers">
+        <h3 class="content-container-links-line-label">Links:</h3>
+        <a
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=268"
+          >SNBI</a
+        >
+        <a
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+          >BIM</a
+        >
+        <a
+          id="footerStop"
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+          >Coding Guide</a
+        >
+        <a
+          id="footerStop"
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.in.gov/dot/div/contracts/standards/drawings/index.html"
+          >Standard Drawings</a
+        >
+      </div>
+      <div class="main-content-containers">
+        <p class="paragraph-rating">Culvert Comments:</p>
+        <div class="content-container-paragraphs">
+          <div class="textarea-containers">
+            <div class="textarea-mirrors">
+              <textarea id="BC04-textarea" class="textarea-comments" name="Culvert" rows="1" oninput="expandTextarea(event, 'BC04-textarea')"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

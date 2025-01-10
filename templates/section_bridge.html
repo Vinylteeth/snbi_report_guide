@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width" />
+    <title>Bridge Tab</title>
+    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/foundations.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <!-- JS -->
+    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="./scripts/modules/snbi.mjs" defer></script>
+    <script src="./scripts/modules/modal.mjs" defer></script>
+    <script src="./scripts/modules/assetdata.mjs" defer></script>
+    <script src="./scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DMCSSans:opsz@9..40&family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MaterialCSSymbolsCSOutlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+  <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
+    <div id="bridge-asset-tab" class="asset-containers" style="display: block">
+      <div class="main-content-containers">
+        <button class="bridge-component-buttons active" onclick="openBridgeComponent(event, 'bridge-alignment-tab')">Alignment</button>
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-approach-slabs-tab')">Approach Slabs</button>
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-joints-tab')">Joints</button>
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-railings-tab')">Railings</button>
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-deck-tab')">Deck</button>
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-super-tab')">Super</button>
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-bearings-tab')">Bearings</button>
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-sub-tab')">Sub</button>
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-culvert-tab')">Culvert</button>
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-channel-tab')">Channel</button>
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-scour-tab')">Scour</button>
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-overtopping-tab')">Overtopping</button>
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-wildlife-tab')">Wildlife</button> |
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-elements-tab')">Elements</button>
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-maintenance-tab')">Maintenance</button> |
+        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-review-tab')">Review</button>
+      </div>
+    </div>
+  </body>
+</html>
+

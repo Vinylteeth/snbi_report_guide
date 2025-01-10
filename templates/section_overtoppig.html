@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width" />
+    <title>Overtopping Tab</title>
+    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/foundations.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <!-- JS -->
+    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="./scripts/modules/snbi.mjs" defer></script>
+    <script src="./scripts/modules/modal.mjs" defer></script>
+    <script src="./scripts/modules/assetdata.mjs" defer></script>
+    <script src="./scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DMCSSans:opsz@9..40&family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MaterialCSSymbolsCSOutlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+  <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
+    <div id="bridge-overtopping-tab" class="bridge-component-containers active" style="display: block">
+      <div class="main-content-containers">
+        <button class="bridge-overtopping-buttons" onclick="openBridgeOvertopping(event, 'bridge-overtopping-pg1')">Overtopping Likelihood (B.AP.02)</button>
+        <button class="bridge-overtopping-buttons active" onclick="openBridgeOvertopping(event, 'bridge-overtopping-pg2')">Rating Table</button>
+        <button class="bridge-overtopping-buttons" onclick="openBridgeOvertopping(event, 'bridge-overtopping-pg3')">Example Comments</button>
+      </div>
+      <div class="main-content-containers">
+        <div id="bridge-overtopping-pg1" class="bridge-overtopping-containers">
+          <div class="content-container-paragraphs">
+            <p>An overtopping occurrence is when the waterway overtops the riding surface carried on the bridge.</p>
+            <br />
+
+            <p>
+              Bridge overtopping likelihood, since the year built (B.W.01), is typically determined from historical bridge inspection or maintenance records, hydraulic studies,
+              local residents/landowners, and/or site indicators including highwater marks on the bridge or its surroundings, debris remains on bridge upper members, etc.
+            </p>
+            <br />
+
+            <p>
+              For newer bridges with limited historical inspection or maintenance information, hydraulic design information can be used to establish an overtopping likelihood.
+            </p>
+            <br />
+
+            <p>This item does not apply to the likelihood of the waterway overtopping approach roadways.</p>
+          </div>
+        </div>
+        <div id="bridge-overtopping-pg2" class="bridge-overtopping-containers active" style="display: block">
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">N</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">NOT APPLICABLE</span>Bridge does not cross over water.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">0</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">NEVER</span>The bridge is never overtopped.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">1</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">REMOTE</span>Once every 100 years or less frequently.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">2</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">VERY LOW</span>Once every 51 to 99 years.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">3</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">LOW</span>Once every 26 to 50 years.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">4</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">MODERATE</span>Once every 11 to 25 years.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">5</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">HIGH</span>Once every 3 to 10 years.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">6</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">VERY HIGH</span>Once every 2 years or more frequently.
+            </p>
+          </div>
+        </div>
+        <div id="bridge-overtopping-pg3" class="bridge-overtopping-containers">
+          <div class="content-container-paragraphs">
+            <p class="content-container-comment-lines">The Q100/HW elevation is significantly below the low structure elevation.</p>
+            <p class="content-container-comment-lines">The Q100/HW elevation is below the low structure elevation.</p>
+            <p class="content-container-comment-lines">The Q100/HW elevation is above the low structure elevation.</p>
+            <p class="content-container-comment-lines">The Q100/HW elevation is 582.2' and 4.3' below the low structure elevation of 586.5'.</p>
+            <p class="content-container-comment-lines">There is nothing to indicate overtopping has ever occurred.</p>
+            <p class="content-container-comment-lines">There is drift and debris deposited on the superstructure.</p>
+            <p class="content-container-comment-lines">Based on the surrounding terrain, overtopping is unlikely.</p>
+          </div>
+        </div>
+      </div>
+      <div class="main-content-containers">
+        <h3 class="content-container-links-line-label">Links:</h3>
+        <a
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=319"
+          >SNBI</a
+        >
+        <a
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+          >BIM</a
+        >
+        <a
+          id="footerStop"
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+          >Coding Guide</a
+        >
+        <a
+          id="footerStop"
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.in.gov/dot/div/contracts/standards/drawings/index.html"
+          >Standard Drawings</a
+        >
+      </div>
+      <div class="main-content-containers">
+        <p class="paragraph-rating">Overtopping Likelihood Comments:</p>
+        <div class="content-container-paragraphs">
+          <div class="textarea-containers">
+            <div class="textarea-mirrors">
+              <textarea id="BAP02-textarea" class="textarea-comments" name="Overtopping Likelihood" rows="1" oninput="expandTextarea(event, 'BAP02-textarea')"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

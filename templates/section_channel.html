@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width" />
+    <title>Channel Tab</title>
+    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/foundations.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <!-- JS -->
+    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="./scripts/modules/snbi.mjs" defer></script>
+    <script src="./scripts/modules/modal.mjs" defer></script>
+    <script src="./scripts/modules/assetdata.mjs" defer></script>
+    <script src="./scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DMCSSans:opsz@9..40&family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MaterialCSSymbolsCSOutlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+  <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
+    <div id="bridge-channel-tab" class="bridge-component-containers active" style="display: block">
+      <div class="main-content-containers">
+        <button class="bridge-channel-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg1')">Channel (B.C.09)</button>
+        <button class="bridge-channel-buttons active" onclick="openBridgeChannel(event, 'bridge-channel-pg2')">Rating Table</button>
+        <button class="bridge-channel-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg3')">Example Comments</button>
+        <button class="bridge-channel-buttons alt-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg4')">Channel Protection (B.C.10)</button>
+        <button class="bridge-channel-buttons alt-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg5')">Rating Table</button>
+        <button class="bridge-channel-buttons alt-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg6')">Example Comments</button> |
+        <button class="bridge-channel-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg7')">Maintenance</button>
+      </div>
+      <div class="main-content-containers">
+        <div id="bridge-channel-pg1" class="bridge-channel-containers">
+          <div class="content-container-paragraphs">
+            <p>
+              This item is used to provide a condition rating for the channel at the bridge. Consider the channel upstream and downstream only insofar as it threatens the
+              bridge and approach roadway.
+            </p>
+            <br />
+
+            <p>The condition of channel protection devices is addressed under a separate item. Refer to Item B.C.10 (Channel Protection Condition Rating).</p>
+            <br />
+
+            <p>
+              For concrete lined channels, channel defects typically do not apply, except for Aggradation and Debris. The condition of the channel lining would be addressed by
+              Item B.C.10 (Channel Protection Condition Rating).
+            </p>
+          </div>
+        </div>
+        <div id="bridge-channel-pg2" class="bridge-channel-containers active" style="display: block">
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">N</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">NOT APPLICABLE</span>Bridge does not cross over water.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">9</span>
+            <p class="content-container-rating-description-and-condition-bubble"><span class="content-container-rating-condition-bubble">EXCELLENT</span>No defects.</p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">8</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">VERY GOOD</span>Inherent defects only.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">7</span>
+            <p class="content-container-rating-description-and-condition-bubble"><span class="content-container-rating-condition-bubble">GOOD</span>Some minor defects.</p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">6</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">SATISFACTORY</span>Widespread minor or isolated moderate defects.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">5</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">FAIR</span>Moderate defects; bridge and approach roadway are not threatened.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">4</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">POOR</span>Widespread moderate or isolated major defects; bridge and/or approach roadway is threatened.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">3</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">SERIOUS</span>Major defects; bridge or approach roadway is seriously threatened. Condition typically
+              necessitates more frequent monitoring, load restrictions, and/or corrective actions.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">2</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">CRITICAL</span>Major defects. Bridge or approach roadway is severely threatened. Condition typically
+              necessitates frequent monitoring, significant load restrictions, and/or corrective actions in order to keep the bridge open.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">1</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">IMMINENT FAILURE</span>Bridge is closed to traffic due to channel condition. Channel rehabilitation may
+              return the bridge to service.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">0</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">FAILED</span>Bridge is closed due to channel condition, and is beyond corrective action. Bridge location
+              or design can no longer accommodate the channel, and bridge replacement is needed to restore service.
+            </p>
+          </div>
+        </div>
+        <div id="bridge-channel-pg3" class="bridge-channel-containers">
+          <div class="content-container-paragraphs">
+            <p class="content-container-comment-lines">There are no deficiencies to report.</p>
+            <p class="content-container-comment-lines">The bridge is not over water.</p>
+            <p class="content-container-comment-lines">The channel condition is not impacting the roadway or the bridge.</p>
+            <p class="content-container-comment-lines">Under normal conditions the shallow, low-velocity channel flows from south to north through Span B.</p>
+            <p class="content-container-comment-lines">Under normal conditions the wide, deep, low-velocity channel flows from north to south through Span B.</p>
+            <p class="content-container-comment-lines">Under normal conditions the channel cannot be entered without additional precautions.</p>
+            <p class="content-container-comment-lines">Flow direction varies with rising and receding water levels.</p>
+            <p class="content-container-comment-lines">The channel is protected with riprap.</p>
+            <p class="content-container-comment-lines">The banks of the channel are protected with riprap.</p>
+            <p class="content-container-comment-lines">The banks are well vegetated.</p>
+            <p class="content-container-comment-lines">Most of the riprap under Spans A and C has washed away.</p>
+            <p class="content-container-comment-lines">There are localized areas of minor erosion.</p>
+            <p class="content-container-comment-lines">There is erosion in the west bank under Span A.</p>
+            <p class="content-container-comment-lines">There is degradation of the channel under Span B.</p>
+            <p class="content-container-comment-lines">There is channel aggradation and sediment deposits on the east side of Pier 2 under Span B.</p>
+          </div>
+        </div>
+        <div id="bridge-channel-pg4" class="bridge-channel-containers">
+          <div class="content-container-paragraphs">
+            <p>This item is used to provide a condition rating for channel protection devices.</p>
+            <br />
+
+            <p>
+              Evaluate the condition and effectiveness of channel protection devices installed on banks or in the stream to mitigate channel issues that may impact the bridge.
+              When reporting this item, consider erosion and scour, damage (unraveling, displacement, separation, and sagging), and material defects (scaling, abrasion,
+              spalling, corrosion, cracking, splitting, and decay).
+            </p>
+            <br />
+
+            <p>
+              Channel protection devices are considered countermeasures that control, inhibit, delay, or minimize stream instability and scour problems, including river
+              training and armoring countermeasures.
+            </p>
+            <br />
+
+            <p>
+              River training countermeasures may include: spurs, bendway weirs, guide banks, drop structures, and check dams. Additional river training countermeasures can be
+              found in HEC-23 and elsewhere.
+            </p>
+          </div>
+        </div>
+        <div id="bridge-channel-pg5" class="bridge-channel-containers">
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">N</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">NOT APPLICABLE</span>Bridge does not cross over water or channel protection devices do not exist.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">9</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">EXCELLENT</span>Isolated inherent defects.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">8</span>
+            <p class="content-container-rating-description-and-condition-bubble"><span class="content-container-rating-condition-bubble">VERY GOOD</span>Some minor defects.</p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">7</span>
+            <p class="content-container-rating-description-and-condition-bubble"><span class="content-container-rating-condition-bubble">GOOD</span>Some minor defects.</p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">6</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">SATISFACTORY</span>Widespread minor or isolated moderate defects.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">5</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">FAIR</span>Some moderate defects; performance of the channel protection is not affected.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">4</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">POOR</span>Widespread moderate or isolated major defects; performance of channel protection is affected.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">3</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">SERIOUS</span>Major defects; performance of channel protection is seriously affected. Condition typically
+              necessitates more frequent monitoring or corrective actions.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">2</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">CRITICAL</span>Major defects; channel protection is severely compromised. Condition typically necessitates
+              more frequent monitoring or corrective actions.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">1</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">IMMINENT FAILURE</span>Channel protection has failed, but corrective action could restore it to working
+              condition.
+            </p>
+          </div>
+          <div class="content-container-rating-lines">
+            <span class="content-container-rating-numerical">0</span>
+            <p class="content-container-rating-description-and-condition-bubble">
+              <span class="content-container-rating-condition-bubble">FAILED</span>Channel protection is beyond repair and must be replaced.
+            </p>
+          </div>
+        </div>
+        <div id="bridge-channel-pg6" class="bridge-channel-containers">
+          <div class="content-container-paragraphs">
+            <p class="content-container-comment-lines">There are no deficiencies to report.</p>
+            <p class="content-container-comment-lines">The bridge is not over water.</p>
+            <p class="content-container-comment-lines">The channel condition is not impacting the roadway or the bridge.</p>
+            <p class="content-container-comment-lines">Under normal conditions the shallow, low-velocity channel flows from south to north through Span B.</p>
+            <p class="content-container-comment-lines">Under normal conditions the wide, deep, low-velocity channel flows from north to south through Span B.</p>
+            <p class="content-container-comment-lines">Under normal conditions the channel cannot be entered without additional precautions.</p>
+            <p class="content-container-comment-lines">Flow direction varies with rising and receding water levels.</p>
+            <p class="content-container-comment-lines">The channel is protected with riprap.</p>
+            <p class="content-container-comment-lines">The banks of the channel are protected with riprap.</p>
+            <p class="content-container-comment-lines">The banks are well vegetated.</p>
+            <p class="content-container-comment-lines">Most of the riprap under Spans A and C has washed away.</p>
+            <p class="content-container-comment-lines">There are localized areas of minor erosion.</p>
+            <p class="content-container-comment-lines">There is erosion in the west bank under Span A.</p>
+            <p class="content-container-comment-lines">There is degradation of the channel under Span B.</p>
+            <p class="content-container-comment-lines">There is channel aggradation and sediment deposits on the east side of Pier 2 under Span B.</p>
+          </div>
+        </div>
+        <div id="bridge-channel-pg7" class="bridge-channel-containers">
+          <div class="component-maintenance-container">
+            <button id="bridge-channel-maintenance-bt1" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-channel-maintenance-bt1')">
+              +
+            </button>
+            <button id="bridge-channel-maintenance-bt2" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-channel-maintenance-bt2')">
+              +
+            </button>
+            <button id="bridge-channel-maintenance-bt3" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-channel-maintenance-bt3')">
+              +
+            </button>
+            <button id="bridge-channel-maintenance-bt4" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-channel-maintenance-bt4')">
+              +
+            </button>
+            <div class="component-maintenance-item">Brush Cutting / Herbicide Spray</div>
+          </div>
+          <div class="component-maintenance-container">
+            <button id="bridge-channel-maintenance-bt5" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-channel-maintenance-bt5')">
+              +
+            </button>
+            <button id="bridge-channel-maintenance-bt6" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-channel-maintenance-bt6')">
+              +
+            </button>
+            <button id="bridge-channel-maintenance-bt7" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-channel-maintenance-bt7')">
+              +
+            </button>
+            <button id="bridge-channel-maintenance-bt8" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-channel-maintenance-bt8')">
+              +
+            </button>
+            <div class="component-maintenance-item">Channel Debris Removal</div>
+          </div>
+          <div class="component-maintenance-container">
+            <button id="bridge-channel-maintenance-bt9" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-channel-maintenance-bt9')">
+              +
+            </button>
+            <button
+              id="bridge-channel-maintenance-bt10"
+              class="component-maintenance-button2"
+              onclick="openBridgeComponentMaintenance(event, 'bridge-channel-maintenance-bt10')"
+            >
+              +
+            </button>
+            <button
+              id="bridge-channel-maintenance-bt11"
+              class="component-maintenance-button3"
+              onclick="openBridgeComponentMaintenance(event, 'bridge-channel-maintenance-bt11')"
+            >
+              +
+            </button>
+            <button
+              id="bridge-channel-maintenance-bt12"
+              class="component-maintenance-button4"
+              onclick="openBridgeComponentMaintenance(event, 'bridge-channel-maintenance-bt12')"
+            >
+              +
+            </button>
+            <div class="component-maintenance-item">Erosion Control / Riprap</div>
+          </div>
+        </div>
+      </div>
+      <div class="main-content-containers">
+        <h3 class="content-container-links-line-label">Links:</h3>
+        <a
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=278"
+          >SNBI</a
+        >
+        |
+        <a
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.fhwa.dot.gov/bridge/snbi/snbi_march_2022_publication.pdf#page=280"
+          >SNBI</a
+        >
+        <a
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/inspector_manual/index.htm"
+          >BIM</a
+        >
+        <a
+          id="footerStop"
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.in.gov/dot/div/contracts/standards/bridge_inspection/pubs/1995%20Recording%20and%20Coding%20Guide%20for%20the%20Structural%20Inventory%20and%20Appraisal%20of%20the%20Nations%20Bridges.pdf"
+          >Coding Guide</a
+        >
+        <a
+          id="footerStop"
+          class="content-container-links-line-links"
+          rel="noopener noreferrer"
+          target="”_tab”"
+          href="https://www.in.gov/dot/div/contracts/standards/drawings/index.html"
+          >Standard Drawings</a
+        >
+      </div>
+      <div class="main-content-containers">
+        <p class="paragraph-rating">Channel Comments:</p>
+        <div class="content-container-paragraphs">
+          <div class="textarea-containers">
+            <div class="textarea-mirrors">
+              <textarea id="BC09-textarea" class="textarea-comments" name="Channel" rows="1" oninput="expandTextarea(event, 'BC09-textarea')"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-content-containers">
+        <p class="paragraph-rating">Channel Protection Comments:</p>
+        <div class="content-container-paragraphs">
+          <div class="textarea-containers">
+            <div class="textarea-mirrors">
+              <textarea id="BC10-textarea" class="textarea-comments" name="Channel Protection" rows="1" oninput="expandTextarea(event, 'BC10-textarea')"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
