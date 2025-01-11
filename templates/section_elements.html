@@ -4,18 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewpoint" content="width=device-width" />
     <title>Element Tab</title>
-    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+    <link rel="icon" href="../media/logo-rings-only-purple.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/foundations.css" />
-    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="../styles/foundations.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
     <!-- JS -->
-    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
-    <script src="./scripts/modules/snbi.mjs" defer></script>
-    <script src="./scripts/modules/modal.mjs" defer></script>
-    <script src="./scripts/modules/assetdata.mjs" defer></script>
-    <script src="./scripts/modules/ratingForms.mjs" defer></script>
-    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <script src="../scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="../scripts/modules/snbi.mjs" defer></script>
+    <script src="../scripts/modules/modal.mjs" defer></script>
+    <script src="../scripts/modules/assetdata.mjs" defer></script>
+    <script src="../scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="../scripts/scripts.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,11 +31,11 @@
   <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
     <div id="bridge-elements-tab" class="bridge-component-containers active" style="display: block">
       <div class="main-content-containers">
-        <button class="element-item-buttons active" onclick="openElementItem(event, 'element-elements-tab')">Element List</button> |
-        <button class="element-item-buttons" onclick="openElementItem(event, 'element-concrete-tab')">Concrete</button>
-        <button class="element-item-buttons" onclick="openElementItem(event, 'element-steel-tab')">Steel</button>
-        <button class="element-item-buttons" onclick="openElementItem(event, 'element-masonry-tab')">Masonry</button>
-        <button class="element-item-buttons" onclick="openElementItem(event, 'element-timber-tab')">Timber</button>
+        <button class="element-item-buttons active" data-target="element-elements-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Element List</button> |
+        <button class="element-item-buttons" data-target="element-concrete-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Concrete</button>
+        <button class="element-item-buttons" data-target="element-steel-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Steel</button>
+        <button class="element-item-buttons" data-target="element-masonry-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Masonry</button>
+        <button class="element-item-buttons" data-target="element-timber-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Timber</button>
         <!-- <div class="content-container-tabs"></div> -->
       </div>
 

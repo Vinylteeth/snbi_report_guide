@@ -4,18 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewpoint" content="width=device-width" />
     <title>Railings Tab</title>
-    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+    <link rel="icon" href="../media/logo-rings-only-purple.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/foundations.css" />
-    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="../styles/foundations.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
     <!-- JS -->
-    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
-    <script src="./scripts/modules/snbi.mjs" defer></script>
-    <script src="./scripts/modules/modal.mjs" defer></script>
-    <script src="./scripts/modules/assetdata.mjs" defer></script>
-    <script src="./scripts/modules/ratingForms.mjs" defer></script>
-    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <script src="../scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="../scripts/modules/snbi.mjs" defer></script>
+    <script src="../scripts/modules/modal.mjs" defer></script>
+    <script src="../scripts/modules/assetdata.mjs" defer></script>
+    <script src="../scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="../scripts/scripts.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,14 +31,14 @@
   <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
     <div id="bridge-railings-tab" class="bridge-component-containers active" style="display: block">
       <div class="main-content-containers">
-        <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg1')">Bridge Railings (B.C.05)</button>
-        <button class="bridge-railings-buttons active" onclick="openBridgeRailings(event, 'bridge-railings-pg2')">Rating Table</button>
-        <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg3')">Example Comments</button>
-        <button class="bridge-railings-buttons alt-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg4')">Bridge Railing Transitions (B.C.06)</button>
-        <button class="bridge-railings-buttons alt-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg5')">Rating Table</button>
-        <button class="bridge-railings-buttons alt-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg6')">Example Comments</button> |
-        <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg7')">Elements</button>
-        <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg8')">Maintenance</button>
+        <button class="bridge-railings-buttons" data-target="bridge-railings-pg1" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Bridge Railings (B.C.05)</button>
+        <button class="bridge-railings-buttons active" data-target="bridge-railings-pg2" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Rating Table</button>
+        <button class="bridge-railings-buttons" data-target="bridge-railings-pg3" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Example Comments</button>
+        <button class="bridge-railings-buttons alt-buttons" data-target="bridge-railings-pg4" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Bridge Railing Transitions (B.C.06)</button>
+        <button class="bridge-railings-buttons alt-buttons" data-target="bridge-railings-pg5" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Rating Table</button>
+        <button class="bridge-railings-buttons alt-buttons" data-target="bridge-railings-pg6" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Example Comments</button> |
+        <button class="bridge-railings-buttons" data-target="bridge-railings-pg7" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Elements</button>
+        <button class="bridge-railings-buttons" data-target="bridge-railings-pg8" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Maintenance</button>
       </div>
       <div class="main-content-containers">
         <div id="bridge-railings-pg1" class="bridge-railings-containers">

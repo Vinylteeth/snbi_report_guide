@@ -4,18 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewpoint" content="width=device-width" />
     <title>Deck Tab</title>
-    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+    <link rel="icon" href="../media/logo-rings-only-purple.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/foundations.css" />
-    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="../styles/foundations.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
     <!-- JS -->
-    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
-    <script src="./scripts/modules/snbi.mjs" defer></script>
-    <script src="./scripts/modules/modal.mjs" defer></script>
-    <script src="./scripts/modules/assetdata.mjs" defer></script>
-    <script src="./scripts/modules/ratingForms.mjs" defer></script>
-    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <script src="../scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="../scripts/modules/snbi.mjs" defer></script>
+    <script src="../scripts/modules/modal.mjs" defer></script>
+    <script src="../scripts/modules/assetdata.mjs" defer></script>
+    <script src="../scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="../scripts/scripts.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,14 +31,14 @@
   <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
     <div id="bridge-deck-tab" class="bridge-component-containers active" style="display: block">
       <div class="main-content-containers">
-        <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg1')">Deck (B.C.01)</button>
-        <button class="bridge-deck-buttons active" onclick="openBridgeDeck(event, 'bridge-deck-pg2')">Rating Table</button>
-        <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg3')">Example Comments</button>
-        <button class="bridge-deck-buttons alt-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg4')">Wearing Surface (B.C.01a)</button>
-        <button class="bridge-deck-buttons alt-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg5')">Rating Table</button>
-        <button class="bridge-deck-buttons alt-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg6')">Example Comments</button> |
-        <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg7')">Elements</button>
-        <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg8')">Maintenance</button>
+        <button class="bridge-deck-buttons" data-target="bridge-deck-pg1" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Deck (B.C.01)</button>
+        <button class="bridge-deck-buttons active" data-target="bridge-deck-pg2" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Rating Table</button>
+        <button class="bridge-deck-buttons" data-target="bridge-deck-pg3" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Example Comments</button>
+        <button class="bridge-deck-buttons alt-buttons" data-target="bridge-deck-pg4" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Wearing Surface (B.C.01a)</button>
+        <button class="bridge-deck-buttons alt-buttons" data-target="bridge-deck-pg5" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Rating Table</button>
+        <button class="bridge-deck-buttons alt-buttons" data-target="bridge-deck-pg6" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Example Comments</button> |
+        <button class="bridge-deck-buttons" data-target="bridge-deck-pg7" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Elements</button>
+        <button class="bridge-deck-buttons" data-target="bridge-deck-pg8" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Maintenance</button>
       </div>
       <div class="main-content-containers">
         <div id="bridge-deck-pg1" class="bridge-deck-containers">

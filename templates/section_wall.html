@@ -4,18 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewpoint" content="width=device-width" />
     <title>Wall Tab</title>
-    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+    <link rel="icon" href="../media/logo-rings-only-purple.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/foundations.css" />
-    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="../styles/foundations.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
     <!-- JS -->
-    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
-    <script src="./scripts/modules/snbi.mjs" defer></script>
-    <script src="./scripts/modules/modal.mjs" defer></script>
-    <script src="./scripts/modules/assetdata.mjs" defer></script>
-    <script src="./scripts/modules/ratingForms.mjs" defer></script>
-    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <script src="../scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="../scripts/modules/snbi.mjs" defer></script>
+    <script src="../scripts/modules/modal.mjs" defer></script>
+    <script src="../scripts/modules/assetdata.mjs" defer></script>
+    <script src="../scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="../scripts/scripts.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,8 +31,8 @@
   <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
     <div id="wall-asset-tab" class="asset-containers active" style="display: block">
       <div class="main-content-containers">
-        <button class="wall-item-buttons active" onclick="openWallItem(event, 'wall-rating-guidelines-tab')">Rating Guidance</button>
-        <button class="wall-item-buttons" onclick="openWallItem(event, 'wall-naming-conventions-tab')">Naming Convention</button>
+        <button class="wall-item-buttons active" data-target="wall-rating-guidelines-tab" data-container-class="wall-item-containers" data-button-class="wall-item-buttons">Rating Guidance</button>
+        <button class="wall-item-buttons" data-target="wall-naming-conventions-tab" data-container-class="wall-item-containers" data-button-class="wall-item-buttons">Naming Convention</button>
       </div>
       <div id="wall-rating-guidelines-tab" class="wall-item-containers active" style="display: block">
         <div class="wall-numeric-ratings-container">

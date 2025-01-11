@@ -4,18 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewpoint" content="width=device-width" />
     <title>Overtopping Tab</title>
-    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+    <link rel="icon" href="../media/logo-rings-only-purple.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/foundations.css" />
-    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="../styles/foundations.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
     <!-- JS -->
-    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
-    <script src="./scripts/modules/snbi.mjs" defer></script>
-    <script src="./scripts/modules/modal.mjs" defer></script>
-    <script src="./scripts/modules/assetdata.mjs" defer></script>
-    <script src="./scripts/modules/ratingForms.mjs" defer></script>
-    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <script src="../scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="../scripts/modules/snbi.mjs" defer></script>
+    <script src="../scripts/modules/modal.mjs" defer></script>
+    <script src="../scripts/modules/assetdata.mjs" defer></script>
+    <script src="../scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="../scripts/scripts.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,9 +31,9 @@
   <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
     <div id="bridge-overtopping-tab" class="bridge-component-containers active" style="display: block">
       <div class="main-content-containers">
-        <button class="bridge-overtopping-buttons" onclick="openBridgeOvertopping(event, 'bridge-overtopping-pg1')">Overtopping Likelihood (B.AP.02)</button>
-        <button class="bridge-overtopping-buttons active" onclick="openBridgeOvertopping(event, 'bridge-overtopping-pg2')">Rating Table</button>
-        <button class="bridge-overtopping-buttons" onclick="openBridgeOvertopping(event, 'bridge-overtopping-pg3')">Example Comments</button>
+        <button class="bridge-overtopping-buttons" data-target="bridge-overtopping-pg1" data-container-class="bridge-overtopping-containers" data-button-class="bridge-overtopping-buttons">Overtopping Likelihood (B.AP.02)</button>
+        <button class="bridge-overtopping-buttons active" data-target="bridge-overtopping-pg2" data-container-class="bridge-overtopping-containers" data-button-class="bridge-overtopping-buttons">Rating Table</button>
+        <button class="bridge-overtopping-buttons" data-target="bridge-overtopping-pg3" data-container-class="bridge-overtopping-containers" data-button-class="bridge-overtopping-buttons">Example Comments</button>
       </div>
       <div class="main-content-containers">
         <div id="bridge-overtopping-pg1" class="bridge-overtopping-containers">

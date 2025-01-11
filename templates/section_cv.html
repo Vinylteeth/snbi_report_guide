@@ -4,18 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewpoint" content="width=device-width" />
     <title>CV Tab</title>
-    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+    <link rel="icon" href="../media/logo-rings-only-purple.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/foundations.css" />
-    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="../styles/foundations.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
     <!-- JS -->
-    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
-    <script src="./scripts/modules/snbi.mjs" defer></script>
-    <script src="./scripts/modules/modal.mjs" defer></script>
-    <script src="./scripts/modules/assetdata.mjs" defer></script>
-    <script src="./scripts/modules/ratingForms.mjs" defer></script>
-    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <script src="../scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="../scripts/modules/snbi.mjs" defer></script>
+    <script src="../scripts/modules/modal.mjs" defer></script>
+    <script src="../scripts/modules/assetdata.mjs" defer></script>
+    <script src="../scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="../scripts/scripts.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,10 +31,10 @@
   <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
     <div id="culvert-asset-tab" class="asset-containers active" style="display: block">
       <div class="main-content-containers">
-        <button class="culvert-item-buttons active" onclick="openCulvertItem(event, 'culvert-rating-guidance-concrete-tab')">Rating Guidance - Concrete</button>
-        <button class="culvert-item-buttons" onclick="openCulvertItem(event, 'culvert-rating-guidance-steel-tab')">Rating Guidance - Steel</button>
-        <button class="culvert-item-buttons" onclick="openCulvertItem(event, 'culvert-naming-convention-tab')">Naming Convention</button>
-        <button class="culvert-item-buttons" onclick="openCulvertItem(event, 'culvert-report-walkthrough-tab')">Report Walkthrough</button>
+        <button class="culvert-item-buttons active" data-target="culvert-rating-guidance-concrete-tab" data-container-class="culvert-item-containers" data-button-class="culvert-item-buttons">Rating Guidance - Concrete</button>
+        <button class="culvert-item-buttons" data-target="culvert-rating-guidance-steel-tab" data-container-class="culvert-item-containers" data-button-class="culvert-item-buttons">Rating Guidance - Steel</button>
+        <button class="culvert-item-buttons" data-target="culvert-naming-convention-tab" data-container-class="culvert-item-containers" data-button-class="culvert-item-buttons">Naming Convention</button>
+        <button class="culvert-item-buttons" data-target="culvert-report-walkthrough-tab" data-container-class="culvert-item-containers" data-button-class="culvert-item-buttons">Report Walkthrough</button>
       </div>
       <div id="culvert-rating-guidance-concrete-tab" class="culvert-item-containers active" style="display: block">
         <div class="culvert-content-cards-container">

@@ -4,18 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewpoint" content="width=device-width" />
     <title>Channel Tab</title>
-    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+    <link rel="icon" href="../media/logo-rings-only-purple.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/foundations.css" />
-    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="../styles/foundations.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
     <!-- JS -->
-    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
-    <script src="./scripts/modules/snbi.mjs" defer></script>
-    <script src="./scripts/modules/modal.mjs" defer></script>
-    <script src="./scripts/modules/assetdata.mjs" defer></script>
-    <script src="./scripts/modules/ratingForms.mjs" defer></script>
-    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <script src="../scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="../scripts/modules/snbi.mjs" defer></script>
+    <script src="../scripts/modules/modal.mjs" defer></script>
+    <script src="../scripts/modules/assetdata.mjs" defer></script>
+    <script src="../scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="../scripts/scripts.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,13 +31,13 @@
   <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
     <div id="bridge-channel-tab" class="bridge-component-containers active" style="display: block">
       <div class="main-content-containers">
-        <button class="bridge-channel-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg1')">Channel (B.C.09)</button>
-        <button class="bridge-channel-buttons active" onclick="openBridgeChannel(event, 'bridge-channel-pg2')">Rating Table</button>
-        <button class="bridge-channel-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg3')">Example Comments</button>
-        <button class="bridge-channel-buttons alt-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg4')">Channel Protection (B.C.10)</button>
-        <button class="bridge-channel-buttons alt-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg5')">Rating Table</button>
-        <button class="bridge-channel-buttons alt-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg6')">Example Comments</button> |
-        <button class="bridge-channel-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg7')">Maintenance</button>
+        <button class="bridge-channel-buttons" data-target="bridge-channel-pg1" data-container-class="bridge-channel-containers" data-button-class="bridge-channel-buttons">Channel (B.C.09)</button>
+        <button class="bridge-channel-buttons active" data-target="bridge-channel-pg2" data-container-class="bridge-channel-containers" data-button-class="bridge-channel-buttons">Rating Table</button>
+        <button class="bridge-channel-buttons" data-target="bridge-channel-pg3" data-container-class="bridge-channel-containers" data-button-class="bridge-channel-buttons">Example Comments</button>
+        <button class="bridge-channel-buttons alt-buttons" data-target="bridge-channel-pg4" data-container-class="bridge-channel-containers" data-button-class="bridge-channel-buttons">Channel Protection (B.C.10)</button>
+        <button class="bridge-channel-buttons alt-buttons" data-target="bridge-channel-pg5" data-container-class="bridge-channel-containers" data-button-class="bridge-channel-buttons">Rating Table</button>
+        <button class="bridge-channel-buttons alt-buttons" data-target="bridge-channel-pg6" data-container-class="bridge-channel-containers" data-button-class="bridge-channel-buttons">Example Comments</button> |
+        <button class="bridge-channel-buttons" data-target="bridge-channel-pg7" data-container-class="bridge-channel-containers" data-button-class="bridge-channel-buttons">Maintenance</button>
       </div>
       <div class="main-content-containers">
         <div id="bridge-channel-pg1" class="bridge-channel-containers">

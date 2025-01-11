@@ -4,18 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewpoint" content="width=device-width" />
     <title>Scour Tab</title>
-    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+    <link rel="icon" href="../media/logo-rings-only-purple.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/foundations.css" />
-    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="../styles/foundations.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
     <!-- JS -->
-    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
-    <script src="./scripts/modules/snbi.mjs" defer></script>
-    <script src="./scripts/modules/modal.mjs" defer></script>
-    <script src="./scripts/modules/assetdata.mjs" defer></script>
-    <script src="./scripts/modules/ratingForms.mjs" defer></script>
-    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <script src="../scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="../scripts/modules/snbi.mjs" defer></script>
+    <script src="../scripts/modules/modal.mjs" defer></script>
+    <script src="../scripts/modules/assetdata.mjs" defer></script>
+    <script src="../scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="../scripts/scripts.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,12 +31,12 @@
   <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
     <div id="bridge-scour-tab" class="bridge-component-containers active" style="display: block">
       <div class="main-content-containers">
-        <button class="bridge-scour-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg1')">Scour (B.C.11)</button>
-        <button class="bridge-scour-buttons active" onclick="openBridgeScour(event, 'bridge-scour-pg2')">Rating Table</button>
-        <button class="bridge-scour-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg3')">Example Comments</button>
-        <button class="bridge-scour-buttons alt-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg4')">Scour Vulnerability (B.AP.03)</button>
-        <button class="bridge-scour-buttons alt-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg5')">Rating Table</button>
-        <button class="bridge-scour-buttons alt-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg6')">Example Comments</button>
+        <button class="bridge-scour-buttons" data-target="bridge-scour-pg1" data-container-class="bridge-scour-containers" data-button-class="bridge-scour-buttons">Scour (B.C.11)</button>
+        <button class="bridge-scour-buttons active" data-target="bridge-scour-pg2" data-container-class="bridge-scour-containers" data-button-class="bridge-scour-buttons">Rating Table</button>
+        <button class="bridge-scour-buttons" data-target="bridge-scour-pg3" data-container-class="bridge-scour-containers" data-button-class="bridge-scour-buttons">Example Comments</button>
+        <button class="bridge-scour-buttons alt-buttons" data-target="bridge-scour-pg4" data-container-class="bridge-scour-containers" data-button-class="bridge-scour-buttons">Scour Vulnerability (B.AP.03)</button>
+        <button class="bridge-scour-buttons alt-buttons" data-target="bridge-scour-pg5" data-container-class="bridge-scour-containers" data-button-class="bridge-scour-buttons">Rating Table</button>
+        <button class="bridge-scour-buttons alt-buttons" data-target="bridge-scour-pg6" data-container-class="bridge-scour-containers" data-button-class="bridge-scour-buttons">Example Comments</button>
       </div>
       <div class="main-content-containers">
         <div id="bridge-scour-pg1" class="bridge-scour-containers">

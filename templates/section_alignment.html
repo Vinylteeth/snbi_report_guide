@@ -4,18 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewpoint" content="width=device-width" />
     <title>Alignment Tab</title>
-    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+    <link rel="icon" href="../media/logo-rings-only-purple.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/foundations.css" />
-    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="../styles/foundations.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
     <!-- JS -->
-    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
-    <script src="./scripts/modules/snbi.mjs" defer></script>
-    <script src="./scripts/modules/modal.mjs" defer></script>
-    <script src="./scripts/modules/assetdata.mjs" defer></script>
-    <script src="./scripts/modules/ratingForms.mjs" defer></script>
-    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <script src="../scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="../scripts/modules/snbi.mjs" defer></script>
+    <script src="../scripts/modules/modal.mjs" defer></script>
+    <script src="../scripts/modules/assetdata.mjs" defer></script>
+    <script src="../scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="../scripts/scripts.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,10 +31,10 @@
   <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
     <div id="bridge-alignment-tab" class="bridge-component-containers active" style="display: block">
       <div class="main-content-containers">
-        <button class="bridge-alignment-buttons" onclick="openBridgeAlignment(event, 'bridge-alignment-pg1')">Approach Roadway Alignment (B.AP.01)</button>
-        <button class="bridge-alignment-buttons active" onclick="openBridgeAlignment(event, 'bridge-alignment-pg2')">Rating Table</button>
-        <button class="bridge-alignment-buttons" onclick="openBridgeAlignment(event, 'bridge-alignment-pg3')">Example Comments</button> |
-        <button class="bridge-alignment-buttons" onclick="openBridgeAlignment(event, 'bridge-alignment-pg4')">Maintenance</button>
+        <button class="bridge-alignment-buttons" data-target="bridge-alignment-pg1" data-container-class="bridge-alignment-containers" data-button-class="bridge-alignment-buttons">Approach Roadway Alignment (B.AP.01)</button>
+        <button class="bridge-alignment-buttons active" data-target="bridge-alignment-pg2" data-container-class="bridge-alignment-containers" data-button-class="bridge-alignment-buttons">Rating Table</button>
+        <button class="bridge-alignment-buttons" data-target="bridge-alignment-pg3" data-container-class="bridge-alignment-containers" data-button-class="bridge-alignment-buttons">Example Comments</button> |
+        <button class="bridge-alignment-buttons" data-target="bridge-alignment-pg4" data-container-class="bridge-alignment-containers" data-button-class="bridge-alignment-buttons">Maintenance</button>
       </div>
       <div class="main-content-containers">
         <div id="bridge-alignment-pg1" class="bridge-alignment-containers">

@@ -4,18 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewpoint" content="width=device-width" />
     <title>Bridge Tab</title>
-    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+    <link rel="icon" href="../media/logo-rings-only-purple.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/foundations.css" />
-    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="../styles/foundations.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
     <!-- JS -->
-    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
-    <script src="./scripts/modules/snbi.mjs" defer></script>
-    <script src="./scripts/modules/modal.mjs" defer></script>
-    <script src="./scripts/modules/assetdata.mjs" defer></script>
-    <script src="./scripts/modules/ratingForms.mjs" defer></script>
-    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <script src="../scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="../scripts/modules/snbi.mjs" defer></script>
+    <script src="../scripts/modules/modal.mjs" defer></script>
+    <script src="../scripts/modules/assetdata.mjs" defer></script>
+    <script src="../scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="../scripts/scripts.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,22 +31,22 @@
   <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
     <div id="bridge-asset-tab" class="asset-containers" style="display: block">
       <div class="main-content-containers">
-        <button class="bridge-component-buttons active" onclick="openBridgeComponent(event, 'bridge-alignment-tab')">Alignment</button>
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-approach-slabs-tab')">Approach Slabs</button>
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-joints-tab')">Joints</button>
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-railings-tab')">Railings</button>
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-deck-tab')">Deck</button>
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-super-tab')">Super</button>
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-bearings-tab')">Bearings</button>
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-sub-tab')">Sub</button>
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-culvert-tab')">Culvert</button>
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-channel-tab')">Channel</button>
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-scour-tab')">Scour</button>
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-overtopping-tab')">Overtopping</button>
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-wildlife-tab')">Wildlife</button> |
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-elements-tab')">Elements</button>
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-maintenance-tab')">Maintenance</button> |
-        <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-review-tab')">Review</button>
+        <button class="bridge-component-buttons active" data-target="bridge-alignment-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Alignment</button>
+        <button class="bridge-component-buttons" data-target="bridge-approach-slabs-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Approach Slabs</button>
+        <button class="bridge-component-buttons" data-target="bridge-joints-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Joints</button>
+        <button class="bridge-component-buttons" data-target="bridge-railings-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Railings</button>
+        <button class="bridge-component-buttons" data-target="bridge-deck-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Deck</button>
+        <button class="bridge-component-buttons" data-target="bridge-super-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Super</button>
+        <button class="bridge-component-buttons" data-target="bridge-bearings-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Bearings</button>
+        <button class="bridge-component-buttons" data-target="bridge-sub-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Sub</button>
+        <button class="bridge-component-buttons" data-target="bridge-culvert-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Culvert</button>
+        <button class="bridge-component-buttons" data-target="bridge-channel-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Channel</button>
+        <button class="bridge-component-buttons" data-target="bridge-scour-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Scour</button>
+        <button class="bridge-component-buttons" data-target="bridge-overtopping-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Overtopping</button>
+        <button class="bridge-component-buttons" data-target="bridge-wildlife-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Wildlife</button> |
+        <button class="bridge-component-buttons" data-target="bridge-elements-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Elements</button>
+        <button class="bridge-component-buttons" data-target="bridge-maintenance-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Maintenance</button> |
+        <button class="bridge-component-buttons" data-target="bridge-review-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Review</button>
       </div>
     </div>
   </body>

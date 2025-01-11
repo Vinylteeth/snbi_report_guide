@@ -4,18 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewpoint" content="width=device-width" />
     <title>Super Tab</title>
-    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+    <link rel="icon" href="../media/logo-rings-only-purple.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/foundations.css" />
-    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="../styles/foundations.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
     <!-- JS -->
-    <script src="./scripts/modules/dropdownMenus.mjs" defer></script>
-    <script src="./scripts/modules/snbi.mjs" defer></script>
-    <script src="./scripts/modules/modal.mjs" defer></script>
-    <script src="./scripts/modules/assetdata.mjs" defer></script>
-    <script src="./scripts/modules/ratingForms.mjs" defer></script>
-    <script type="text/javascript" src="./scripts/scripts.js" defer></script>
+    <script src="../scripts/modules/dropdownMenus.mjs" defer></script>
+    <script src="../scripts/modules/snbi.mjs" defer></script>
+    <script src="../scripts/modules/modal.mjs" defer></script>
+    <script src="../scripts/modules/assetdata.mjs" defer></script>
+    <script src="../scripts/modules/ratingForms.mjs" defer></script>
+    <script type="text/javascript" src="../scripts/scripts.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,14 +31,14 @@
   <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
     <div id="bridge-super-tab" class="bridge-component-containers active" style="display: block">
         <div class="main-content-containers">
-          <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg1')">Superstructure (B.C.02)</button>
-          <button class="bridge-super-buttons active" onclick="openBridgeSuper(event, 'bridge-super-pg2')">Rating Table</button>
-          <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg3')">Example Comments</button>
-          <button class="bridge-super-buttons alt-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg4')">Paint (B.C.02a)</button>
-          <button class="bridge-super-buttons alt-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg5')">Rating Table</button>
-          <button class="bridge-super-buttons alt-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg6')">Example Comments</button> |
-          <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg7')">Elements</button>
-          <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg8')">Maintenance</button>
+          <button class="bridge-super-buttons" data-target="bridge-super-pg1" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Superstructure (B.C.02)</button>
+          <button class="bridge-super-buttons active" data-target="bridge-super-pg2" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Rating Table</button>
+          <button class="bridge-super-buttons" data-target="bridge-super-pg3" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Example Comments</button>
+          <button class="bridge-super-buttons alt-buttons" data-target="bridge-super-pg4" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Paint (B.C.02a)</button>
+          <button class="bridge-super-buttons alt-buttons" data-target="bridge-super-pg5" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Rating Table</button>
+          <button class="bridge-super-buttons alt-buttons" data-target="bridge-super-pg6" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Example Comments</button> |
+          <button class="bridge-super-buttons" data-target="bridge-super-pg7" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Elements</button>
+          <button class="bridge-super-buttons" data-target="bridge-super-pg8" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Maintenance</button>
         </div>
         <div class="main-content-containers">
           <div id="bridge-super-pg1" class="bridge-super-containers">

@@ -1,0 +1,44 @@
+Alignment Tab:
+
+Classes:
+bridge-component-containers
+active
+main-content-containers
+bridge-alignment-buttons
+bridge-alignment-containers
+content-container-paragraphs
+content-container-paragraphs-ul
+content-container-rating-lines
+content-container-rating-numerical
+content-container-rating-description-and-condition-bubble
+content-container-rating-condition-bubble
+content-container-comment-lines
+component-maintenance-container
+component-maintenance-button1
+component-maintenance-button2
+component-maintenance-button3
+component-maintenance-button4
+component-maintenance-item
+content-container-links-line-label
+content-container-links-line-links
+paragraph-rating
+textarea-containers
+textarea-mirrors
+textarea-comments
+
+Approach Tab:
+
+Classes:
+bridge-approach-buttons
+bridge-approach-containers
+component-elements-container
+component-elements-button2
+component-elements-button3
+component-elements-button4
+component-elements-item
+
+Bearings Tab:
+
+Classes:
+bridge-bearings-buttons
+bridge-bearings-containers

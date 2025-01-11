@@ -1,5 +1,12 @@
 // General open tab function
-function openTab(evt, containerClass, buttonClass, componentName) {
+function openTab(evt) {
+  var button = evt.currentTarget;
+
+  // Extract data attributes from the clicked button
+  var componentName = button.getAttribute('data-target');
+  var containerClass = button.getAttribute('data-container-class');
+  var buttonClass = button.getAttribute('data-button-class');
+
   // Hide all containers
   var containers = document.getElementsByClassName(containerClass);
   for (var i = 0; i < containers.length; i++) {
@@ -14,81 +21,55 @@ function openTab(evt, containerClass, buttonClass, componentName) {
 
   // Show the current tab and add "active" class to the clicked button
   document.getElementById(componentName).style.display = "block";
-  evt.currentTarget.className += " active";
+  button.className += " active";
 }
 
-// Open tab functions
-function openAssetTab(evt, componentName) {
-  openTab(evt, "asset-containers", "asset-buttons", componentName);
-}
+// Array of button classes
+var buttonClasses = [
+  'asset-buttons',
+  'bridge-component-buttons',
+  'bridge-alignment-buttons',
+  'bridge-approach-buttons',
+  'bridge-joints-buttons',
+  'bridge-railings-buttons',
+  'bridge-deck-buttons',
+  'bridge-super-buttons',
+  'bridge-bearings-buttons',
+  'bridge-sub-buttons',
+  'bridge-culvert-buttons',
+  'bridge-channel-buttons',
+  'bridge-scour-buttons',
+  'bridge-overtopping-buttons',
+  'bridge-wildlife-buttons',
+  'bridge-elements-buttons',
+  'bridge-maintenance-buttons',
+  'bridge-review-buttons',
+  'element-item-buttons',
+  'culvert-item-buttons',
+  'wall-item-buttons'
+];
 
-function openBridgeComponent(evt, componentName) {
-  openTab(evt, "bridge-component-containers", "bridge-component-buttons", componentName);
-}
+// Loop through the array and add event listeners to each button class
+buttonClasses.forEach(function(buttonClass) {
+  document.querySelectorAll('.' + buttonClass).forEach(function(button) {
+    button.addEventListener('click', openTab);
+  });
+});
 
-function openBridgeAlignment(evt, componentName) {
-  openTab(evt, "bridge-alignment-containers", "bridge-alignment-buttons", componentName);
-}
+// // Activate the second tab (assuming you want to display pg2 as the initial active page)
+// window.addEventListener('load', function() {
+//   var secondButton = document.querySelectorAll('.' + buttonClasses[0])[1]; // Select the second button in each class
+//   if (secondButton) {
+//     secondButton.click(); // Trigger a click event on the second button to activate pg2
+//   }
+// });
 
-function openBridgeApproach(evt, componentName) {
-  openTab(evt, "bridge-approach-containers", "bridge-approach-buttons", componentName);
-}
+// Add event listeners to buttons
+// document.querySelectorAll('[class^="bridge-"][class$="-buttons"]').forEach(function(button) {
+//   button.addEventListener('click', openTab);
+// });
 
-function openBridgeJoints(evt, componentName) {
-  openTab(evt, "bridge-joints-containers", "bridge-joints-buttons", componentName);
-}
 
-function openBridgeRailings(evt, componentName) {
-  openTab(evt, "bridge-railings-containers", "bridge-railings-buttons", componentName);
-}
-
-function openBridgeDeck(evt, componentName) {
-  openTab(evt, "bridge-deck-containers", "bridge-deck-buttons", componentName);
-}
-
-function openBridgeSuper(evt, componentName) {
-  openTab(evt, "bridge-super-containers", "bridge-super-buttons", componentName);
-}
-
-function openBridgeBearings(evt, componentName) {
-  openTab(evt, "bridge-bearings-containers", "bridge-bearings-buttons", componentName);
-}
-
-function openBridgeSub(evt, componentName) {
-  openTab(evt, "bridge-sub-containers", "bridge-sub-buttons", componentName);
-}
-
-function openBridgeCulvert(evt, componentName) {
-  openTab(evt, "bridge-culvert-containers", "bridge-culvert-buttons", componentName);
-}
-
-function openBridgeChannel(evt, componentName) {
-  openTab(evt, "bridge-channel-containers", "bridge-channel-buttons", componentName);
-}
-
-function openBridgeScour(evt, componentName) {
-  openTab(evt, "bridge-scour-containers", "bridge-scour-buttons", componentName);
-}
-
-function openBridgeOvertopping(evt, componentName) {
-  openTab(evt, "bridge-overtopping-containers", "bridge-overtopping-buttons", componentName);
-}
-
-function openBridgeWildlife(evt, componentName) {
-  openTab(evt, "bridge-wildlife-containers", "bridge-wildlife-buttons", componentName);
-}
-
-function openElementItem(evt, componentName) {
-  openTab(evt, "bridge-element-containers", "bridge-element-buttons", componentName);
-}
-
-function openCulvertItem(evt, componentName) {
-  openTab(evt, "culvert-item-containers", "culvert-item-buttons", componentName);
-}
-
-function openWallItem(evt, componentName) {
-  openTab(evt, "wall-item-containers", "wall-item-buttons", componentName);
-}
 
 // Maintenance alert
 function openBridgeComponentMaintenance(evt, componentName) {

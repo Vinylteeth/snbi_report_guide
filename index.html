@@ -2,14 +2,6 @@
 <!-- HTML is for layout purposes only. JS eventListeners are used for calling functions. Any inline CSS or JS are for development and testing. -->
 <!-- IDs are not used in the Template Literals. Template Literals are often repeated items. If IDs are used in Template Lieterals it should be noted. -->
 <!-- Comments should be used in the HTML to show where Template Literals are used to build HTML. -->
-<!-- Typical naming conventions (exceptions should be easy to understand): Functions = fxAction; IDs = namePurpose; Classes = htmltagPurpose. -->
-
-<!-- Header will have a navigation pane reflecting choices. -->
-<!-- Should ask questions that prevent errors like monolithic and slab. -->
-<!-- Should store component comments and allow multiple defects be added.  -->
-<!-- Scour. The substructure components appear stable. There is no scour present. -->
-<!-- Use home page for iterate as layout. Choices and Questions, Ratings and Links, Comment. -->
-<!-- Guide selections with good language. -->
 
 <!DOCTYPE html>
 <html lang="en-US">
@@ -17,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewpoint" content="width=device-width" />
     <title>Report Assistant</title>
-    <link rel="icon" href=".\media\logo-rings-only-purple.png" />
+    <link rel="icon" href="./media/logo-rings-only-purple.png" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/foundations.css" />
@@ -49,9 +41,9 @@
       <!-- <div style="display: flex; height: 40px; line-height: 40px; vertical-align: middle; margin-left: 10px">Bridge | Culvert | Walls</div>
       <div style="display: flex; height: 40px; line-height: 40px; vertical-align: middle; margin-left: 10px">Superstructure | Reinforced Concrete Slab | Spalling</div> -->
       <div class="header-tab-line">
-        <button class="asset-buttons active" onclick="openAssetTab(event, 'bridge-asset-tab')">Bridge</button>
-        <button class="asset-buttons" onclick="openAssetTab(event, 'culvert-asset-tab')">Culvert</button>
-        <button class="asset-buttons" onclick="openAssetTab(event, 'wall-asset-tab')">Wall</button>
+        <button class="asset-buttons active" data-target="bridge-asset-tab" data-container-class="asset-containers" data-button-class="asset-buttons">Bridge</button>
+        <button class="asset-buttons" data-target="culvert-asset-tab" data-container-class="asset-containers" data-button-class="asset-buttons">Culvert</button>
+        <button class="asset-buttons" data-target="wall-asset-tab" data-container-class="asset-containers" data-button-class="asset-buttons">Wall</button>
       </div>
       
     </header>
@@ -62,29 +54,29 @@
       <!-- Tab content -->
       <div id="bridge-asset-tab" class="asset-containers" style="display: block">
         <div class="main-content-containers">
-          <button class="bridge-component-buttons active" onclick="openBridgeComponent(event, 'bridge-alignment-tab')">Alignment</button>
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-approach-slabs-tab')">Approach Slabs</button>
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-joints-tab')">Joints</button>
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-railings-tab')">Railings</button>
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-deck-tab')">Deck</button>
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-super-tab')">Super</button>
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-bearings-tab')">Bearings</button>
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-sub-tab')">Sub</button>
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-culvert-tab')">Culvert</button>
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-channel-tab')">Channel</button>
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-scour-tab')">Scour</button>
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-overtopping-tab')">Overtopping</button>
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-wildlife-tab')">Wildlife</button> |
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-elements-tab')">Elements</button>
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-maintenance-tab')">Maintenance</button> |
-          <button class="bridge-component-buttons" onclick="openBridgeComponent(event, 'bridge-review-tab')">Review</button>
+          <button class="bridge-component-buttons active" data-target="bridge-alignment-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Alignment</button>
+        <button class="bridge-component-buttons" data-target="bridge-approach-slabs-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Approach Slabs</button>
+        <button class="bridge-component-buttons" data-target="bridge-joints-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Joints</button>
+        <button class="bridge-component-buttons" data-target="bridge-railings-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Railings</button>
+        <button class="bridge-component-buttons" data-target="bridge-deck-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Deck</button>
+        <button class="bridge-component-buttons" data-target="bridge-super-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Super</button>
+        <button class="bridge-component-buttons" data-target="bridge-bearings-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Bearings</button>
+        <button class="bridge-component-buttons" data-target="bridge-sub-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Sub</button>
+        <button class="bridge-component-buttons" data-target="bridge-culvert-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Culvert</button>
+        <button class="bridge-component-buttons" data-target="bridge-channel-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Channel</button>
+        <button class="bridge-component-buttons" data-target="bridge-scour-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Scour</button>
+        <button class="bridge-component-buttons" data-target="bridge-overtopping-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Overtopping</button>
+        <button class="bridge-component-buttons" data-target="bridge-wildlife-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Wildlife</button> |
+        <button class="bridge-component-buttons" data-target="bridge-elements-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Elements</button>
+        <button class="bridge-component-buttons" data-target="bridge-maintenance-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Maintenance</button> |
+        <button class="bridge-component-buttons" data-target="bridge-review-tab" data-container-class="bridge-component-containers" data-button-class="bridge-component-buttons">Review</button>
         </div>
         <div id="bridge-alignment-tab" class="bridge-component-containers active" style="display: block">
           <div class="main-content-containers">
-            <button class="bridge-alignment-buttons" onclick="openBridgeAlignment(event, 'bridge-alignment-pg1')">Approach Roadway Alignment (B.AP.01)</button>
-            <button class="bridge-alignment-buttons active" onclick="openBridgeAlignment(event, 'bridge-alignment-pg2')">Rating Table</button>
-            <button class="bridge-alignment-buttons" onclick="openBridgeAlignment(event, 'bridge-alignment-pg3')">Example Comments</button> |
-            <button class="bridge-alignment-buttons" onclick="openBridgeAlignment(event, 'bridge-alignment-pg4')">Maintenance</button>
+            <button class="bridge-alignment-buttons" data-target="bridge-alignment-pg1" data-container-class="bridge-alignment-containers" data-button-class="bridge-alignment-buttons">Approach Roadway Alignment (B.AP.01)</button>
+            <button class="bridge-alignment-buttons active" data-target="bridge-alignment-pg2" data-container-class="bridge-alignment-containers" data-button-class="bridge-alignment-buttons">Rating Table</button>
+            <button class="bridge-alignment-buttons" data-target="bridge-alignment-pg3" data-container-class="bridge-alignment-containers" data-button-class="bridge-alignment-buttons">Example Comments</button> |
+            <button class="bridge-alignment-buttons" data-target="bridge-alignment-pg4" data-container-class="bridge-alignment-containers" data-button-class="bridge-alignment-buttons">Maintenance</button>
           </div>
           <div class="main-content-containers">
             <div id="bridge-alignment-pg1" class="bridge-alignment-containers">
@@ -109,7 +101,7 @@
                 </ul>
               </div>
             </div>
-
+    
             <div id="bridge-alignment-pg2" class="bridge-alignment-containers active" style="display: block">
               <div class="content-container-rating-lines">
                 <span class="content-container-rating-numerical">N</span>
@@ -138,7 +130,7 @@
                 </p>
               </div>
             </div>
-
+    
             <div id="bridge-alignment-pg3" class="bridge-alignment-containers">
               <div class="content-container-paragraphs">
                 <p class="content-container-comment-lines">No speed reduction necessary.</p>
@@ -151,7 +143,7 @@
                 <p class="content-container-comment-lines">The bridge is in a crest vertical curve.</p>
               </div>
             </div>
-
+    
             <div id="bridge-alignment-pg4" class="bridge-alignment-containers">
               <div class="component-maintenance-container">
                 <button
@@ -263,11 +255,11 @@
         </div>
         <div id="bridge-approach-slabs-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <button class="bridge-approach-buttons" onclick="openBridgeApproach(event, 'bridge-approach-pg1')">Approach Slabs (B.C.01b)</button>
-            <button class="bridge-approach-buttons active" onclick="openBridgeApproach(event, 'bridge-approach-pg2')">Rating Table</button>
-            <button class="bridge-approach-buttons" onclick="openBridgeApproach(event, 'bridge-approach-pg3')">Example Comments</button> |
-            <button class="bridge-approach-buttons" onclick="openBridgeApproach(event, 'bridge-approach-pg4')">Elements</button>
-            <button class="bridge-approach-buttons" onclick="openBridgeApproach(event, 'bridge-approach-pg5')">Maintenance</button>
+            <button class="bridge-approach-buttons" data-target="bridge-approach-pg1" data-container-class="bridge-approach-containers" data-button-class="bridge-approach-buttons">Approach Slabs (B.C.01b)</button>
+            <button class="bridge-approach-buttons active" data-target="bridge-approach-pg2" data-container-class="bridge-approach-containers" data-button-class="bridge-approach-buttons">Rating Table</button>
+            <button class="bridge-approach-buttons" data-target="bridge-approach-pg3" data-container-class="bridge-approach-containers" data-button-class="bridge-approach-buttons">Example Comments</button> |
+            <button class="bridge-approach-buttons" data-target="bridge-approach-pg4" data-container-class="bridge-approach-containers" data-button-class="bridge-approach-buttons">Elements</button>
+            <button class="bridge-approach-buttons" data-target="bridge-approach-pg5" data-container-class="bridge-approach-containers" data-button-class="bridge-approach-buttons">Maintenance</button>
           </div>
           <div class="main-content-containers">
             <div id="bridge-approach-pg1" class="bridge-approach-containers">
@@ -471,17 +463,17 @@
         </div>
         <div id="bridge-joints-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <button class="bridge-joints-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg1')">Bridge Joints (B.C.08)</button>
-            <button class="bridge-joints-buttons active" onclick="openBridgeJoints(event, 'bridge-joints-pg2')">Rating Table</button>
-            <button class="bridge-joints-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg3')">Example Comments</button>
-            <button class="bridge-joints-buttons alt-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg4')">Terminal Joints (B.C.08a)</button>
-            <button class="bridge-joints-buttons alt-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg5')">Rating Table</button>
-            <button class="bridge-joints-buttons alt-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg6')">Example Comments</button> |
-            <button class="bridge-joints-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg7')">Elements</button>
-            <button class="bridge-joints-buttons" onclick="openBridgeJoints(event, 'bridge-joints-pg8')">Maintenance</button>
+            <button class="bridge-joints-buttons" data-target="bridge-joints-pg1" data-container-class="bridge-joints-containers" data-button-class="bridge-joints-buttons">Bridge Joints (B.C.08)</button>
+            <button class="bridge-joints-buttons active" data-target="bridge-joints-pg2" data-container-class="bridge-joints-containers" data-button-class="bridge-joints-buttons">Rating Table</button>
+            <button class="bridge-joints-buttons" data-target="bridge-joints-pg3" data-container-class="bridge-joints-containers" data-button-class="bridge-joints-buttons">Example Comments</button>
+            <button class="bridge-joints-buttons alt-buttons" data-target="bridge-joints-pg4" data-container-class="bridge-joints-containers" data-button-class="bridge-joints-buttons">Terminal Joints (B.C.08a)</button>
+            <button class="bridge-joints-buttons alt-buttons" data-target="bridge-joints-pg5" data-container-class="bridge-joints-containers" data-button-class="bridge-joints-buttons">Rating Table</button>
+            <button class="bridge-joints-buttons alt-buttons" data-target="bridge-joints-pg6" data-container-class="bridge-joints-containers" data-button-class="bridge-joints-buttons">Example Comments</button> |
+            <button class="bridge-joints-buttons" data-target="bridge-joints-pg7" data-container-class="bridge-joints-containers" data-button-class="bridge-joints-buttons">Elements</button>
+            <button class="bridge-joints-buttons" data-target="bridge-joints-pg8" data-container-class="bridge-joints-containers" data-button-class="bridge-joints-buttons">Maintenance</button>
           </div>
           <div class="main-content-containers">
-            <div id="bridge-joints-pg1" class="bridge-joints-containers">
+            <div id="bridge-joints-pg1" class="bridge-joints-containers active" style="display: block">
               <div class="content-container-paragraphs">
                 <p>
                   This item addresses the condition of all types and shapes of bridge deck joints. The condition assessment includes all aspects of the joints such as any seals,
@@ -797,14 +789,14 @@
         </div>
         <div id="bridge-railings-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg1')">Bridge Railings (B.C.05)</button>
-            <button class="bridge-railings-buttons active" onclick="openBridgeRailings(event, 'bridge-railings-pg2')">Rating Table</button>
-            <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg3')">Example Comments</button>
-            <button class="bridge-railings-buttons alt-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg4')">Bridge Railing Transitions (B.C.06)</button>
-            <button class="bridge-railings-buttons alt-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg5')">Rating Table</button>
-            <button class="bridge-railings-buttons alt-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg6')">Example Comments</button> |
-            <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg7')">Elements</button>
-            <button class="bridge-railings-buttons" onclick="openBridgeRailings(event, 'bridge-railings-pg8')">Maintenance</button>
+            <button class="bridge-railings-buttons" data-target="bridge-railings-pg1" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Bridge Railings (B.C.05)</button>
+            <button class="bridge-railings-buttons active" data-target="bridge-railings-pg2" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Rating Table</button>
+            <button class="bridge-railings-buttons" data-target="bridge-railings-pg3" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Example Comments</button>
+            <button class="bridge-railings-buttons alt-buttons" data-target="bridge-railings-pg4" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Bridge Railing Transitions (B.C.06)</button>
+            <button class="bridge-railings-buttons alt-buttons" data-target="bridge-railings-pg5" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Rating Table</button>
+            <button class="bridge-railings-buttons alt-buttons" data-target="bridge-railings-pg6" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Example Comments</button> |
+            <button class="bridge-railings-buttons" data-target="bridge-railings-pg7" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Elements</button>
+            <button class="bridge-railings-buttons" data-target="bridge-railings-pg8" data-container-class="bridge-railings-containers" data-button-class="bridge-railings-buttons">Maintenance</button>
           </div>
           <div class="main-content-containers">
             <div id="bridge-railings-pg1" class="bridge-railings-containers">
@@ -814,10 +806,10 @@
                   over buried structures. The condition assessment includes the portions of the railings, posts, blocking, and curbs that are part of the bridge railing system.
                 </p>
                 <br />
-
+    
                 <p>Do not consider pedestrian railings when coding this item, except to the extent that the pedestrian railing is integral to the traffic barrier.</p>
                 <br />
-
+    
                 <p>
                   Do not consider the condition of protective coatings and other protection systems when determining the condition rating code for this item, except to the extent
                   that problems with the protective coating system are indicative of problems with the underlying railing material.
@@ -909,7 +901,7 @@
                   railings, posts, blocking, and curbs that are part of the bridge railing transitions.
                 </p>
                 <br />
-
+    
                 <p>
                   Do not consider the condition of protective coatings and other protection systems when determining the condition rating code for this item, except to the extent
                   that problems with the protective coating system are indicative of problems with the underlying railing transition material.
@@ -1216,14 +1208,14 @@
         </div>
         <div id="bridge-deck-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg1')">Deck (B.C.01)</button>
-            <button class="bridge-deck-buttons active" onclick="openBridgeDeck(event, 'bridge-deck-pg2')">Rating Table</button>
-            <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg3')">Example Comments</button>
-            <button class="bridge-deck-buttons alt-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg4')">Wearing Surface (B.C.01a)</button>
-            <button class="bridge-deck-buttons alt-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg5')">Rating Table</button>
-            <button class="bridge-deck-buttons alt-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg6')">Example Comments</button> |
-            <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg7')">Elements</button>
-            <button class="bridge-deck-buttons" onclick="openBridgeDeck(event, 'bridge-deck-pg8')">Maintenance</button>
+            <button class="bridge-deck-buttons" data-target="bridge-deck-pg1" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Deck (B.C.01)</button>
+            <button class="bridge-deck-buttons active" data-target="bridge-deck-pg2" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Rating Table</button>
+            <button class="bridge-deck-buttons" data-target="bridge-deck-pg3" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Example Comments</button>
+            <button class="bridge-deck-buttons alt-buttons" data-target="bridge-deck-pg4" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Wearing Surface (B.C.01a)</button>
+            <button class="bridge-deck-buttons alt-buttons" data-target="bridge-deck-pg5" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Rating Table</button>
+            <button class="bridge-deck-buttons alt-buttons" data-target="bridge-deck-pg6" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Example Comments</button> |
+            <button class="bridge-deck-buttons" data-target="bridge-deck-pg7" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Elements</button>
+            <button class="bridge-deck-buttons" data-target="bridge-deck-pg8" data-container-class="bridge-deck-containers" data-button-class="bridge-deck-buttons">Maintenance</button>
           </div>
           <div class="main-content-containers">
             <div id="bridge-deck-pg1" class="bridge-deck-containers">
@@ -1495,7 +1487,7 @@
                 <button id="bridge-deck-elements-bta36" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-deck-elements-bta36')">CS4</button>
                 <div class="component-elements-item">65: Other Slab</div>
               </div>
-
+    
               <br />
               <div class="component-elements-container">
                 <button id="bridge-deck-elements-btc88" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-deck-elements-btc88')">CS2</button>
@@ -1631,14 +1623,14 @@
         </div>
         <div id="bridge-super-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg1')">Superstructure (B.C.02)</button>
-            <button class="bridge-super-buttons active" onclick="openBridgeSuper(event, 'bridge-super-pg2')">Rating Table</button>
-            <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg3')">Example Comments</button>
-            <button class="bridge-super-buttons alt-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg4')">Paint (B.C.02a)</button>
-            <button class="bridge-super-buttons alt-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg5')">Rating Table</button>
-            <button class="bridge-super-buttons alt-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg6')">Example Comments</button> |
-            <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg7')">Elements</button>
-            <button class="bridge-super-buttons" onclick="openBridgeSuper(event, 'bridge-super-pg8')">Maintenance</button>
+            <button class="bridge-super-buttons" data-target="bridge-super-pg1" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Superstructure (B.C.02)</button>
+            <button class="bridge-super-buttons active" data-target="bridge-super-pg2" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Rating Table</button>
+            <button class="bridge-super-buttons" data-target="bridge-super-pg3" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Example Comments</button>
+            <button class="bridge-super-buttons alt-buttons" data-target="bridge-super-pg4" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Paint (B.C.02a)</button>
+            <button class="bridge-super-buttons alt-buttons" data-target="bridge-super-pg5" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Rating Table</button>
+            <button class="bridge-super-buttons alt-buttons" data-target="bridge-super-pg6" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Example Comments</button> |
+            <button class="bridge-super-buttons" data-target="bridge-super-pg7" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Elements</button>
+            <button class="bridge-super-buttons" data-target="bridge-super-pg8" data-container-class="bridge-super-containers" data-button-class="bridge-super-buttons">Maintenance</button>
           </div>
           <div class="main-content-containers">
             <div id="bridge-super-pg1" class="bridge-super-containers">
@@ -2047,7 +2039,7 @@
                 <button id="bridge-super-elements-btb36" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btb36')">CS4</button>
                 <div class="component-elements-item">162: Steel Gusset Plate</div>
               </div>
-
+  
               <br />
               <div class="component-elements-container">
                 <button id="bridge-super-elements-btc91" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-super-elements-btc91')">CS2</button>
@@ -2056,7 +2048,7 @@
                 <div class="component-elements-item">515: Steel Protective Coating</div>
               </div>
             </div>
-
+  
             <div id="bridge-super-pg8" class="bridge-super-containers">
               <div class="component-maintenance-container">
                 <button id="bridge-super-maintenance-bt1" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-super-maintenance-bt1')">
@@ -2176,11 +2168,11 @@
         </div>
         <div id="bridge-bearings-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <button class="bridge-bearings-buttons" onclick="openBridgeBearings(event, 'bridge-bearings-pg1')">Bridge Bearings (B.C.07)</button>
-            <button class="bridge-bearings-buttons active" onclick="openBridgeBearings(event, 'bridge-bearings-pg2')">Rating Table</button>
-            <button class="bridge-bearings-buttons" onclick="openBridgeBearings(event, 'bridge-bearings-pg3')">Example Comments</button> |
-            <button class="bridge-bearings-buttons" onclick="openBridgeBearings(event, 'bridge-bearings-pg4')">Elements</button>
-            <button class="bridge-bearings-buttons" onclick="openBridgeBearings(event, 'bridge-bearings-pg5')">Maintenance</button>
+            <button class="bridge-bearings-buttons" data-target="bridge-bearings-pg1" data-container-class="bridge-bearings-containers" data-button-class="bridge-bearings-buttons">Bridge Bearings (B.C.07)</button>
+            <button class="bridge-bearings-buttons active" data-target="bridge-bearings-pg2" data-container-class="bridge-bearings-containers" data-button-class="bridge-bearings-buttons">Rating Table</button>
+            <button class="bridge-bearings-buttons" data-target="bridge-bearings-pg3" data-container-class="bridge-bearings-containers" data-button-class="bridge-bearings-buttons">Example Comments</button> |
+            <button class="bridge-bearings-buttons" data-target="bridge-bearings-pg4" data-container-class="bridge-bearings-containers" data-button-class="bridge-bearings-buttons">Elements</button>
+            <button class="bridge-bearings-buttons" data-target="bridge-bearings-pg5" data-container-class="bridge-bearings-containers" data-button-class="bridge-bearings-buttons">Maintenance</button>
           </div>
           <div class="main-content-containers">
             <div id="bridge-bearings-pg1" class="bridge-bearings-containers">
@@ -2375,7 +2367,7 @@
                 <div class="component-elements-item">316: Other Bearing</div>
               </div>
             </div>
-
+    
             <div id="bridge-bearings-pg5" class="bridge-bearings-containers">
               <div class="component-maintenance-container">
                 <button
@@ -2456,14 +2448,14 @@
         </div>
         <div id="bridge-sub-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg1')">Substructure (B.C.03)</button>
-            <button class="bridge-sub-buttons active" onclick="openBridgeSub(event, 'bridge-sub-pg2')">Rating Table</button>
-            <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg3')">Example Comments</button>
-            <button class="bridge-sub-buttons alt-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg4')">Slopewall (B.C.03a)</button>
-            <button class="bridge-sub-buttons alt-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg5')">Rating Table</button>
-            <button class="bridge-sub-buttons alt-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg6')">Example Comments</button> |
-            <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg7')">Elements</button>
-            <button class="bridge-sub-buttons" onclick="openBridgeSub(event, 'bridge-sub-pg8')">Maintenance</button>
+              <button class="bridge-sub-buttons" data-target="bridge-sub-pg1" data-container-class="bridge-sub-containers" data-button-class="bridge-sub-buttons">Substructure (B.C.03)</button>
+              <button class="bridge-sub-buttons active" data-target="bridge-sub-pg2" data-container-class="bridge-sub-containers" data-button-class="bridge-sub-buttons">Rating Table</button>
+              <button class="bridge-sub-buttons" data-target="bridge-sub-pg3" data-container-class="bridge-sub-containers" data-button-class="bridge-sub-buttons">Example Comments</button>
+              <button class="bridge-sub-buttons alt-buttons" data-target="bridge-sub-pg4" data-container-class="bridge-sub-containers" data-button-class="bridge-sub-buttons">Slopewall (B.C.03a)</button>
+              <button class="bridge-sub-buttons alt-buttons" data-target="bridge-sub-pg5" data-container-class="bridge-sub-containers" data-button-class="bridge-sub-buttons">Rating Table</button>
+              <button class="bridge-sub-buttons alt-buttons" data-target="bridge-sub-pg6" data-container-class="bridge-sub-containers" data-button-class="bridge-sub-buttons">Example Comments</button> |
+              <button class="bridge-sub-buttons" data-target="bridge-sub-pg7" data-container-class="bridge-sub-containers" data-button-class="bridge-sub-buttons">Elements</button>
+              <button class="bridge-sub-buttons" data-target="bridge-sub-pg8" data-container-class="bridge-sub-containers" data-button-class="bridge-sub-buttons">Maintenance</button>
           </div>
           <div class="main-content-containers">
             <div id="bridge-sub-pg1" class="bridge-sub-containers">
@@ -2475,22 +2467,22 @@
                   materials to determine the applicable code. Visual assessments may be supplemented with non-destructive or destructive testing results.
                 </p>
                 <br />
-
+    
                 <p>Consider the condition of integral abutment wingwalls to the first construction or expansion joint when determining the condition rating code for this item.</p>
                 <br />
-
+    
                 <p>
                   Do not consider the condition of protective coatings, fenders and other substructure protection systems when determining the condition rating code for this item,
                   except to the extent that these items indicate distress of the substructure, or adversely affect its condition.
                 </p>
                 <br />
-
+    
                 <p>
                   Do not consider the presence of drift, debris, and soil accumulation when determining the condition rating code for this item, except to the extent that these
                   items are causing distress in the substructure.
                 </p>
                 <br />
-
+    
                 <p>The substructure includes:</p>
                 <ul class="content-container-paragraphs-ul">
                   <li>backwalls and the members below the bearings for bridges with non-integral superstructure and substructure;</li>
@@ -2501,7 +2493,7 @@
                   <li>foundation piles exposed by erosion or scour.</li>
                 </ul>
                 <br />
-
+    
                 <p>
                   When observed conditions are not consistent with the scour design or the assumptions used in the scour appraisal, scour is considered in the coding of this item.
                   In this case, observed conditions also indicate a need to reevaluate Item B.AP.03 (Scour Vulnerability). Observed scour that is less than the tolerable limit
@@ -2768,7 +2760,7 @@
                 <div class="component-elements-item">236: Other Pier Cap</div>
               </div>
             </div>
-
+    
             <div id="bridge-sub-pg8" class="bridge-sub-containers">
               <div class="component-maintenance-container">
                 <button id="bridge-sub-maintenance-bt1" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-sub-maintenance-bt1')">
@@ -2903,41 +2895,41 @@
         </div>
         <div id="bridge-culvert-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <button class="bridge-culvert-buttons" onclick="openBridgeCulvert(event, 'bridge-culvert-pg1')">Culvert (B.C.04)</button>
-            <button class="bridge-culvert-buttons active" onclick="openBridgeCulvert(event, 'bridge-culvert-pg2')">Rating Table</button>
-            <button class="bridge-culvert-buttons" onclick="openBridgeCulvert(event, 'bridge-culvert-pg3')">Example Comments</button> |
-            <button class="bridge-culvert-buttons" onclick="openBridgeCulvert(event, 'bridge-culvert-pg4')">Elements</button>
-            <button class="bridge-culvert-buttons" onclick="openBridgeCulvert(event, 'bridge-culvert-pg5')">Maintenance</button>
+            <button class="bridge-culvert-buttons" data-target="bridge-culvert-pg1" data-container-class="bridge-culvert-containers" data-button-class="bridge-culvert-buttons">Culvert (B.C.04)</button>
+            <button class="bridge-culvert-buttons active" data-target="bridge-culvert-pg2" data-container-class="bridge-culvert-containers" data-button-class="bridge-culvert-buttons">Rating Table</button>
+            <button class="bridge-culvert-buttons" data-target="bridge-culvert-pg3" data-container-class="bridge-culvert-containers" data-button-class="bridge-culvert-buttons">Example Comments</button> |
+            <button class="bridge-culvert-buttons" data-target="bridge-culvert-pg4" data-container-class="bridge-culvert-containers" data-button-class="bridge-culvert-buttons">Elements</button>
+            <button class="bridge-culvert-buttons" data-target="bridge-culvert-pg5" data-container-class="bridge-culvert-containers" data-button-class="bridge-culvert-buttons">Maintenance</button>
           </div>
           <div class="main-content-containers">
             <div id="bridge-culvert-pg1" class="bridge-culvert-containers">
               <div class="content-container-paragraphs">
                 <p>This item addresses the condition of culverts. The condition assessment includes footings, piles, and other foundation members when present.</p>
                 <br />
-
+    
                 <p>
                   For culverts that have components not visible for inspection, use appropriate visual condition indicators from the roadway or surrounding foundation materials to
                   determine the applicable code. Visual assessments may be supplemented with non-destructive or destructive testing results.
                 </p>
                 <br />
-
+    
                 <p>
                   Consider the condition of integral wingwalls and headwalls to the first construction or expansion joint when determining the condition rating code for this item.
                 </p>
                 <br />
-
+    
                 <p>
                   Do not consider the condition of protective coatings and other culvert protection systems when determining the condition rating code for this item, except to the
                   extent that these items indicate distress of the culvert, or adversely affect its condition.
                 </p>
                 <br />
-
+    
                 <p>
                   Do not consider the presence of drift, debris, and soil accumulation when determining the condition rating code for this item, except to the extent that these
                   items are causing distress in the culvert.
                 </p>
                 <br />
-
+    
                 <p>The culvert includes:</p>
                 <ul class="content-container-paragraphs-ul">
                   <li>buried pipe or box;</li>
@@ -2945,7 +2937,7 @@
                   <li>foundation piles exposed by erosion or scour.</li>
                 </ul>
                 <br />
-
+    
                 <p>
                   When observed conditions are not consistent with the scour design or the assumptions used in the scour appraisal, scour is considered in the coding of this item.
                   In this case, observed conditions also indicate a need to reevaluate Item B.AP.03 (Scour Vulnerability). Observed scour that is less than the tolerable limit
@@ -3114,7 +3106,7 @@
                 <div class="component-elements-item">245: Prestressed Concrete Culvert</div>
               </div>
             </div>
-
+    
             <div id="bridge-culvert-pg5" class="bridge-culvert-containers">
               <div class="component-maintenance-container">
                 <button id="bridge-culvert-maintenance-bt1" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-culvert-maintenance-bt1')">
@@ -3221,13 +3213,13 @@
         </div>
         <div id="bridge-channel-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <button class="bridge-channel-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg1')">Channel (B.C.09)</button>
-            <button class="bridge-channel-buttons active" onclick="openBridgeChannel(event, 'bridge-channel-pg2')">Rating Table</button>
-            <button class="bridge-channel-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg3')">Example Comments</button>
-            <button class="bridge-channel-buttons alt-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg4')">Channel Protection (B.C.10)</button>
-            <button class="bridge-channel-buttons alt-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg5')">Rating Table</button>
-            <button class="bridge-channel-buttons alt-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg6')">Example Comments</button> |
-            <button class="bridge-channel-buttons" onclick="openBridgeChannel(event, 'bridge-channel-pg7')">Maintenance</button>
+            <button class="bridge-channel-buttons" data-target="bridge-channel-pg1" data-container-class="bridge-channel-containers" data-button-class="bridge-channel-buttons">Channel (B.C.09)</button>
+            <button class="bridge-channel-buttons active" data-target="bridge-channel-pg2" data-container-class="bridge-channel-containers" data-button-class="bridge-channel-buttons">Rating Table</button>
+            <button class="bridge-channel-buttons" data-target="bridge-channel-pg3" data-container-class="bridge-channel-containers" data-button-class="bridge-channel-buttons">Example Comments</button>
+            <button class="bridge-channel-buttons alt-buttons" data-target="bridge-channel-pg4" data-container-class="bridge-channel-containers" data-button-class="bridge-channel-buttons">Channel Protection (B.C.10)</button>
+            <button class="bridge-channel-buttons alt-buttons" data-target="bridge-channel-pg5" data-container-class="bridge-channel-containers" data-button-class="bridge-channel-buttons">Rating Table</button>
+            <button class="bridge-channel-buttons alt-buttons" data-target="bridge-channel-pg6" data-container-class="bridge-channel-containers" data-button-class="bridge-channel-buttons">Example Comments</button> |
+            <button class="bridge-channel-buttons" data-target="bridge-channel-pg7" data-container-class="bridge-channel-containers" data-button-class="bridge-channel-buttons">Maintenance</button>
           </div>
           <div class="main-content-containers">
             <div id="bridge-channel-pg1" class="bridge-channel-containers">
@@ -3237,10 +3229,10 @@
                   bridge and approach roadway.
                 </p>
                 <br />
-
+    
                 <p>The condition of channel protection devices is addressed under a separate item. Refer to Item B.C.10 (Channel Protection Condition Rating).</p>
                 <br />
-
+    
                 <p>
                   For concrete lined channels, channel defects typically do not apply, except for Aggradation and Debris. The condition of the channel lining would be addressed by
                   Item B.C.10 (Channel Protection Condition Rating).
@@ -3338,20 +3330,20 @@
               <div class="content-container-paragraphs">
                 <p>This item is used to provide a condition rating for channel protection devices.</p>
                 <br />
-
+    
                 <p>
                   Evaluate the condition and effectiveness of channel protection devices installed on banks or in the stream to mitigate channel issues that may impact the bridge.
                   When reporting this item, consider erosion and scour, damage (unraveling, displacement, separation, and sagging), and material defects (scaling, abrasion,
                   spalling, corrosion, cracking, splitting, and decay).
                 </p>
                 <br />
-
+    
                 <p>
                   Channel protection devices are considered countermeasures that control, inhibit, delay, or minimize stream instability and scour problems, including river
                   training and armoring countermeasures.
                 </p>
                 <br />
-
+    
                 <p>
                   River training countermeasures may include: spurs, bendway weirs, guide banks, drop structures, and check dams. Additional river training countermeasures can be
                   found in HEC-23 and elsewhere.
@@ -3568,25 +3560,25 @@
         </div>
         <div id="bridge-scour-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <button class="bridge-scour-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg1')">Scour (B.C.11)</button>
-            <button class="bridge-scour-buttons active" onclick="openBridgeScour(event, 'bridge-scour-pg2')">Rating Table</button>
-            <button class="bridge-scour-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg3')">Example Comments</button>
-            <button class="bridge-scour-buttons alt-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg4')">Scour Vulnerability (B.AP.03)</button>
-            <button class="bridge-scour-buttons alt-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg5')">Rating Table</button>
-            <button class="bridge-scour-buttons alt-buttons" onclick="openBridgeScour(event, 'bridge-scour-pg6')">Example Comments</button>
+            <button class="bridge-scour-buttons" data-target="bridge-scour-pg1" data-container-class="bridge-scour-containers" data-button-class="bridge-scour-buttons">Scour (B.C.11)</button>
+            <button class="bridge-scour-buttons active" data-target="bridge-scour-pg2" data-container-class="bridge-scour-containers" data-button-class="bridge-scour-buttons">Rating Table</button>
+            <button class="bridge-scour-buttons" data-target="bridge-scour-pg3" data-container-class="bridge-scour-containers" data-button-class="bridge-scour-buttons">Example Comments</button>
+            <button class="bridge-scour-buttons alt-buttons" data-target="bridge-scour-pg4" data-container-class="bridge-scour-containers" data-button-class="bridge-scour-buttons">Scour Vulnerability (B.AP.03)</button>
+            <button class="bridge-scour-buttons alt-buttons" data-target="bridge-scour-pg5" data-container-class="bridge-scour-containers" data-button-class="bridge-scour-buttons">Rating Table</button>
+            <button class="bridge-scour-buttons alt-buttons" data-target="bridge-scour-pg6" data-container-class="bridge-scour-containers" data-button-class="bridge-scour-buttons">Example Comments</button>
           </div>
           <div class="main-content-containers">
             <div id="bridge-scour-pg1" class="bridge-scour-containers">
               <div class="content-container-paragraphs">
                 <p>Refer to Item B.AP.03 (Scour Vulnerability) to verify if the bridge has been determined to be stable or unstable for appraised scour conditions.</p>
                 <br />
-
+    
                 <p>
                   Consider design scour depth and critical scour depth, commonly found in hydraulic designs, scour evaluations, and POAs, when determining the scour condition
                   ratings.
                 </p>
                 <br />
-
+    
                 <p>
                   When observed conditions are not consistent with the scour design or the assumptions used in the scour appraisal, this indicates a need to reevaluate Item B.AP.03
                   (Scour Vulnerability).
@@ -3673,37 +3665,37 @@
               <div class="content-container-paragraphs">
                 <p>The intent of this item is to report the status and vulnerability determination from scour appraisals required by the NBIS.</p>
                 <br />
-
+    
                 <p>
                   The codes for this item are based on the appraised scour vulnerability as described in HEC-18, Evaluating Scour at Bridges; HEC-23, Bridge Scour and Stream
                   Instability Countermeasures; and HEC-20, Stream Stability at Highway Structures.
                 </p>
                 <br />
-
+    
                 <p>Scour appraisals are typically performed by a multidisciplinary team of hydraulic, geotechnical, and structural engineers (Scour Appraisal Team).</p>
                 <br />
-
+    
                 <p>FHWA Hydraulic Technical Advisories, manuals, and software can be found in the link below.</p>
                 <br />
-
+    
                 <p>
                   Refer to item B.C.11 (Scour Condition Rating) in the Component Condition Ratings subsection to address field observed scour conditions and the effect on bridge
                   components.
                 </p>
                 <br />
-
+    
                 <p>
                   Use code B when designed, installed, and functioning countermeasures are used to address potential scour and to maintain bridge stability for new or existing
                   bridges, or bridges with unknown foundations.
                 </p>
                 <br />
-
+    
                 <p>
                   Use code B when the Scour Appraisal Team determines that the in-place, non-designed countermeasures are fully functioning and are appropriate to mitigate the risk
                   of scour.
                 </p>
                 <br />
-
+    
                 <p>Use code C for bridges that could become unstable for the potential scour, and temporary countermeasures are installed that were not designed.</p>
               </div>
             </div>
@@ -3830,27 +3822,27 @@
         </div>
         <div id="bridge-overtopping-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <button class="bridge-overtopping-buttons" onclick="openBridgeOvertopping(event, 'bridge-overtopping-pg1')">Overtopping Likelihood (B.AP.02)</button>
-            <button class="bridge-overtopping-buttons active" onclick="openBridgeOvertopping(event, 'bridge-overtopping-pg2')">Rating Table</button>
-            <button class="bridge-overtopping-buttons" onclick="openBridgeOvertopping(event, 'bridge-overtopping-pg3')">Example Comments</button>
+            <button class="bridge-overtopping-buttons" data-target="bridge-overtopping-pg1" data-container-class="bridge-overtopping-containers" data-button-class="bridge-overtopping-buttons">Overtopping Likelihood (B.AP.02)</button>
+            <button class="bridge-overtopping-buttons active" data-target="bridge-overtopping-pg2" data-container-class="bridge-overtopping-containers" data-button-class="bridge-overtopping-buttons">Rating Table</button>
+            <button class="bridge-overtopping-buttons" data-target="bridge-overtopping-pg3" data-container-class="bridge-overtopping-containers" data-button-class="bridge-overtopping-buttons">Example Comments</button>
           </div>
           <div class="main-content-containers">
             <div id="bridge-overtopping-pg1" class="bridge-overtopping-containers">
               <div class="content-container-paragraphs">
                 <p>An overtopping occurrence is when the waterway overtops the riding surface carried on the bridge.</p>
                 <br />
-
+    
                 <p>
                   Bridge overtopping likelihood, since the year built (B.W.01), is typically determined from historical bridge inspection or maintenance records, hydraulic studies,
                   local residents/landowners, and/or site indicators including highwater marks on the bridge or its surroundings, debris remains on bridge upper members, etc.
                 </p>
                 <br />
-
+    
                 <p>
                   For newer bridges with limited historical inspection or maintenance information, hydraulic design information can be used to establish an overtopping likelihood.
                 </p>
                 <br />
-
+    
                 <p>This item does not apply to the likelihood of the waterway overtopping approach roadways.</p>
               </div>
             </div>
@@ -3962,10 +3954,10 @@
         </div>
         <div id="bridge-wildlife-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <button class="bridge-wildlife-buttons" onclick="openBridgeWildlife(event, 'bridge-wildlife-pg1')">Cliff Swallows</button>
-            <button class="bridge-wildlife-buttons active" onclick="openBridgeWildlife(event, 'bridge-wildlife-pg2')">Rating Table</button>
-            <button class="bridge-wildlife-buttons alt-buttons" onclick="openBridgeWildlife(event, 'bridge-wildlife-pg3')">Bats</button>
-            <button class="bridge-wildlife-buttons alt-buttons" onclick="openBridgeWildlife(event, 'bridge-wildlife-pg4')">Rating Table</button>
+            <button class="bridge-wildlife-buttons" data-target="bridge-wildlife-pg1" data-container-class="bridge-wildlife-containers" data-button-class="bridge-wildlife-buttons">Cliff Swallows</button>
+            <button class="bridge-wildlife-buttons active" data-target="bridge-wildlife-pg2" data-container-class="bridge-wildlife-containers" data-button-class="bridge-wildlife-buttons">Rating Table</button>
+            <button class="bridge-wildlife-buttons alt-buttons" data-target="bridge-wildlife-pg3" data-container-class="bridge-wildlife-containers" data-button-class="bridge-wildlife-buttons">Bats</button>
+            <button class="bridge-wildlife-buttons alt-buttons" data-target="bridge-wildlife-pg4" data-container-class="bridge-wildlife-containers" data-button-class="bridge-wildlife-buttons">Rating Table</button>
           </div>
           <div class="main-content-containers">
             <div id="bridge-wildlife-pg1" class="bridge-wildlife-containers">
@@ -4059,15 +4051,15 @@
         </div>
         <div id="bridge-elements-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <button class="bridge-element-buttons active" onclick="openElementItem(event, 'element-elements-tab')">Element List</button> |
-            <button class="bridge-element-buttons" onclick="openElementItem(event, 'element-concrete-tab')">Concrete</button>
-            <button class="bridge-element-buttons" onclick="openElementItem(event, 'element-steel-tab')">Steel</button>
-            <button class="bridge-element-buttons" onclick="openElementItem(event, 'element-masonry-tab')">Masonry</button>
-            <button class="bridge-element-buttons" onclick="openElementItem(event, 'element-timber-tab')">Timber</button>
+            <button class="element-item-buttons active" data-target="element-elements-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Element List</button> |
+            <button class="element-item-buttons" data-target="element-concrete-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Concrete</button>
+            <button class="element-item-buttons" data-target="element-steel-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Steel</button>
+            <button class="element-item-buttons" data-target="element-masonry-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Masonry</button>
+            <button class="element-item-buttons" data-target="element-timber-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Timber</button>
             <!-- <div class="content-container-tabs"></div> -->
           </div>
-
-          <div id="element-elements-tab" class="bridge-element-containers active" style="display: block">
+    
+          <div id="element-elements-tab" class="element-content-containers active" style="display: block">
             <div class="main-content-containers">
               <div class="elements-segment-header">Approach Slabs:</div>
               <div class="component-elements-container">
@@ -4082,7 +4074,7 @@
                 <button id="bridge-elements-btc30" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc30')">CS4</button>
                 <div class="component-elements-item">321: Reinforced Concrete Approach Slab</div>
               </div>
-
+    
               <div class="elements-segment-header">Joints:</div>
               <div class="component-elements-container">
                 <button id="bridge-elements-btc46" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc46')">CS2</button>
@@ -4126,7 +4118,7 @@
                 <button id="bridge-elements-btc66" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc66')">CS4</button>
                 <div class="component-elements-item">306: Other Joint</div>
               </div>
-
+    
               <div class="elements-segment-header">Bridge Railings:</div>
               <div class="component-elements-container">
                 <button id="bridge-elements-btc31" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc31')">CS2</button>
@@ -4158,7 +4150,7 @@
                 <button id="bridge-elements-btc45" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc45')">CS4</button>
                 <div class="component-elements-item">334: Masonry Bridge Rail</div>
               </div>
-
+    
               <div class="elements-segment-header">Decks/Slabs:</div>
               <div class="component-elements-container">
                 <button id="bridge-elements-bta01" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta01')">CS2</button>
@@ -4232,7 +4224,7 @@
                 <button id="bridge-elements-bta36" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta36')">CS4</button>
                 <div class="component-elements-item">65: Other Slab</div>
               </div>
-
+    
               <div class="elements-segment-header">Protective Coatings - Wearing Surface</div>
               <div class="component-elements-container">
                 <button id="bridge-elements-btc88" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc88')">CS2</button>
@@ -4240,7 +4232,7 @@
                 <button id="bridge-elements-btc90" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc90')">CS4</button>
                 <div class="component-elements-item">510: Wearing Surfaces</div>
               </div>
-
+    
               <div class="elements-segment-header">Superstructure:</div>
               <div class="component-elements-container">
                 <button id="bridge-elements-bta37" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta37')">CS2</button>
@@ -4440,7 +4432,7 @@
                 <button id="bridge-elements-btb36" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb36')">CS4</button>
                 <div class="component-elements-item">162: Steel Gusset Plate</div>
               </div>
-
+    
               <div class="elements-segment-header">Protective Coatings - Paint</div>
               <div class="component-elements-container">
                 <button id="bridge-elements-btc91" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc91')">CS2</button>
@@ -4448,7 +4440,7 @@
                 <button id="bridge-elements-btc93" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc93')">CS4</button>
                 <div class="component-elements-item">515: Steel Protective Coating</div>
               </div>
-
+    
               <div class="elements-segment-header">Bearings</div>
               <div class="component-elements-container">
                 <button id="bridge-elements-btc67" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc67')">CS2</button>
@@ -4492,7 +4484,7 @@
                 <button id="bridge-elements-btc87" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc87')">CS4</button>
                 <div class="component-elements-item">316: Other Bearing</div>
               </div>
-
+    
               <div class="elements-segment-header">Substructure:</div>
               <div class="component-elements-container">
                 <button id="bridge-elements-btb37" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb37')">CS2</button>
@@ -4632,7 +4624,7 @@
                 <button id="bridge-elements-btc06" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc06')">CS4</button>
                 <div class="component-elements-item">236: Other Pier Cap</div>
               </div>
-
+    
               <div class="elements-segment-header">Culvert</div>
               <div class="component-elements-container">
                 <button id="bridge-elements-btc07" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc07')">CS2</button>
@@ -4672,8 +4664,8 @@
               </div>
             </div>
           </div>
-
-          <div id="element-concrete-tab" class="bridge-element-containers">
+    
+          <div id="element-concrete-tab" class="element-content-containers">
             <div class="element-content-cards-container">
               <div class="element-content-cards">
                 <p class="element-card-header">Delamination, Spall, Patched Area (1080):</p>
@@ -4688,7 +4680,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Exposed Rebar (1090):</p>
                 <ul>
@@ -4700,7 +4692,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Efflorescence, Rust Staining (1120):</p>
                 <ul>
@@ -4712,7 +4704,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Cracking (1130):</p>
                 <ul>
@@ -4724,7 +4716,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Abrasion, Wear (1190):</p>
                 <ul>
@@ -4736,7 +4728,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Settlement (4000):</p>
                 <ul>
@@ -4748,7 +4740,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Scour (6000):</p>
                 <ul>
@@ -4764,7 +4756,7 @@
               </div>
             </div>
           </div>
-          <div id="element-steel-tab" class="bridge-element-containers">
+          <div id="element-steel-tab" class="element-content-containers">
             <div class="element-content-cards-container">
               <div class="element-content-cards">
                 <p class="element-card-header">Corrosion (1000):</p>
@@ -4777,7 +4769,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Cracking (1010):</p>
                 <ul>
@@ -4789,7 +4781,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Connection (1020):</p>
                 <ul>
@@ -4803,7 +4795,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Distortion (1900):</p>
                 <ul>
@@ -4817,7 +4809,7 @@
               </div>
             </div>
           </div>
-          <div id="element-masonry-tab" class="bridge-element-containers">
+          <div id="element-masonry-tab" class="element-content-containers">
             <div class="element-content-cards-container">
               <div class="element-content-cards">
                 <p class="element-card-header">Delamination, Spall, Patched Area (1080):</p>
@@ -4832,7 +4824,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Efflorescence, Rust Staining (1120):</p>
                 <ul>
@@ -4844,7 +4836,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Mortar Breakdown (1610):</p>
                 <ul>
@@ -4856,7 +4848,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Split, Spall (1620):</p>
                 <ul>
@@ -4868,7 +4860,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Patched Area (1630):</p>
                 <ul>
@@ -4880,7 +4872,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Masonry Displacement (1640):</p>
                 <ul>
@@ -4892,7 +4884,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Distortion (1900):</p>
                 <ul>
@@ -4906,7 +4898,7 @@
               </div>
             </div>
           </div>
-          <div id="element-timber-tab" class="bridge-element-containers">
+          <div id="element-timber-tab" class="element-content-containers">
             <div class="element-content-cards-container">
               <div class="element-content-cards">
                 <p class="element-card-header">Connection (1020):</p>
@@ -4921,7 +4913,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Decay, Section Loss (1140):</p>
                 <ul>
@@ -4933,7 +4925,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Check, Shake (1150):</p>
                 <ul>
@@ -4948,7 +4940,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Crack (1160):</p>
                 <ul>
@@ -4960,7 +4952,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Split, Delamination (1170):</p>
                 <ul>
@@ -4972,7 +4964,7 @@
                   </li>
                 </ul>
               </div>
-
+    
               <div class="element-content-cards">
                 <p class="element-card-header">Abrasion, Wear (1180):</p>
                 <ul>
@@ -5127,10 +5119,10 @@
 
       <div id="culvert-asset-tab" class="asset-containers">
         <div class="main-content-containers">
-          <button class="culvert-item-buttons active" onclick="openCulvertItem(event, 'culvert-rating-guidance-concrete-tab')">Rating Guidance - Concrete</button>
-          <button class="culvert-item-buttons" onclick="openCulvertItem(event, 'culvert-rating-guidance-steel-tab')">Rating Guidance - Steel</button>
-          <button class="culvert-item-buttons" onclick="openCulvertItem(event, 'culvert-naming-convention-tab')">Naming Convention</button>
-          <button class="culvert-item-buttons" onclick="openCulvertItem(event, 'culvert-report-walkthrough-tab')">Report Walkthrough</button>
+          <button class="culvert-item-buttons active" data-target="culvert-rating-guidance-concrete-tab" data-container-class="culvert-item-containers" data-button-class="culvert-item-buttons">Rating Guidance - Concrete</button>
+          <button class="culvert-item-buttons" data-target="culvert-rating-guidance-steel-tab" data-container-class="culvert-item-containers" data-button-class="culvert-item-buttons">Rating Guidance - Steel</button>
+          <button class="culvert-item-buttons" data-target="culvert-naming-convention-tab" data-container-class="culvert-item-containers" data-button-class="culvert-item-buttons">Naming Convention</button>
+          <button class="culvert-item-buttons" data-target="culvert-report-walkthrough-tab" data-container-class="culvert-item-containers" data-button-class="culvert-item-buttons">Report Walkthrough</button>
         </div>
         <div id="culvert-rating-guidance-concrete-tab" class="culvert-item-containers active" style="display: block">
           <div class="culvert-content-cards-container">
@@ -5647,7 +5639,7 @@
           <div class="report-walkthrough-content-cards-container">
             <div class="report-walkthrough-content-cards">
               <p class="report-walkthrough-card-header">Writing the report:</p>
-
+  
               <ul>
                 <li>
                   <p class="report-walkthrough-card-paragraph">Change the to and from report dates in the report</p>
@@ -5700,20 +5692,20 @@
                 </li>
               </ul>
             </div>
-
+  
             <div class="report-walkthrough-content-cards">
               <p class="report-walkthrough-card-header">Before you approve the report:</p>
-
+  
               <ul>
                 <li>
                   <p class="report-walkthrough-card-paragraph">Generate the report</p>
                 </li>
               </ul>
             </div>
-
+  
             <div class="report-walkthrough-content-cards">
               <p class="report-walkthrough-card-header">After you have processed the report go to the asset view:</p>
-
+  
               <ul>
                 <li>
                   <p class="report-walkthrough-card-paragraph">Add a photo to the asset and set it as the default</p>
@@ -5757,10 +5749,10 @@
                 <p class="report-walkthrough-card-paragraph">* Use steel if it is both steel and concrete so frequencies can be verified</p>
               </ul>
             </div>
-
+  
             <div class="report-walkthrough-content-cards">
               <p class="report-walkthrough-card-header">Helpful updates for identification:</p>
-
+  
               <ul>
                 <li>
                   <p class="report-walkthrough-card-paragraph">Update the GPS if you know it is wrong</p>
@@ -5805,8 +5797,8 @@
 
       <div id="wall-asset-tab" class="asset-containers">
         <div class="main-content-containers">
-          <button class="wall-item-buttons active" onclick="openWallItem(event, 'wall-rating-guidelines-tab')">Rating Guidance</button>
-          <button class="wall-item-buttons" onclick="openWallItem(event, 'wall-naming-conventions-tab')">Naming Convention</button>
+          <button class="wall-item-buttons active" data-target="wall-rating-guidelines-tab" data-container-class="wall-item-containers" data-button-class="wall-item-buttons">Rating Guidance</button>
+          <button class="wall-item-buttons" data-target="wall-naming-conventions-tab" data-container-class="wall-item-containers" data-button-class="wall-item-buttons">Naming Convention</button>
         </div>
         <div id="wall-rating-guidelines-tab" class="wall-item-containers active" style="display: block">
           <div class="wall-numeric-ratings-container">
