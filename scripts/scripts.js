@@ -113,6 +113,7 @@ function addDeficiencyButtons(event) {
   // Access the shared data attributes
   const buttonNumber = button.getAttribute("data-button-number");
   const severityLevel = button.getAttribute("data-button-category");
+  const taskName = button.getAttribute("data-button-name");
 
   if (buttonNumber.includes("Element")) {
     // Perform the action based on the element number and CS level
@@ -122,9 +123,9 @@ function addDeficiencyButtons(event) {
   }
   if (buttonNumber.includes("Maintenance")) {
     // Perform the action based on the element number and CS level
-    alert(`Opening details for ${buttonNumber} at Deficiency Level ${severityLevel}`);
+    alert(`Opening details for ${taskName} at Deficiency Level ${severityLevel}`);
     // Copy the text to the clipboard
-    navigator.clipboard.writeText(`Opening details for ${buttonNumber} at Deficiency Level ${severityLevel}`); 
+    navigator.clipboard.writeText(`Opening details for ${taskName} at Deficiency Level ${severityLevel}`); 
   }
 }
 

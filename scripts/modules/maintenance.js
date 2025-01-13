@@ -1,3 +1,117 @@
+const alignmentMaintenanceTasks = [
+  { number: 2, name: "Attenuator Repair", },
+  { number: 14, name: "Signage Install / Signage Repair", },
+];
+
+const approachMaintenanceTasks = [
+  { number: 1, name: "Approach Repair", },
+];
+
+const jointsMaintenanceTasks = [
+  { number: 13, name: "Joint Repair", },
+];
+
+const railingsMaintenanceTasks = [
+  { number: 2, name: "Attenuator Repair", },
+  { number: 11, name: "Graffiti Removal", },
+  { number: 12, name: "Guardrail / Barrier Wall Repair", },
+];
+
+const deckMaintenanceTasks = [
+  { number: 6, name: "Concrete Crack Seal", },
+  { number: 7, name: "Deck Cleaning and Flushing", },
+  { number: 8, name: "Deck Patch", },
+  { number: 9, name: "Drain Repair", },
+];
+
+const superMaintenanceTasks = [
+  { number: 11, name: "Graffiti Removal", },
+  { number: 14, name: "Signage Install / Signage Repair", },
+  { number: 17, name: "Superstructure Cleaning and Flushing", },
+  { number: 18, name: "Superstructure Repair" },
+];
+
+const bearingsMaintenanceTasks = [
+  { number: 3, name: "Bearing Repair", },
+];
+
+const subMaintenanceTasks = [
+  { number: 2, name: "Attenuator Repair", },
+  { number: 11, name: "Graffiti Removal", },
+  { number: 14, name: "Signage Install / Signage Repair", },
+  { number: 15, name: "Substructure Cleaning and Flushing", },
+  { number: 16, name: "Substructure Repair", },
+];
+
+const culvertMaintenanceTasks = [
+  { number: 6, name: "Concrete Crack Seal", },
+  { number: 18, name: "Superstructure Repair" },
+  { number: 16, name: "Substructure Repair", },
+];
+
+const channelMaintenanceTasks = [
+  { number: 4, name: "Brush Cutting / Herbicide Spray", },
+  { number: 5, name: "Channel Debris Removal", },
+  { number: 10, name: "Erosion Control / Riprap", },
+];
+
+const maintenanceTasks = [
+  { tasks: alignmentMaintenanceTasks, containerID: "alignment-maintenance-container" },
+  { tasks: approachMaintenanceTasks, containerID: "approach-maintenance-container" },
+  { tasks: jointsMaintenanceTasks, containerID: "joints-maintenance-container" },
+  { tasks: railingsMaintenanceTasks, containerID: "railings-maintenance-container" },
+  { tasks: deckMaintenanceTasks, containerID: "deck-maintenance-container" },
+  { tasks: superMaintenanceTasks, containerID: "super-maintenance-container" },
+  { tasks: bearingsMaintenanceTasks, containerID: "bearings-maintenance-container" },
+  { tasks: subMaintenanceTasks, containerID: "sub-maintenance-container" },
+  { tasks: culvertMaintenanceTasks, containerID: "culvert-maintenance-container" },
+  { tasks: channelMaintenanceTasks, containerID: "channel-maintenance-container" },
+]
+
+// Loop through each component in the maintenanceTasks array and add a header row to the container
+maintenanceTasks.forEach(component => {
+  const maintenancePageContainer = document.getElementById(component.containerID);
+
+    component.tasks.forEach(task => {
+    const taskPage = document.createElement('div'); // Component pages
+    taskPage.className = 'component-maintenance-container';
+  
+    // Add deficiency level buttons to each container
+    for (let i = 1; i <= 4; i++) {
+      // Create separate buttons for each container
+      const buttonPage = document.createElement('button');
+      buttonPage.className = `component-maintenance-button${i}`;
+      buttonPage.textContent = "+";
+      buttonPage.setAttribute('onclick', `addDeficiencyButtons(event)`);
+      buttonPage.setAttribute('data-button-number', `Maintenance Item ${task.number}`);
+      if (i == 1) {
+        colorsuffix = "Grey";
+      } else if (i == 2) {
+        colorsuffix = "Green";
+      } else if (i == 3) {
+        colorsuffix = "Yellow";
+      } else {
+        colorsuffix = "Red"; // Default color is red if none of the above
+      }
+      buttonPage.setAttribute("data-button-category", `${colorsuffix}`);
+      buttonPage.setAttribute("data-button-name", `${task.name}`);
+  
+      taskPage.appendChild(buttonPage); // Append to taskPage
+    }
+  
+    // Add the element name to each container
+    const itemPage = document.createElement('div');
+    itemPage.className = 'component-maintenance-item';
+    itemPage.textContent = `${task.name}`;
+  
+    taskPage.appendChild(itemPage); // Append to taskPage
+  
+    // Append containers to their respective parents
+    maintenancePageContainer.appendChild(taskPage);
+  });
+
+});
+
 const repairTaskNames = [
   "Approach Repair",
   "Attenuator Repair",
@@ -64,6 +178,7 @@ repairTasks.forEach(repairItem => {
       colorsuffix = "Red"; // Default color is red if none of the above
     }
     button.setAttribute("data-button-category", `${colorsuffix}`);
+    button.setAttribute("data-button-name", `${repairItem.name}`);
     repairContainer.appendChild(button);
   }
 
@@ -76,3 +191,4 @@ repairTasks.forEach(repairItem => {
   // Add the repairContainer to the container
   maintenanceContainter.appendChild(repairContainer);
 });
+

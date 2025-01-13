@@ -128,16 +128,16 @@ const culvertBridgeElements = [
 
 // Create an array to hold the other arrays as part of an object
 const bridgeElements = [
-  { header: "Approach Slabs:", elements: approachBridgeElements },
-  { header: "Joints:", elements: jointsBridgeElements },
-  { header: "Bridge Railings:", elements: railingsBridgeElements },
-  { header: "Deck/Slabs:", elements: deckBridgeElements },
-  { header: "Protective Coatings - Wearing Surface:", elements: wearingBridgeElements },
-  { header: "Superstructure:", elements: superBridgeElements },
-  { header: "Protective Coatings - Paint:", elements: paintBridgeElements },
-  { header: "Bearings:", elements: bearingsBridgeElements },
-  { header: "Substructure:", elements: subBridgeElements },
-  { header: "Culvert:", elements: culvertBridgeElements },
+  { header: "Approach Slabs:", elements: approachBridgeElements, containerID: "approach-elements-container" },
+  { header: "Joints:", elements: jointsBridgeElements, containerID: "joints-elements-container" },
+  { header: "Bridge Railings:", elements: railingsBridgeElements, containerID: "railings-elements-container" },
+  { header: "Deck/Slabs:", elements: deckBridgeElements, containerID: "deck-elements-container" },
+  { header: "Protective Coatings - Wearing Surface:", elements: wearingBridgeElements, containerID: "wearing-elements-container" },
+  { header: "Superstructure:", elements: superBridgeElements, containerID: "super-elements-container" },
+  { header: "Protective Coatings - Paint:", elements: paintBridgeElements, containerID: "paint-elements-container" },
+  { header: "Bearings:", elements: bearingsBridgeElements, containerID: "bearings-elements-container" },
+  { header: "Substructure:", elements: subBridgeElements, containerID: "sub-elements-container" },
+  { header: "Culvert:", elements: culvertBridgeElements, containerID: "culvert-elements-container" },
 ];
 
 // console.log(bridgeElements[9].elements[5].name)
@@ -154,38 +154,56 @@ bridgeElements.forEach(component => {
   header.className = 'elements-segment-header';
   header.textContent = component.header;
   elementComponentContainer.appendChild(header);
+  const elementPageContainer = document.getElementById(component.containerID);
 
-  // Loop through each element in the component arrays and add an elementContainer row to the container
-  component.elements.forEach(element => {
-    const elementContainer = document.createElement('div');
+    component.elements.forEach(element => {
+    const elementContainer = document.createElement('div'); // Element page
     elementContainer.className = 'component-elements-container';
-
-    // Add the child buttons for CS2, CS3 and CS4 to elementContainer row
+    const elementPage = document.createElement('div'); // Component pages
+    elementPage.className = 'component-elements-container';
+  
+    // Add CS2, CS3, CS4 buttons to each container
     for (let cs = 2; cs <= 4; cs++) {
-      const button = document.createElement('button');
-      button.id = `bridge-elements-bt${element.number}${cs}`;
-      button.className = `component-elements-button${cs}`;
-      button.textContent = `CS${cs}`;
-      button.setAttribute('onclick', `addDeficiencyButtons(event, 'bridge-elements-bt${element.number}${cs}')`);
-      button.setAttribute("data-button-number", `Element ${element.number}`);
-      button.setAttribute("data-button-category", `${cs}`);
-      elementContainer.appendChild(button);
+      // Create separate buttons for each container
+      const buttonElement = document.createElement('button');
+      buttonElement.className = `component-elements-button${cs}`;
+      buttonElement.textContent = `CS${cs}`;
+      buttonElement.setAttribute('onclick', `addDeficiencyButtons(event)`);
+      buttonElement.setAttribute('data-button-number', `Element ${element.number}`);
+      buttonElement.setAttribute('data-button-category', `${cs}`);
+  
+      const buttonPage = document.createElement('button');
+      buttonPage.className = `component-elements-button${cs}`;
+      buttonPage.textContent = `CS${cs}`;
+      buttonPage.setAttribute('onclick', `addDeficiencyButtons(event)`);
+      buttonPage.setAttribute('data-button-number', `Element ${element.number}`);
+      buttonPage.setAttribute('data-button-category', `${cs}`);
+  
+      elementContainer.appendChild(buttonElement); // Append to elementContainer
+      elementPage.appendChild(buttonPage); // Append to elementPage
     }
-
-    // Add the element name to the elementContainer row
-    const item = document.createElement('div');
-    item.className = 'component-elements-item';
-    item.textContent = `${element.number}: ${element.name}`;
-    elementContainer.appendChild(item);
-
-    // Add the elementContainer to the container
+  
+    // Add the element name to each container
+    const itemElement = document.createElement('div');
+    itemElement.className = 'component-elements-item';
+    itemElement.textContent = `${element.number}: ${element.name}`;
+  
+    const itemPage = document.createElement('div');
+    itemPage.className = 'component-elements-item';
+    itemPage.textContent = `${element.number}: ${element.name}`;
+  
+    elementContainer.appendChild(itemElement); // Append to elementContainer
+    elementPage.appendChild(itemPage); // Append to elementPage
+  
+    // Append containers to their respective parents
     elementComponentContainer.appendChild(elementContainer);
+    elementPageContainer.appendChild(elementPage);
   });
+  
 });
 
-// what if i count the number of approach elements and when i reach that count i append the approach page and move to the next group?
-// i would have to remove the header somehow
-// i might be able to get it to read the component names and then use that to copy it to the appropriate page if i get the classes right
+
+// i have questions about the id for the cs buttons
 
 // <button id="bridge-approach-elements-bt1" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-approach-elements-bt1')">
 //  CS2
