@@ -413,7 +413,7 @@ button.active {
 .bridge-wildlife-containers,
 .culvert-item-containers,
 .wall-item-containers,
-.bridge-element-containers {
+.element-content-containers {
   display: none;
 }
 

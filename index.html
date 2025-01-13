@@ -20,6 +20,8 @@
     <script src="./scripts/modules/modal.mjs" defer></script>
     <script src="./scripts/modules/assetdata.mjs" defer></script>
     <script src="./scripts/modules/ratingForms.mjs" defer></script>
+    <script src="./scripts/modules/elements.js" defer></script>
+    <script src="./scripts/modules/maintenance.js" defer></script>
     <script type="text/javascript" src="./scripts/scripts.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -360,7 +362,7 @@
                 <button id="bridge-approach-elements-bt3" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-approach-elements-bt3')">
                   CS4
                 </button>
-                <div class="component-elements-item">Approach Repair</div>
+                <div class="component-elements-item">320: Prestressed Concrete Approach Slab</div>
               </div>
               <div class="component-elements-container">
                 <button id="bridge-approach-elements-bt4" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-approach-elements-bt4')">
@@ -372,19 +374,7 @@
                 <button id="bridge-approach-elements-bt6" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-approach-elements-bt6')">
                   CS4
                 </button>
-                <div class="component-elements-item">Attenuator Repair</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-approach-elements-bt7" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-approach-elements-bt7')">
-                  CS2
-                </button>
-                <button id="bridge-approach-elements-bt8" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-approach-elements-bt8')">
-                  CS3
-                </button>
-                <button id="bridge-approach-elements-bt9" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-approach-elements-bt9')">
-                  CS4
-                </button>
-                <div class="component-elements-item">Bearing Repair</div>
+                <div class="component-elements-item">321: Reinforced Concrete Approach Slab</div>
               </div>
             </div>
             <div id="bridge-approach-pg5" class="bridge-approach-containers">
@@ -473,7 +463,7 @@
             <button class="bridge-joints-buttons" data-target="bridge-joints-pg8" data-container-class="bridge-joints-containers" data-button-class="bridge-joints-buttons">Maintenance</button>
           </div>
           <div class="main-content-containers">
-            <div id="bridge-joints-pg1" class="bridge-joints-containers active" style="display: block">
+            <div id="bridge-joints-pg1" class="bridge-joints-containers">
               <div class="content-container-paragraphs">
                 <p>
                   This item addresses the condition of all types and shapes of bridge deck joints. The condition assessment includes all aspects of the joints such as any seals,
@@ -4056,611 +4046,17 @@
             <button class="element-item-buttons" data-target="element-steel-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Steel</button>
             <button class="element-item-buttons" data-target="element-masonry-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Masonry</button>
             <button class="element-item-buttons" data-target="element-timber-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Timber</button>
+            <button class="element-item-buttons" data-target="element-bearings-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Bearings</button>
+            <button class="element-item-buttons" data-target="element-joints-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Joints</button>
+            <button class="element-item-buttons" data-target="element-paint-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Paint</button>
+            <button class="element-item-buttons" data-target="element-wearing-surface-tab" data-container-class="element-content-containers" data-button-class="element-item-buttons">Wearing Surface</button>
             <!-- <div class="content-container-tabs"></div> -->
           </div>
     
           <div id="element-elements-tab" class="element-content-containers active" style="display: block">
             <div class="main-content-containers">
-              <div class="elements-segment-header">Approach Slabs:</div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc25" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc25')">CS2</button>
-                <button id="bridge-elements-btc26" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc26')">CS3</button>
-                <button id="bridge-elements-btc27" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc27')">CS4</button>
-                <div class="component-elements-item">320: Prestressed Concrete Approach Slab</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc28" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc28')">CS2</button>
-                <button id="bridge-elements-btc29" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc29')">CS3</button>
-                <button id="bridge-elements-btc30" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc30')">CS4</button>
-                <div class="component-elements-item">321: Reinforced Concrete Approach Slab</div>
-              </div>
-    
-              <div class="elements-segment-header">Joints:</div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc46" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc46')">CS2</button>
-                <button id="bridge-elements-btc47" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc47')">CS3</button>
-                <button id="bridge-elements-btc48" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc48')">CS4</button>
-                <div class="component-elements-item">300: Strip Seal Expansion Joint</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc49" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc49')">CS2</button>
-                <button id="bridge-elements-btc50" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc50')">CS3</button>
-                <button id="bridge-elements-btc51" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc51')">CS4</button>
-                <div class="component-elements-item">301: Pourable Joint Seal</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc52" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc52')">CS2</button>
-                <button id="bridge-elements-btc53" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc53')">CS3</button>
-                <button id="bridge-elements-btc54" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc54')">CS4</button>
-                <div class="component-elements-item">302: Compression Joint Seal</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc55" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc55')">CS2</button>
-                <button id="bridge-elements-btc56" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc56')">CS3</button>
-                <button id="bridge-elements-btc57" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc57')">CS4</button>
-                <div class="component-elements-item">303: Assembly Joint with Seal (Modular)</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc58" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc58')">CS2</button>
-                <button id="bridge-elements-btc59" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc59')">CS3</button>
-                <button id="bridge-elements-btc60" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc60')">CS4</button>
-                <div class="component-elements-item">304: Open Expansion Joint</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc61" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc61')">CS2</button>
-                <button id="bridge-elements-btc62" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc62')">CS3</button>
-                <button id="bridge-elements-btc63" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc63')">CS4</button>
-                <div class="component-elements-item">305: Assembly Joint without Seal</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc64" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc64')">CS2</button>
-                <button id="bridge-elements-btc65" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc65')">CS3</button>
-                <button id="bridge-elements-btc66" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc66')">CS4</button>
-                <div class="component-elements-item">306: Other Joint</div>
-              </div>
-    
-              <div class="elements-segment-header">Bridge Railings:</div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc31" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc31')">CS2</button>
-                <button id="bridge-elements-btc32" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc32')">CS3</button>
-                <button id="bridge-elements-btc33" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc33')">CS4</button>
-                <div class="component-elements-item">330: Metal Bridge Rail</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc34" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc34')">CS2</button>
-                <button id="bridge-elements-btc35" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc35')">CS3</button>
-                <button id="bridge-elements-btc36" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc36')">CS4</button>
-                <div class="component-elements-item">331: Reinforced Concrete Bridge Rail</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc37" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc37')">CS2</button>
-                <button id="bridge-elements-btc38" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc38')">CS3</button>
-                <button id="bridge-elements-btc39" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc39')">CS4</button>
-                <div class="component-elements-item">332: Timber Bridge Rail</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc40" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc40')">CS2</button>
-                <button id="bridge-elements-btc41" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc41')">CS3</button>
-                <button id="bridge-elements-btc42" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc42')">CS4</button>
-                <div class="component-elements-item">333: Other Bridge Rail</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc43" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc43')">CS2</button>
-                <button id="bridge-elements-btc44" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc44')">CS3</button>
-                <button id="bridge-elements-btc45" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc45')">CS4</button>
-                <div class="component-elements-item">334: Masonry Bridge Rail</div>
-              </div>
-    
-              <div class="elements-segment-header">Decks/Slabs:</div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta01" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta01')">CS2</button>
-                <button id="bridge-elements-bta02" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta02')">CS3</button>
-                <button id="bridge-elements-bta03" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta03')">CS4</button>
-                <div class="component-elements-item">12: Reinforced Concrete Deck</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta04" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta04')">CS2</button>
-                <button id="bridge-elements-bta05" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta05')">CS3</button>
-                <button id="bridge-elements-bta06" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta06')">CS4</button>
-                <div class="component-elements-item">13: Prestressed Concrete Deck</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta07" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta07')">CS2</button>
-                <button id="bridge-elements-bta08" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta08')">CS3</button>
-                <button id="bridge-elements-bta09" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta09')">CS4</button>
-                <div class="component-elements-item">15: Prestressed Concrete Top Flange</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta10" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta10')">CS2</button>
-                <button id="bridge-elements-bta11" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta11')">CS3</button>
-                <button id="bridge-elements-bta12" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta12')">CS4</button>
-                <div class="component-elements-item">16: Reinforced Concrete Top Flange</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta13" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta13')">CS2</button>
-                <button id="bridge-elements-bta14" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta14')">CS3</button>
-                <button id="bridge-elements-bta15" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta15')">CS4</button>
-                <div class="component-elements-item">28: Steel Open Grid Deck</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta16" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta16')">CS2</button>
-                <button id="bridge-elements-bta17" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta17')">CS3</button>
-                <button id="bridge-elements-bta18" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta18')">CS4</button>
-                <div class="component-elements-item">29: Steel Concrete Filled Grid Deck</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta19" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta19')">CS2</button>
-                <button id="bridge-elements-bta20" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta20')">CS3</button>
-                <button id="bridge-elements-bta21" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta21')">CS4</button>
-                <div class="component-elements-item">30: Steel Corrugated or Orthotropic Deck</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta22" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta22')">CS2</button>
-                <button id="bridge-elements-bta23" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta23')">CS3</button>
-                <button id="bridge-elements-bta24" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta24')">CS4</button>
-                <div class="component-elements-item">31: Timber Deck</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta25" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta25')">CS2</button>
-                <button id="bridge-elements-bta26" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta26')">CS3</button>
-                <button id="bridge-elements-bta27" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta27')">CS4</button>
-                <div class="component-elements-item">38: Reinforced Concrete Slab</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta28" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta28')">CS2</button>
-                <button id="bridge-elements-bta29" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta29')">CS3</button>
-                <button id="bridge-elements-bta30" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta30')">CS4</button>
-                <div class="component-elements-item">54: Timber Slab</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta31" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta31')">CS2</button>
-                <button id="bridge-elements-bta32" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta32')">CS3</button>
-                <button id="bridge-elements-bta33" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta33')">CS4</button>
-                <div class="component-elements-item">60: Other Deck</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta34" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta34')">CS2</button>
-                <button id="bridge-elements-bta35" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta35')">CS3</button>
-                <button id="bridge-elements-bta36" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta36')">CS4</button>
-                <div class="component-elements-item">65: Other Slab</div>
-              </div>
-    
-              <div class="elements-segment-header">Protective Coatings - Wearing Surface</div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc88" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc88')">CS2</button>
-                <button id="bridge-elements-btc89" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc89')">CS3</button>
-                <button id="bridge-elements-btc90" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc90')">CS4</button>
-                <div class="component-elements-item">510: Wearing Surfaces</div>
-              </div>
-    
-              <div class="elements-segment-header">Superstructure:</div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta37" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta37')">CS2</button>
-                <button id="bridge-elements-bta38" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta38')">CS3</button>
-                <button id="bridge-elements-bta39" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta39')">CS4</button>
-                <div class="component-elements-item">102: Steel Closed Web/Box Girder</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta40" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta40')">CS2</button>
-                <button id="bridge-elements-bta41" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta41')">CS3</button>
-                <button id="bridge-elements-bta42" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta42')">CS4</button>
-                <div class="component-elements-item">104: Prestressed Concrete Closed Web/Box Girder</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta43" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta43')">CS2</button>
-                <button id="bridge-elements-bta44" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta44')">CS3</button>
-                <button id="bridge-elements-bta45" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta45')">CS4</button>
-                <div class="component-elements-item">105: Reinforced Concrete Closed Web/Box Girder</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta46" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta46')">CS2</button>
-                <button id="bridge-elements-bta47" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta47')">CS3</button>
-                <button id="bridge-elements-bta48" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta48')">CS4</button>
-                <div class="component-elements-item">106: Other Closed Web/Box Girder</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta49" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta49')">CS2</button>
-                <button id="bridge-elements-bta50" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta50')">CS3</button>
-                <button id="bridge-elements-bta51" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta51')">CS4</button>
-                <div class="component-elements-item">107: Steel Girder/Beam</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta52" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta52')">CS2</button>
-                <button id="bridge-elements-bta53" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta53')">CS3</button>
-                <button id="bridge-elements-bta54" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta54')">CS4</button>
-                <div class="component-elements-item">109: Prestressed Concrete Girder/Beam</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta55" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta55')">CS2</button>
-                <button id="bridge-elements-bta56" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta56')">CS3</button>
-                <button id="bridge-elements-bta57" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta57')">CS4</button>
-                <div class="component-elements-item">110: Reinforced Concrete Open Girder/Beam</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta58" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta58')">CS2</button>
-                <button id="bridge-elements-bta59" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta59')">CS3</button>
-                <button id="bridge-elements-bta60" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta60')">CS4</button>
-                <div class="component-elements-item">111: Timber Open Girder/Beam</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta61" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta61')">CS2</button>
-                <button id="bridge-elements-bta62" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta62')">CS3</button>
-                <button id="bridge-elements-bta63" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta63')">CS4</button>
-                <div class="component-elements-item">112: Other Open Girder/Beam</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta64" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta64')">CS2</button>
-                <button id="bridge-elements-bta65" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta65')">CS3</button>
-                <button id="bridge-elements-bta66" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta66')">CS4</button>
-                <div class="component-elements-item">113: Steel Stringer</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta67" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta67')">CS2</button>
-                <button id="bridge-elements-bta68" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta68')">CS3</button>
-                <button id="bridge-elements-bta69" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta69')">CS4</button>
-                <div class="component-elements-item">115: Prestressed Concrete Stringer</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta70" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta70')">CS2</button>
-                <button id="bridge-elements-bta71" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta71')">CS3</button>
-                <button id="bridge-elements-bta72" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta72')">CS4</button>
-                <div class="component-elements-item">116: Reinforced Concrete Stringer</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta73" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta73')">CS2</button>
-                <button id="bridge-elements-bta74" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta74')">CS3</button>
-                <button id="bridge-elements-bta75" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta75')">CS4</button>
-                <div class="component-elements-item">117: Timber Stringer</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta76" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta76')">CS2</button>
-                <button id="bridge-elements-bta77" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta77')">CS3</button>
-                <button id="bridge-elements-bta78" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta78')">CS4</button>
-                <div class="component-elements-item">118: Other Stringer</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta79" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta79')">CS2</button>
-                <button id="bridge-elements-bta80" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta80')">CS3</button>
-                <button id="bridge-elements-bta81" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta81')">CS4</button>
-                <div class="component-elements-item">120: Steel Truss</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta82" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta82')">CS2</button>
-                <button id="bridge-elements-bta83" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta83')">CS3</button>
-                <button id="bridge-elements-bta84" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta84')">CS4</button>
-                <div class="component-elements-item">135: Timber Truss</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta85" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta85')">CS2</button>
-                <button id="bridge-elements-bta86" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta86')">CS3</button>
-                <button id="bridge-elements-bta87" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta87')">CS4</button>
-                <div class="component-elements-item">136: Other Truss</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta88" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta88')">CS2</button>
-                <button id="bridge-elements-bta89" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta89')">CS3</button>
-                <button id="bridge-elements-bta90" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta90')">CS4</button>
-                <div class="component-elements-item">141: Steel Arch</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta91" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta91')">CS2</button>
-                <button id="bridge-elements-bta92" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta92')">CS3</button>
-                <button id="bridge-elements-bta93" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta93')">CS4</button>
-                <div class="component-elements-item">142: Other Arch</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta94" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta94')">CS2</button>
-                <button id="bridge-elements-bta95" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta95')">CS3</button>
-                <button id="bridge-elements-bta96" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta96')">CS4</button>
-                <div class="component-elements-item">143: Prestressed Concrete Arch</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-bta97" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-bta97')">CS2</button>
-                <button id="bridge-elements-bta98" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-bta98')">CS3</button>
-                <button id="bridge-elements-bta99" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-bta99')">CS4</button>
-                <div class="component-elements-item">144: Reinforced Concrete Arch</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb01" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb01')">CS2</button>
-                <button id="bridge-elements-btb02" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb02')">CS3</button>
-                <button id="bridge-elements-btb03" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb03')">CS4</button>
-                <div class="component-elements-item">145: Masonry Arch</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb04" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb04')">CS2</button>
-                <button id="bridge-elements-btb05" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb05')">CS3</button>
-                <button id="bridge-elements-btb06" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb06')">CS4</button>
-                <div class="component-elements-item">146: Timber Arch</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb07" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb07')">CS2</button>
-                <button id="bridge-elements-btb08" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb08')">CS3</button>
-                <button id="bridge-elements-btb09" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb09')">CS4</button>
-                <div class="component-elements-item">147: Steel Cable-Primary</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb10" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb10')">CS2</button>
-                <button id="bridge-elements-btb11" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb11')">CS3</button>
-                <button id="bridge-elements-btb12" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb12')">CS4</button>
-                <div class="component-elements-item">148: Steel Cable-Secondary</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb13" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb13')">CS2</button>
-                <button id="bridge-elements-btb14" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb14')">CS3</button>
-                <button id="bridge-elements-btb15" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb15')">CS4</button>
-                <div class="component-elements-item">149: Other Cable Secondary</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb16" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb16')">CS2</button>
-                <button id="bridge-elements-btb17" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb17')">CS3</button>
-                <button id="bridge-elements-btb18" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb18')">CS4</button>
-                <div class="component-elements-item">152: Steel Floor Beam</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb19" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb19')">CS2</button>
-                <button id="bridge-elements-btb20" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb20')">CS3</button>
-                <button id="bridge-elements-btb21" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb21')">CS4</button>
-                <div class="component-elements-item">154: Prestressed Concrete Floor Beam</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb22" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb22')">CS2</button>
-                <button id="bridge-elements-btb23" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb23')">CS3</button>
-                <button id="bridge-elements-btb24" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb24')">CS4</button>
-                <div class="component-elements-item">155: Reinforced Concrete Floor Beam</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb25" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb25')">CS2</button>
-                <button id="bridge-elements-btb26" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb26')">CS3</button>
-                <button id="bridge-elements-btb27" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb27')">CS4</button>
-                <div class="component-elements-item">156: Timber Floor Beam</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb28" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb28')">CS2</button>
-                <button id="bridge-elements-btb29" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb29')">CS3</button>
-                <button id="bridge-elements-btb30" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb30')">CS4</button>
-                <div class="component-elements-item">157: Other Floor Beam</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb31" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb31')">CS2</button>
-                <button id="bridge-elements-btb32" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb32')">CS3</button>
-                <button id="bridge-elements-btb33" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb33')">CS4</button>
-                <div class="component-elements-item">161: Steel Pin, Pin and Hanger Assembly, or Both</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb34" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb34')">CS2</button>
-                <button id="bridge-elements-btb35" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb35')">CS3</button>
-                <button id="bridge-elements-btb36" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb36')">CS4</button>
-                <div class="component-elements-item">162: Steel Gusset Plate</div>
-              </div>
-    
-              <div class="elements-segment-header">Protective Coatings - Paint</div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc91" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc91')">CS2</button>
-                <button id="bridge-elements-btc92" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc92')">CS3</button>
-                <button id="bridge-elements-btc93" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc93')">CS4</button>
-                <div class="component-elements-item">515: Steel Protective Coating</div>
-              </div>
-    
-              <div class="elements-segment-header">Bearings</div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc67" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc67')">CS2</button>
-                <button id="bridge-elements-btc68" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc68')">CS3</button>
-                <button id="bridge-elements-btc69" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc69')">CS4</button>
-                <div class="component-elements-item">310: Elastomeric Bearing</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc70" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc70')">CS2</button>
-                <button id="bridge-elements-btc71" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc71')">CS3</button>
-                <button id="bridge-elements-btc72" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc72')">CS4</button>
-                <div class="component-elements-item">311: Movable Bearing (roller, sliding, etc.)</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc73" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc73')">CS2</button>
-                <button id="bridge-elements-btc74" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc74')">CS3</button>
-                <button id="bridge-elements-btc75" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc75')">CS4</button>
-                <div class="component-elements-item">312: Enclosed/Concealed Bearing</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc76" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc76')">CS2</button>
-                <button id="bridge-elements-btc77" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc77')">CS3</button>
-                <button id="bridge-elements-btc78" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc78')">CS4</button>
-                <div class="component-elements-item">313: Fixed Bearing</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc79" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc79')">CS2</button>
-                <button id="bridge-elements-btc80" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc80')">CS3</button>
-                <button id="bridge-elements-btc81" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc81')">CS4</button>
-                <div class="component-elements-item">314: Pot Bearing</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc82" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc82')">CS2</button>
-                <button id="bridge-elements-btc83" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc83')">CS3</button>
-                <button id="bridge-elements-btc84" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc84')">CS4</button>
-                <div class="component-elements-item">315: Disk Bearing</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc85" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc85')">CS2</button>
-                <button id="bridge-elements-btc86" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc86')">CS3</button>
-                <button id="bridge-elements-btc87" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc87')">CS4</button>
-                <div class="component-elements-item">316: Other Bearing</div>
-              </div>
-    
-              <div class="elements-segment-header">Substructure:</div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb37" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb37')">CS2</button>
-                <button id="bridge-elements-btb38" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb38')">CS3</button>
-                <button id="bridge-elements-btb39" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb39')">CS4</button>
-                <div class="component-elements-item">202: Steel Column</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb40" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb40')">CS2</button>
-                <button id="bridge-elements-btb41" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb41')">CS3</button>
-                <button id="bridge-elements-btb42" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb42')">CS4</button>
-                <div class="component-elements-item">203: Other Column</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb43" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb43')">CS2</button>
-                <button id="bridge-elements-btb44" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb44')">CS3</button>
-                <button id="bridge-elements-btb45" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb45')">CS4</button>
-                <div class="component-elements-item">204: Prestressed Concrete Column</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb46" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb46')">CS2</button>
-                <button id="bridge-elements-btb47" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb47')">CS3</button>
-                <button id="bridge-elements-btb48" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb48')">CS4</button>
-                <div class="component-elements-item">205: Reinforced Concrete Column</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb49" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb49')">CS2</button>
-                <button id="bridge-elements-btb50" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb50')">CS3</button>
-                <button id="bridge-elements-btb51" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb51')">CS4</button>
-                <div class="component-elements-item">207: Column Tower (Trestle)</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb52" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb52')">CS2</button>
-                <button id="bridge-elements-btb53" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb53')">CS3</button>
-                <button id="bridge-elements-btb54" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb54')">CS4</button>
-                <div class="component-elements-item">210: Reinforced Concrete Pier Wall</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb55" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb55')">CS2</button>
-                <button id="bridge-elements-btb56" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb56')">CS3</button>
-                <button id="bridge-elements-btb57" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb57')">CS4</button>
-                <div class="component-elements-item">211: Other Pier Wall</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb58" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb58')">CS2</button>
-                <button id="bridge-elements-btb59" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb59')">CS3</button>
-                <button id="bridge-elements-btb60" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb60')">CS4</button>
-                <div class="component-elements-item">213: Masonry Pier Wall</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb61" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb61')">CS2</button>
-                <button id="bridge-elements-btb62" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb62')">CS3</button>
-                <button id="bridge-elements-btb63" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb63')">CS4</button>
-                <div class="component-elements-item">215: Reinforced Concrete Abutment</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb64" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb64')">CS2</button>
-                <button id="bridge-elements-btb65" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb65')">CS3</button>
-                <button id="bridge-elements-btb66" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb66')">CS4</button>
-                <div class="component-elements-item">217: Masonry Abutment</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb67" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb67')">CS2</button>
-                <button id="bridge-elements-btb68" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb68')">CS3</button>
-                <button id="bridge-elements-btb69" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb69')">CS4</button>
-                <div class="component-elements-item">218: Other Abutment</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb70" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb70')">CS2</button>
-                <button id="bridge-elements-btb71" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb71')">CS3</button>
-                <button id="bridge-elements-btb72" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb72')">CS4</button>
-                <div class="component-elements-item">219: Steel Abutment</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb73" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb73')">CS2</button>
-                <button id="bridge-elements-btb74" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb74')">CS3</button>
-                <button id="bridge-elements-btb75" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb75')">CS4</button>
-                <div class="component-elements-item">220: Reinforced Pile Cap/Footing</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb76" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb76')">CS2</button>
-                <button id="bridge-elements-btb77" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb77')">CS3</button>
-                <button id="bridge-elements-btb78" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb78')">CS4</button>
-                <div class="component-elements-item">225: Steel Pile</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb79" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb79')">CS2</button>
-                <button id="bridge-elements-btb80" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb80')">CS3</button>
-                <button id="bridge-elements-btb81" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb81')">CS4</button>
-                <div class="component-elements-item">226: Prestressed Concrete Pile</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb82" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb82')">CS2</button>
-                <button id="bridge-elements-btb83" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb83')">CS3</button>
-                <button id="bridge-elements-btb84" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb84')">CS4</button>
-                <div class="component-elements-item">227: Reinforced Concrete Pile</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb85" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb85')">CS2</button>
-                <button id="bridge-elements-btb86" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb86')">CS3</button>
-                <button id="bridge-elements-btb87" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb87')">CS4</button>
-                <div class="component-elements-item">228: Timber Pile</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb88" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb88')">CS2</button>
-                <button id="bridge-elements-btb89" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb89')">CS3</button>
-                <button id="bridge-elements-btb90" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb90')">CS4</button>
-                <div class="component-elements-item">229: Other Pile</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb91" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb91')">CS2</button>
-                <button id="bridge-elements-btb92" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb92')">CS3</button>
-                <button id="bridge-elements-btb93" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb93')">CS4</button>
-                <div class="component-elements-item">231: Steel Pier Cap</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb94" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb94')">CS2</button>
-                <button id="bridge-elements-btb95" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb95')">CS3</button>
-                <button id="bridge-elements-btb96" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb96')">CS4</button>
-                <div class="component-elements-item">233: Prestressed Concrete Pier Cap</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btb97" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btb97')">CS2</button>
-                <button id="bridge-elements-btb98" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btb98')">CS3</button>
-                <button id="bridge-elements-btb99" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btb99')">CS4</button>
-                <div class="component-elements-item">234: Reinforced Concrete Pier Cap</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc01" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc01')">CS2</button>
-                <button id="bridge-elements-btc02" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc02')">CS3</button>
-                <button id="bridge-elements-btc03" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc03')">CS4</button>
-                <div class="component-elements-item">235: Timber Pier Cap</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc04" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc04')">CS2</button>
-                <button id="bridge-elements-btc05" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc05')">CS3</button>
-                <button id="bridge-elements-btc06" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc06')">CS4</button>
-                <div class="component-elements-item">236: Other Pier Cap</div>
-              </div>
-    
-              <div class="elements-segment-header">Culvert</div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc07" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc07')">CS2</button>
-                <button id="bridge-elements-btc08" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc08')">CS3</button>
-                <button id="bridge-elements-btc09" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc09')">CS4</button>
-                <div class="component-elements-item">240: Steel Culvert</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc10" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc10')">CS2</button>
-                <button id="bridge-elements-btc11" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc11')">CS3</button>
-                <button id="bridge-elements-btc12" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc12')">CS4</button>
-                <div class="component-elements-item">241: Reinforced Concrete Culvert</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc13" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc13')">CS2</button>
-                <button id="bridge-elements-btc14" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc14')">CS3</button>
-                <button id="bridge-elements-btc15" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc15')">CS4</button>
-                <div class="component-elements-item">242: Timber Culvert</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc16" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc16')">CS2</button>
-                <button id="bridge-elements-btc17" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc17')">CS3</button>
-                <button id="bridge-elements-btc18" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc18')">CS4</button>
-                <div class="component-elements-item">243: Other Culvert</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc19" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc19')">CS2</button>
-                <button id="bridge-elements-btc20" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc20')">CS3</button>
-                <button id="bridge-elements-btc21" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc21')">CS4</button>
-                <div class="component-elements-item">244: Masonry Culvert</div>
-              </div>
-              <div class="component-elements-container">
-                <button id="bridge-elements-btc22" class="component-elements-button2" onclick="openBridgeComponentElements(event, 'bridge-elements-btc22')">CS2</button>
-                <button id="bridge-elements-btc23" class="component-elements-button3" onclick="openBridgeComponentElements(event, 'bridge-elements-btc23')">CS3</button>
-                <button id="bridge-elements-btc24" class="component-elements-button4" onclick="openBridgeComponentElements(event, 'bridge-elements-btc24')">CS4</button>
-                <div class="component-elements-item">245: Prestressed Concrete Culvert</div>
+              <div id="element-components-container">
+                <!-- innerHTML is dynamically built in element.js -->
               </div>
             </div>
           </div>
@@ -4978,135 +4374,261 @@
               </div>
             </div>
           </div>
+          <div id="element-bearings-tab" class="element-content-containers">
+            <div class="element-content-cards-container">
+          
+              <div class="element-content-cards">
+            <p class="element-card-paragraph">
+              <p class="element-card-header">Corrosion (1000): </p>
+            </p>
+            <ul>
+              <li>
+                <p class="element-card-paragraph">CS2 - Freckled rust. Corrosion of the steel has initiated.</p>
+              </li>
+              <li>
+                <p class="element-card-paragraph">CS3 - Section loss is evident, or pack rust is present but does not warrant structural review.</p>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="element-content-cards">
+            <p class="element-card-header">Connection (1020): </p>
+            <ul>
+              <li>
+                <p class="element-card-paragraph">CS2 - Loose fasteners or pack rust without distortion present but the connection is in place and functioning as intended.</p>
+              </li>
+              <li>
+                <p class="element-card-paragraph">CS3 - Missing bolts, rivets, or fasteners; broken welds; or pack rust with distortion but does not warrant a structural review.</p>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="element-content-cards">
+            <p class="element-card-header">Movement (2210): </p>
+            <ul>
+              <li>
+                <p class="element-card-paragraph">CS2 - Minor restriction.</p>
+              </li>
+              <li>
+                <p class="element-card-paragraph">CS3 - Restricted, but not warranting a structural review.</p>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="element-content-cards">
+            <p class="element-card-header">Alignment (2220): </p>
+            <ul>
+              <li>
+                <p class="element-card-paragraph">CS2 - Tolerable lateral or vertical alignment that is inconsistent with the temperature conditions.</p>
+              </li>
+              <li>
+                <p class="element-card-paragraph">CS3 - Approaching the limits of lateral or vertical alignment for the bearing but does not warrant a structural review.</p>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="element-content-cards">
+            <p class="element-card-header">Bulging, Splitting, or Tearing (2230): </p>
+            <ul>
+              <li>
+                <p class="element-card-paragraph">CS2 - Bulging less than 15% of the thickness.</p>
+              </li>
+              <li>
+                <p class="element-card-paragraph">CS3 - Bulging 15% or more of the thickness. Splitting or tearing. Bearing's surfaces are not parallel. Does not warrant structural review.</p>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="element-content-cards">
+            <p class="element-card-header">Loss of Bearing Area (2240): </p>
+            <ul>
+              <li>
+                <p class="element-card-paragraph">CS2 - Less than 10%.</p>
+              </li>
+              <li>
+                <p class="element-card-paragraph">CS3 - 10% or more but does not warrant structural review.</p>
+              </li>
+            </ul>
+          </div>
+          
+            </div>
+          </div>
+          <div id="element-joints-tab" class="element-content-containers">
+            <div class="element-content-cards-container">
+          
+              <div class="element-content-cards">
+                <p class="element-card-header">Leakage (2310): </p>
+                <ul>
+                  <li>
+                    <p class="element-card-paragraph">CS2 - Minimal. Minor dripping through the joints.</p>
+                  </li>
+                  <li>
+                    <p class="element-card-paragraph">CS3 - Moderate. More than a drip and less than free flow water. |CS4| Free flow of water through the joint.</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="element-content-cards">
+                <p class="element-card-header">Seal Adhesion (2320): </p>
+                <ul>
+                  <li>
+                    <p class="element-card-paragraph">CS2 - Adhered for more than 50% of the Joint height.</p>
+                  </li>
+                  <li>
+                    <p class="element-card-paragraph">CS3 - Adhered 50% or less of joint height, but still some adhesion. |CS4| Complete loss of adhesion.</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="element-content-cards">
+                <p class="element-card-header">Seal Damage (2330): </p>
+                <ul>
+                  <li>
+                    <p class="element-card-paragraph">CS2 - Seal abrasion without punctures.</p>
+                  </li>
+                  <li>
+                    <p class="element-card-paragraph">CS3 - Punctured or ripped or partially pulled out.</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="element-content-cards">
+                <p class="element-card-header">Debris Impaction (2350): </p>
+                <ul>
+                  <li>
+                    <p class="element-card-paragraph">CS2 - Partially filled with hard-packed material but still allowing free movement.</p>
+                  </li>
+                  <li>
+                    <p class="element-card-paragraph">CS3 - Completely filled and impacts joint movement. |CS4| Completely filled and prevents joint movement.</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="element-content-cards">
+                <p class="element-card-header">Adjacent Deck or Header (2360): </p>
+                <ul>
+                  <li>
+                    <p class="element-card-paragraph">CS2 - Edge delamination or spall 1 in. or less deep or 6 in. or less in diameter. No exposed rebar. Patched area that is sound.</p>
+                  </li>
+                  <li>
+                    <p class="element-card-paragraph">CS3 - Spall greater than 1 in. deep or greater than 6 in. diameter. Exposed rebar. Delamination or unsound patched area that makes the joint loose.</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="element-content-cards">
+                <p class="element-card-header">Metal Deterioration or Damage (2370): </p>
+                <ul>
+                  <li>
+                    <p class="element-card-paragraph">CS2 - Freckled rust; metal has no cracks or impact damage. Connection may be loose but functioning as intended.</p>
+                  </li>
+                  <li>
+                    <p class="element-card-paragraph">CS3 - Section loss, missing or broken fasteners, cracking of the metal, or impact damage but joint still functioning.</p>
+                  </li>
+                </ul>
+              </div>
+          
+            </div>
+          </div>
+          <div id="element-paint-tab" class="element-content-containers">
+            <div class="element-content-cards-container">
+          
+              <div class="element-content-cards">
+                <p class="element-card-header">Chalking (3410): </p>
+                <ul>
+                  <li>
+                    <p class="element-card-paragraph">CS2 - Surface dulling.</p>
+                  </li>
+                  <li>
+                    <p class="element-card-paragraph">CS3 - Loss of pigment.</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="element-content-cards">
+                <p class="element-card-header">Peeling, Bubbling, Cracking (3420): </p>
+                <ul>
+                  <li>
+                    <p class="element-card-paragraph">CS2 - Finish coats only.</p>
+                  </li>
+                  <li>
+                    <p class="element-card-paragraph">CS3 - Finish and primer coats. |CS4| Exposure of bare metal.</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="element-content-cards">
+                <p class="element-card-header">Oxide Film Degradation (3430): </p>
+                <ul>
+                  <li>
+                    <p class="element-card-paragraph">CS2 - Granular texture.</p>
+                  </li>
+                  <li>
+                    <p class="element-card-paragraph">CS3 - Small flakes, less than 0.5 in. diameter.</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="element-content-cards">
+                <p class="element-card-header">Effectiveness (3440): </p>
+                <ul>
+                  <li>
+                    <p class="element-card-paragraph">CS2 - Substantially effective.</p>
+                  </li>
+                  <li>
+                    <p class="element-card-paragraph">CS3 - Limited effectiveness.</p>
+                  </li>
+                </ul>
+              </div>
+          
+            </div>
+          </div>
+          <div id="element-wearing-surface-tab" class="element-content-containers">
+            <div class="element-content-cards-container">
+          
+              <div class="element-content-cards">
+                <p class="element-card-header">Delamination, Spall, Patched Area (3210): </p>
+                <ul>
+                  <li>
+                    <p class="element-card-paragraph">CS2 - Delaminated. Spall 1 in. or less deep or 6 in. or less in diameter. Patched area that is sound. Partial-depth pothole.</p>
+                  </li>
+                  <li>
+                    <p class="element-card-paragraph">CS3 - Spall greater than 1 in. deep or greater than 6 in. diameter. Patched area that is unsound or showing distress. Full-depth pothole.</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="element-content-cards">
+                <p class="element-card-header">Crack (3220): </p>
+                <ul>
+                  <li>
+                    <p class="element-card-paragraph">CS2 - Width 0.012-0.05 in. or spacing of 1.0-3.0 ft.</p>
+                  </li>
+                  <li>
+                    <p class="element-card-paragraph">CS3 - Width of more than 0.05 in. or spacing of less than 1.0 ft.</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="element-content-cards">
+                <p class="element-card-header">Effectiveness (3230): </p>
+                <ul>
+                  <li>
+                    <p class="element-card-paragraph">CS2 - Substantially effective. Deterioration of the protected element has slowed.</p>
+                  </li>
+                  <li>
+                    <p class="element-card-paragraph">CS3 - Limited effectiveness. Deterioration of the protected element has progressed.</p>
+                  </li>
+                </ul>
+              </div>
+          
+            </div>
+          </div>
         </div>
         <div id="bridge-maintenance-tab" class="bridge-component-containers">
           <div class="main-content-containers">
-            <div class="elements-segment-header">Maintenance Items</div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt1" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt1')">+</button>
-              <button id="bridge-maintenance-bt2" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt2')">+</button>
-              <button id="bridge-maintenance-bt3" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt3')">+</button>
-              <button id="bridge-maintenance-bt4" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt4')">+</button>
-              <div class="component-maintenance-item">Approach Repair</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt5" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt5')">+</button>
-              <button id="bridge-maintenance-bt6" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt6')">+</button>
-              <button id="bridge-maintenance-bt7" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt7')">+</button>
-              <button id="bridge-maintenance-bt8" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt8')">+</button>
-              <div class="component-maintenance-item">Attenuator Repair</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt9" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt9')">+</button>
-              <button id="bridge-maintenance-bt10" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt10')">+</button>
-              <button id="bridge-maintenance-bt11" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt11')">+</button>
-              <button id="bridge-maintenance-bt12" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt12')">+</button>
-              <div class="component-maintenance-item">Bearing Repair</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt13" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt13')">+</button>
-              <button id="bridge-maintenance-bt14" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt14')">+</button>
-              <button id="bridge-maintenance-bt15" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt15')">+</button>
-              <button id="bridge-maintenance-bt16" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt16')">+</button>
-              <div class="component-maintenance-item">Brush Cutting / Herbicide Spray</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt17" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt17')">+</button>
-              <button id="bridge-maintenance-bt18" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt18')">+</button>
-              <button id="bridge-maintenance-bt19" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt19')">+</button>
-              <button id="bridge-maintenance-bt20" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt20')">+</button>
-              <div class="component-maintenance-item">Channel Debris Removal</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt21" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt21')">+</button>
-              <button id="bridge-maintenance-bt22" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt22')">+</button>
-              <button id="bridge-maintenance-bt23" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt23')">+</button>
-              <button id="bridge-maintenance-bt24" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt24')">+</button>
-              <div class="component-maintenance-item">Concrete Crack Seal</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt25" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt25')">+</button>
-              <button id="bridge-maintenance-bt26" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt26')">+</button>
-              <button id="bridge-maintenance-bt27" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt27')">+</button>
-              <button id="bridge-maintenance-bt28" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt28')">+</button>
-              <div class="component-maintenance-item">Deck Cleaning and Flushing</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt29" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt29')">+</button>
-              <button id="bridge-maintenance-bt30" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt30')">+</button>
-              <button id="bridge-maintenance-bt31" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt31')">+</button>
-              <button id="bridge-maintenance-bt32" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt32')">+</button>
-              <div class="component-maintenance-item">Deck Patch</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt33" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt33')">+</button>
-              <button id="bridge-maintenance-bt34" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt34')">+</button>
-              <button id="bridge-maintenance-bt35" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt35')">+</button>
-              <button id="bridge-maintenance-bt36" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt36')">+</button>
-              <div class="component-maintenance-item">Drain Repair</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt37" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt37')">+</button>
-              <button id="bridge-maintenance-bt38" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt38')">+</button>
-              <button id="bridge-maintenance-bt39" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt39')">+</button>
-              <button id="bridge-maintenance-bt40" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt40')">+</button>
-              <div class="component-maintenance-item">Erosion Control / Riprap</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt41" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt41')">+</button>
-              <button id="bridge-maintenance-bt42" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt42')">+</button>
-              <button id="bridge-maintenance-bt43" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt43')">+</button>
-              <button id="bridge-maintenance-bt44" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt4')">+</button>
-              <div class="component-maintenance-item">Graffiti Removal</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt45" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt45')">+</button>
-              <button id="bridge-maintenance-bt46" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt46')">+</button>
-              <button id="bridge-maintenance-bt47" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt47')">+</button>
-              <button id="bridge-maintenance-bt48" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt8')">+</button>
-              <div class="component-maintenance-item">Guardrail / Barrier Wall Repair</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt49" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt49')">+</button>
-              <button id="bridge-maintenance-bt50" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt50')">+</button>
-              <button id="bridge-maintenance-bt51" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt51')">+</button>
-              <button id="bridge-maintenance-bt52" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt52')">+</button>
-              <div class="component-maintenance-item">Joint Repair</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt53" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt53')">+</button>
-              <button id="bridge-maintenance-bt54" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt54')">+</button>
-              <button id="bridge-maintenance-bt55" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt55')">+</button>
-              <button id="bridge-maintenance-bt56" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt56')">+</button>
-              <div class="component-maintenance-item">Signage Install / Signage Repair</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt57" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt57')">+</button>
-              <button id="bridge-maintenance-bt58" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt58')">+</button>
-              <button id="bridge-maintenance-bt59" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt59')">+</button>
-              <button id="bridge-maintenance-bt60" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt60')">+</button>
-              <div class="component-maintenance-item">Substructure Cleaning and Flushing</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt61" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt61')">+</button>
-              <button id="bridge-maintenance-bt62" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt62')">+</button>
-              <button id="bridge-maintenance-bt63" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt63')">+</button>
-              <button id="bridge-maintenance-bt64" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt64')">+</button>
-              <div class="component-maintenance-item">Substructure Repair</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt65" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt65')">+</button>
-              <button id="bridge-maintenance-bt66" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt66')">+</button>
-              <button id="bridge-maintenance-bt67" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt67')">+</button>
-              <button id="bridge-maintenance-bt68" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt68')">+</button>
-              <div class="component-maintenance-item">Superstructure Cleaning and Flushing</div>
-            </div>
-            <div class="component-maintenance-container">
-              <button id="bridge-maintenance-bt69" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt69')">+</button>
-              <button id="bridge-maintenance-bt70" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt70')">+</button>
-              <button id="bridge-maintenance-bt71" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt71')">+</button>
-              <button id="bridge-maintenance-bt72" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt72')">+</button>
-              <div class="component-maintenance-item">Superstructure Repair</div>
+            <div id="maintenance-container">
+              <!-- innerHTML is dynamically built in maintenance.js -->
             </div>
           </div>
         </div>

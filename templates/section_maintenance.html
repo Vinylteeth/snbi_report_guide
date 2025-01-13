@@ -10,11 +10,7 @@
     <link rel="stylesheet" href="../styles/foundations.css" />
     <link rel="stylesheet" href="../styles/components.css" />
     <!-- JS -->
-    <script src="../scripts/modules/dropdownMenus.mjs" defer></script>
-    <script src="../scripts/modules/snbi.mjs" defer></script>
-    <script src="../scripts/modules/modal.mjs" defer></script>
-    <script src="../scripts/modules/assetdata.mjs" defer></script>
-    <script src="../scripts/modules/ratingForms.mjs" defer></script>
+    <script src="../scripts/modules/maintenance.js" defer></script>
     <script type="text/javascript" src="../scripts/scripts.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,132 +27,8 @@
   <body style="background-color: rgb(58 73 95 / 0.9); background-image: none">
     <div id="bridge-maintenance-tab" class="bridge-component-containers active" style="display: block">
       <div class="main-content-containers">
-        <div class="elements-segment-header">Maintenance Items</div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt1" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt1')">+</button>
-          <button id="bridge-maintenance-bt2" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt2')">+</button>
-          <button id="bridge-maintenance-bt3" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt3')">+</button>
-          <button id="bridge-maintenance-bt4" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt4')">+</button>
-          <div class="component-maintenance-item">Approach Repair</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt5" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt5')">+</button>
-          <button id="bridge-maintenance-bt6" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt6')">+</button>
-          <button id="bridge-maintenance-bt7" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt7')">+</button>
-          <button id="bridge-maintenance-bt8" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt8')">+</button>
-          <div class="component-maintenance-item">Attenuator Repair</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt9" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt9')">+</button>
-          <button id="bridge-maintenance-bt10" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt10')">+</button>
-          <button id="bridge-maintenance-bt11" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt11')">+</button>
-          <button id="bridge-maintenance-bt12" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt12')">+</button>
-          <div class="component-maintenance-item">Bearing Repair</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt13" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt13')">+</button>
-          <button id="bridge-maintenance-bt14" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt14')">+</button>
-          <button id="bridge-maintenance-bt15" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt15')">+</button>
-          <button id="bridge-maintenance-bt16" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt16')">+</button>
-          <div class="component-maintenance-item">Brush Cutting / Herbicide Spray</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt17" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt17')">+</button>
-          <button id="bridge-maintenance-bt18" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt18')">+</button>
-          <button id="bridge-maintenance-bt19" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt19')">+</button>
-          <button id="bridge-maintenance-bt20" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt20')">+</button>
-          <div class="component-maintenance-item">Channel Debris Removal</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt21" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt21')">+</button>
-          <button id="bridge-maintenance-bt22" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt22')">+</button>
-          <button id="bridge-maintenance-bt23" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt23')">+</button>
-          <button id="bridge-maintenance-bt24" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt24')">+</button>
-          <div class="component-maintenance-item">Concrete Crack Seal</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt25" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt25')">+</button>
-          <button id="bridge-maintenance-bt26" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt26')">+</button>
-          <button id="bridge-maintenance-bt27" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt27')">+</button>
-          <button id="bridge-maintenance-bt28" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt28')">+</button>
-          <div class="component-maintenance-item">Deck Cleaning and Flushing</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt29" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt29')">+</button>
-          <button id="bridge-maintenance-bt30" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt30')">+</button>
-          <button id="bridge-maintenance-bt31" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt31')">+</button>
-          <button id="bridge-maintenance-bt32" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt32')">+</button>
-          <div class="component-maintenance-item">Deck Patch</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt33" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt33')">+</button>
-          <button id="bridge-maintenance-bt34" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt34')">+</button>
-          <button id="bridge-maintenance-bt35" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt35')">+</button>
-          <button id="bridge-maintenance-bt36" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt36')">+</button>
-          <div class="component-maintenance-item">Drain Repair</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt37" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt37')">+</button>
-          <button id="bridge-maintenance-bt38" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt38')">+</button>
-          <button id="bridge-maintenance-bt39" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt39')">+</button>
-          <button id="bridge-maintenance-bt40" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt40')">+</button>
-          <div class="component-maintenance-item">Erosion Control / Riprap</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt41" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt41')">+</button>
-          <button id="bridge-maintenance-bt42" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt42')">+</button>
-          <button id="bridge-maintenance-bt43" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt43')">+</button>
-          <button id="bridge-maintenance-bt44" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt4')">+</button>
-          <div class="component-maintenance-item">Graffiti Removal</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt45" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt45')">+</button>
-          <button id="bridge-maintenance-bt46" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt46')">+</button>
-          <button id="bridge-maintenance-bt47" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt47')">+</button>
-          <button id="bridge-maintenance-bt48" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt8')">+</button>
-          <div class="component-maintenance-item">Guardrail / Barrier Wall Repair</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt49" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt49')">+</button>
-          <button id="bridge-maintenance-bt50" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt50')">+</button>
-          <button id="bridge-maintenance-bt51" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt51')">+</button>
-          <button id="bridge-maintenance-bt52" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt52')">+</button>
-          <div class="component-maintenance-item">Joint Repair</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt53" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt53')">+</button>
-          <button id="bridge-maintenance-bt54" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt54')">+</button>
-          <button id="bridge-maintenance-bt55" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt55')">+</button>
-          <button id="bridge-maintenance-bt56" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt56')">+</button>
-          <div class="component-maintenance-item">Signage Install / Signage Repair</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt57" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt57')">+</button>
-          <button id="bridge-maintenance-bt58" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt58')">+</button>
-          <button id="bridge-maintenance-bt59" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt59')">+</button>
-          <button id="bridge-maintenance-bt60" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt60')">+</button>
-          <div class="component-maintenance-item">Substructure Cleaning and Flushing</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt61" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt61')">+</button>
-          <button id="bridge-maintenance-bt62" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt62')">+</button>
-          <button id="bridge-maintenance-bt63" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt63')">+</button>
-          <button id="bridge-maintenance-bt64" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt64')">+</button>
-          <div class="component-maintenance-item">Substructure Repair</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt65" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt65')">+</button>
-          <button id="bridge-maintenance-bt66" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt66')">+</button>
-          <button id="bridge-maintenance-bt67" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt67')">+</button>
-          <button id="bridge-maintenance-bt68" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt68')">+</button>
-          <div class="component-maintenance-item">Superstructure Cleaning and Flushing</div>
-        </div>
-        <div class="component-maintenance-container">
-          <button id="bridge-maintenance-bt69" class="component-maintenance-button1" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt69')">+</button>
-          <button id="bridge-maintenance-bt70" class="component-maintenance-button2" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt70')">+</button>
-          <button id="bridge-maintenance-bt71" class="component-maintenance-button3" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt71')">+</button>
-          <button id="bridge-maintenance-bt72" class="component-maintenance-button4" onclick="openBridgeComponentMaintenance(event, 'bridge-maintenance-bt72')">+</button>
-          <div class="component-maintenance-item">Superstructure Repair</div>
+        <div id="maintenance-container">
+          <!-- innerHTML is dynamically built in maintenance.js -->
         </div>
       </div>
     </div>

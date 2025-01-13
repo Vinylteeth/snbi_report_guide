@@ -69,43 +69,63 @@ buttonClasses.forEach(function(buttonClass) {
 //   button.addEventListener('click', openTab);
 // });
 
+// Function to copy innerHTML to clipboard
+function copyToClipboard(evt) {
+  var textToCopy = evt.currentTarget.innerHTML; // Get the innerHTML of the clicked element
+  navigator.clipboard.writeText('')
+  navigator.clipboard.writeText(textToCopy) // Copy text to clipboard
+    .then(function() {
+      // alert("Copied to clipboard: " + textToCopy); // Alert on successful copy
+    })
+    .catch(function(err) {
+      console.error("Error copying text: ", err); // Log any errors
+    });
+}
 
+// Function to paste clipboard content into the textarea
+function pasteFromClipboard(evt) {
+  var textarea = evt.currentTarget; // Get the double-clicked textarea
+  navigator.clipboard.readText() // Read text from the clipboard
+    .then(function(clipboardText) {
+      textarea.value += clipboardText; // Append the clipboard content to the textarea
+      // alert("Pasted into textarea: " + clipboardText); // Optional: Alert the pasted content
+    })
+    .catch(function(err) {
+      console.error("Error pasting text: ", err); // Log any errors
+    });
+}
 
-// Maintenance alert
-function openBridgeComponentMaintenance(evt, componentName) {
-  // Declare all variables
-  var idClicked = evt.target.id; // ID of the clicked element
-  var classClicked = evt.target.className; // Class of the clicked element
-  var colorsuffix = classClicked.slice(-1); // Last character of the class name determines the color
-  var defectNameContainer = evt.target.parentNode.querySelector("div"); // Find the defect description in the parent div
-  var defectName = defectNameContainer.innerHTML; // Get the inner HTML of the defect div
-  var defectNameLowerCase = defectName.toLowerCase(); // Convert the defect name to lowercase
+// Add event listener for double-click on the textarea
+document.querySelectorAll('.textarea-comments').forEach(function(textarea) {
+  textarea.addEventListener('dblclick', pasteFromClipboard);
+});
 
-  // Determine the color based on the class suffix
-  if (colorsuffix == 1) {
-    colorsuffix = "grey";
-  } else if (colorsuffix == 2) {
-    colorsuffix = "green";
-  } else if (colorsuffix == 3) {
-    colorsuffix = "yellow";
-  } else {
-    colorsuffix = "red"; // Default color is red if none of the above
+// Add event listener to all elements with the class 'content-container-comment-lines'
+document.querySelectorAll('.content-container-comment-lines').forEach(function(element) {
+  element.addEventListener('click', copyToClipboard);
+});
+
+//element alert
+function addDeficiencyButtons(event) {
+  // Get the button element that was clicked
+  const button = event.target;
+
+  // Access the shared data attributes
+  const buttonNumber = button.getAttribute("data-button-number");
+  const severityLevel = button.getAttribute("data-button-category");
+
+  if (buttonNumber.includes("Element")) {
+    // Perform the action based on the element number and CS level
+    alert(`Opening details for ${buttonNumber} at Condition State ${severityLevel}`);
+    // Copy the text to the clipboard
+    navigator.clipboard.writeText(`Opening details for ${buttonNumber} at Condition State ${severityLevel}`); 
   }
-
-  // Prepare the text for the clipboard and the alert
-  var clipboardValue = "A " + colorsuffix + " deficiency was submitted for " + defectNameLowerCase + ".";
-  var finalMessage =
-    'This was copied to the clipboard: "' +
-    clipboardValue +
-    '" This submission is from ' +
-    idClicked +
-    ". This will eventually be added to the Review page and the plural form will be corrected.";
-
-  // Copy the text to the clipboard
-  navigator.clipboard.writeText(clipboardValue);
-
-  // Show an alert with the copied message
-  alert(finalMessage);
+  if (buttonNumber.includes("Maintenance")) {
+    // Perform the action based on the element number and CS level
+    alert(`Opening details for ${buttonNumber} at Deficiency Level ${severityLevel}`);
+    // Copy the text to the clipboard
+    navigator.clipboard.writeText(`Opening details for ${buttonNumber} at Deficiency Level ${severityLevel}`); 
+  }
 }
 
 // textarea row control
@@ -113,4 +133,21 @@ function expandTextarea(evt, componentName) {
   // Declare all variables
   var elem = document.getElementById(componentName); // Get the textarea element to use its properties.
   elem.parentNode.dataset.replicatedValue = elem.value; // Match the parent element value to it (divTextAreaMirror class = value/comment).
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('collapsed');
+}
+
+function openContent(sectionId) {
+  // Hide all sections
+  document.querySelectorAll('.content-section').forEach((section) => {
+    section.classList.add('hidden');
+  });
+
+  // Show the selected section
+  document.getElementById(sectionId).classList.remove('hidden');
 }
