@@ -1,27 +1,42 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin"); // Import the plugin
 
 module.exports = {
-  entry: "./index.html", // Entry point for your app
+  entry: "./index.html", // Entry point remains your existing index.html
   output: {
-    filename: "bundle.js", // Name of the bundled file
+    filename: "bundle.js", // Name of the bundled JavaScript file
     path: path.resolve(__dirname, "dist"), // Output folder for bundled files
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"), // Serve files from the 'dist' directory
-    port: 3333, // Port to run the server
+    contentBase: path.join(__dirname, "dist"), // Serve files from 'dist'
+    port: 3333, // Port for the server
   },
   module: {
     rules: [
       {
-        test: /\.css$/, // Match .css files
-        use: ["style-loader", "css-loader"], // Use style-loader and css-loader for CSS
+        test: /\.css$/, // CSS loader
+        use: ["style-loader", "css-loader"], // CSS loading
       },
       {
-        test: /\.js$/, // Match .js files
-        exclude: /node_modules/, // Exclude the node_modules directory
-        use: "babel-loader", // Use Babel to transpile JS
+        test: /\.js$/, // JS loader
+        exclude: /node_modules/,
+        use: "babel-loader", // Babel for JS transpiling
+      },
+      {
+        test: /\.html$/, // Add this rule to process HTML files
+        use: ["html-loader"], // Use html-loader to handle HTML files
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },
-  mode: "development", // Run in development mode
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./index.html", // Use your existing index.html as the template
+      inject: "body", // Inject the script tag at the bottom of the body
+    }),
+  ],
+  mode: "development", // Development mode
 };
