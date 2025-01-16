@@ -1,11 +1,24 @@
+// Insert in HTML
+const container = document.querySelector("#bridge-alignment-pg1 .content-container-paragraphs");
+
+// Insert the commentary
+if (container) {
+  let unsafeHTML = bridgeComponents[0].commentary;
+  let safeHTML = DOMPurify.sanitize(unsafeHTML);
+  container.innerHTML = safeHTML;
+  console.log("Sanitization complete and inserted.");
+} else {
+  console.log("Container element not found.");
+}
+
 // General open tab function
 function openTab(evt) {
   var button = evt.currentTarget;
 
   // Extract data attributes from the clicked button
-  var componentName = button.getAttribute('data-target');
-  var containerClass = button.getAttribute('data-container-class');
-  var buttonClass = button.getAttribute('data-button-class');
+  var componentName = button.getAttribute("data-target");
+  var containerClass = button.getAttribute("data-container-class");
+  var buttonClass = button.getAttribute("data-button-class");
 
   // Hide all containers
   var containers = document.getElementsByClassName(containerClass);
@@ -26,33 +39,33 @@ function openTab(evt) {
 
 // Array of button classes
 var buttonClasses = [
-  'asset-buttons',
-  'bridge-component-buttons',
-  'bridge-alignment-buttons',
-  'bridge-approach-buttons',
-  'bridge-joints-buttons',
-  'bridge-railings-buttons',
-  'bridge-deck-buttons',
-  'bridge-super-buttons',
-  'bridge-bearings-buttons',
-  'bridge-sub-buttons',
-  'bridge-culvert-buttons',
-  'bridge-channel-buttons',
-  'bridge-scour-buttons',
-  'bridge-overtopping-buttons',
-  'bridge-wildlife-buttons',
-  'bridge-elements-buttons',
-  'bridge-maintenance-buttons',
-  'bridge-review-buttons',
-  'element-item-buttons',
-  'culvert-item-buttons',
-  'wall-item-buttons'
+  "asset-buttons",
+  "bridge-component-buttons",
+  "bridge-alignment-buttons",
+  "bridge-approach-buttons",
+  "bridge-joints-buttons",
+  "bridge-railings-buttons",
+  "bridge-deck-buttons",
+  "bridge-super-buttons",
+  "bridge-bearings-buttons",
+  "bridge-sub-buttons",
+  "bridge-culvert-buttons",
+  "bridge-channel-buttons",
+  "bridge-scour-buttons",
+  "bridge-overtopping-buttons",
+  "bridge-wildlife-buttons",
+  "bridge-elements-buttons",
+  "bridge-maintenance-buttons",
+  "bridge-review-buttons",
+  "element-item-buttons",
+  "culvert-item-buttons",
+  "wall-item-buttons",
 ];
 
 // Loop through the array and add event listeners to each button class
-buttonClasses.forEach(function(buttonClass) {
-  document.querySelectorAll('.' + buttonClass).forEach(function(button) {
-    button.addEventListener('click', openTab);
+buttonClasses.forEach(function (buttonClass) {
+  document.querySelectorAll("." + buttonClass).forEach(function (button) {
+    button.addEventListener("click", openTab);
   });
 });
 
@@ -72,12 +85,13 @@ buttonClasses.forEach(function(buttonClass) {
 // Function to copy innerHTML to clipboard
 function copyToClipboard(evt) {
   var textToCopy = evt.currentTarget.innerHTML; // Get the innerHTML of the clicked element
-  navigator.clipboard.writeText('')
-  navigator.clipboard.writeText(textToCopy) // Copy text to clipboard
-    .then(function() {
+  navigator.clipboard.writeText("");
+  navigator.clipboard
+    .writeText(textToCopy) // Copy text to clipboard
+    .then(function () {
       // alert("Copied to clipboard: " + textToCopy); // Alert on successful copy
     })
-    .catch(function(err) {
+    .catch(function (err) {
       console.error("Error copying text: ", err); // Log any errors
     });
 }
@@ -85,24 +99,25 @@ function copyToClipboard(evt) {
 // Function to paste clipboard content into the textarea
 function pasteFromClipboard(evt) {
   var textarea = evt.currentTarget; // Get the double-clicked textarea
-  navigator.clipboard.readText() // Read text from the clipboard
-    .then(function(clipboardText) {
+  navigator.clipboard
+    .readText() // Read text from the clipboard
+    .then(function (clipboardText) {
       textarea.value += clipboardText; // Append the clipboard content to the textarea
       // alert("Pasted into textarea: " + clipboardText); // Optional: Alert the pasted content
     })
-    .catch(function(err) {
+    .catch(function (err) {
       console.error("Error pasting text: ", err); // Log any errors
     });
 }
 
 // Add event listener for double-click on the textarea
-document.querySelectorAll('.textarea-comments').forEach(function(textarea) {
-  textarea.addEventListener('dblclick', pasteFromClipboard);
+document.querySelectorAll(".textarea-comments").forEach(function (textarea) {
+  textarea.addEventListener("dblclick", pasteFromClipboard);
 });
 
 // Add event listener to all elements with the class 'content-container-comment-lines'
-document.querySelectorAll('.content-container-comment-lines').forEach(function(element) {
-  element.addEventListener('click', copyToClipboard);
+document.querySelectorAll(".content-container-comment-lines").forEach(function (element) {
+  element.addEventListener("click", copyToClipboard);
 });
 
 //element alert
@@ -119,13 +134,13 @@ function addDeficiencyButtons(event) {
     // Perform the action based on the element number and CS level
     alert(`Opening details for ${buttonNumber} at Condition State ${severityLevel}`);
     // Copy the text to the clipboard
-    navigator.clipboard.writeText(`Opening details for ${buttonNumber} at Condition State ${severityLevel}`); 
+    navigator.clipboard.writeText(`Opening details for ${buttonNumber} at Condition State ${severityLevel}`);
   }
   if (buttonNumber.includes("Maintenance")) {
     // Perform the action based on the element number and CS level
     alert(`Opening details for ${taskName} at Deficiency Level ${severityLevel}`);
     // Copy the text to the clipboard
-    navigator.clipboard.writeText(`Opening details for ${taskName} at Deficiency Level ${severityLevel}`); 
+    navigator.clipboard.writeText(`Opening details for ${taskName} at Deficiency Level ${severityLevel}`);
   }
 }
 
@@ -139,16 +154,16 @@ function expandTextarea(evt, componentName) {
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 function toggleSidebar() {
-  const sidebar = document.getElementById('sidebar');
-  sidebar.classList.toggle('collapsed');
+  const sidebar = document.getElementById("sidebar");
+  sidebar.classList.toggle("collapsed");
 }
 
 function openContent(sectionId) {
   // Hide all sections
-  document.querySelectorAll('.content-section').forEach((section) => {
-    section.classList.add('hidden');
+  document.querySelectorAll(".content-section").forEach((section) => {
+    section.classList.add("hidden");
   });
 
   // Show the selected section
-  document.getElementById(sectionId).classList.remove('hidden');
+  document.getElementById(sectionId).classList.remove("hidden");
 }
