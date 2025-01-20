@@ -1,21 +1,17 @@
 const express = require("express");
-const path = require("path"); // Import the path module
+const path = require("path");
+
 const app = express();
+const port = 3333;
 
-// Serve static files from the 'styles' and 'scripts' directories
-app.use("/styles", express.static("styles"));
-app.use("/scripts", express.static("scripts"));
-app.use("/media", express.static(path.join(__dirname, "media"))); // Use path.join to resolve the media folder
+// Serve static files from the 'dist' directory
+app.use(express.static(path.join(__dirname, "dist")));
 
-// Serve the index.html from the root directory
+// Serve the index.html file at the root
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html"); // Path to your HTML
-});
-app.get("/iterate-logo.html", (req, res) => {
-  res.sendFile(__dirname + "/iterate-logo.html");
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
-// Start the server on port 3333
-app.listen(3333, () => {
-  console.log("Server is running on http://localhost:3333");
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
 });

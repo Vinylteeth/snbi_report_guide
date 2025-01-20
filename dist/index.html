@@ -7,30 +7,22 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewpoint" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Report Assistant</title>
-    <link rel="icon" href="a83c6fce7dd49b677d36.png" />
+    <link rel="icon" href="media/logo-rings-only-purple.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="f748539f2c3cc7352e52.css" />
-    <link rel="stylesheet" href="efa62a34dc1a2bda8f68.css" />
+    <!-- <link rel="stylesheet" href="/styles/foundations.css" />
+    <link rel="stylesheet" href="/styles/components.css" /> -->
 
     <!-- JS -->
-    <script src="55cb7366f1855238fa9a.js" defer></script>
-    <script src="2cd0c357062113eda3b6.js" defer></script>
-    <script src="ed7482bb656711228e49.js" defer></script>
-    <script type="text/javascript" src="dedde6084e2a838709c8.js" defer></script>
+    <!-- main.js imports the following modules:./modules/bridge_objects.mjs, ./modules/elements.mjs, ./modules/maintenance.mjs -->
+    <script type="module" src="/scripts/scripts.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.0/dist/purify.min.js"></script>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Roboto&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=DM+Sans:opsz@9..40&family=Ubuntu:wght@500&display=swap" rel="stylesheet" />
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   </head>
@@ -291,7 +283,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BAP01-textarea" class="textarea-comments" name="Approach Roadway Alignment" rows="1" oninput="expandTextarea(event, 'BAP01-textarea')"></textarea>
+                  <textarea id="BAP01-textarea" class="textarea-comments" name="Approach Roadway Alignment" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -454,7 +446,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC01b-textarea" class="textarea-comments" name="Approach Slab" rows="1" oninput="expandTextarea(event, 'BC01b-textarea')"></textarea>
+                  <textarea id="BC01b-textarea" class="textarea-comments" name="Approach Slab" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -709,7 +701,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC08-textarea" class="textarea-comments" name="Bridge Joints" rows="1" oninput="expandTextarea(event, 'BC08-textarea')"></textarea>
+                  <textarea id="BC08-textarea" class="textarea-comments" name="Bridge Joints" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -719,7 +711,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC08a-textarea" class="textarea-comments" name="Terminal Joints" rows="1" oninput="expandTextarea(event, 'BC08a-textarea')"></textarea>
+                  <textarea id="BC08a-textarea" class="textarea-comments" name="Terminal Joints" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -1018,7 +1010,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC05-textarea" class="textarea-comments" name="Bridge Railing" rows="1" oninput="expandTextarea(event, 'BC05-textarea')"></textarea>
+                  <textarea id="BC05-textarea" class="textarea-comments" name="Bridge Railing" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -1028,7 +1020,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC06-textarea" class="textarea-comments" name="Bridge Railing Transitions" rows="1" oninput="expandTextarea(event, 'BC06-textarea')"></textarea>
+                  <textarea id="BC06-textarea" class="textarea-comments" name="Bridge Railing Transitions" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -1321,7 +1313,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC01-textarea" class="textarea-comments" name="Deck" rows="1" oninput="expandTextarea(event, 'BC01-textarea')"></textarea>
+                  <textarea id="BC01-textarea" class="textarea-comments" name="Deck" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -1331,7 +1323,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC01a-textarea" class="textarea-comments" name="Wearing Surface" rows="1" oninput="expandTextarea(event, 'BC01a-textarea')"></textarea>
+                  <textarea id="BC01a-textarea" class="textarea-comments" name="Wearing Surface" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -1628,7 +1620,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC02-textarea" class="textarea-comments" name="Superstructure" rows="1" oninput="expandTextarea(event, 'BC02-textarea')"></textarea>
+                  <textarea id="BC02-textarea" class="textarea-comments" name="Superstructure" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -1638,7 +1630,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC02a-textarea" class="textarea-comments" name="Paint" rows="1" oninput="expandTextarea(event, 'BC02a-textarea')"></textarea>
+                  <textarea id="BC02a-textarea" class="textarea-comments" name="Paint" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -1825,7 +1817,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC07-textarea" class="textarea-comments" name="Bridge Bearings" rows="1" oninput="expandTextarea(event, 'BC07-textarea')"></textarea>
+                  <textarea id="BC07-textarea" class="textarea-comments" name="Bridge Bearings" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -2068,7 +2060,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC03-textarea" class="textarea-comments" name="Substructure" rows="1" oninput="expandTextarea(event, 'BC03-textarea')"></textarea>
+                  <textarea id="BC03-textarea" class="textarea-comments" name="Substructure" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -2078,7 +2070,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC03a-textarea" class="textarea-comments" name="Slopewall" rows="1" oninput="expandTextarea(event, 'BC03a-textarea')"></textarea>
+                  <textarea id="BC03a-textarea" class="textarea-comments" name="Slopewall" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -2289,7 +2281,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC04-textarea" class="textarea-comments" name="Culvert" rows="1" oninput="expandTextarea(event, 'BC04-textarea')"></textarea>
+                  <textarea id="BC04-textarea" class="textarea-comments" name="Culvert" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -2607,7 +2599,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC09-textarea" class="textarea-comments" name="Channel" rows="1" oninput="expandTextarea(event, 'BC09-textarea')"></textarea>
+                  <textarea id="BC09-textarea" class="textarea-comments" name="Channel" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -2617,7 +2609,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC10-textarea" class="textarea-comments" name="Channel Protection" rows="1" oninput="expandTextarea(event, 'BC10-textarea')"></textarea>
+                  <textarea id="BC10-textarea" class="textarea-comments" name="Channel Protection" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -2881,7 +2873,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BC11-textarea" class="textarea-comments" name="Scour" rows="1" oninput="expandTextarea(event, 'BC11-textarea')"></textarea>
+                  <textarea id="BC11-textarea" class="textarea-comments" name="Scour" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -2891,7 +2883,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BAP03-textarea" class="textarea-comments" name="Scour Vulnerability" rows="1" oninput="expandTextarea(event, 'BAP03-textarea')"></textarea>
+                  <textarea id="BAP03-textarea" class="textarea-comments" name="Scour Vulnerability" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -3044,7 +3036,7 @@
             <div class="content-container-paragraphs">
               <div class="textarea-containers">
                 <div class="textarea-mirrors">
-                  <textarea id="BAP02-textarea" class="textarea-comments" name="Overtopping Likelihood" rows="1" oninput="expandTextarea(event, 'BAP02-textarea')"></textarea>
+                  <textarea id="BAP02-textarea" class="textarea-comments" name="Overtopping Likelihood" rows="1"></textarea>
                 </div>
               </div>
             </div>
@@ -4528,7 +4520,7 @@
         <div class="inner-container" style="display: flex">
           <span class="footer-image-holder">
             <a tabindex="-1" href="iterate-logo.html" target="_blank" rel="noreferrer">
-              <img class="iterate-img" src="a83c6fce7dd49b677d36.png" alt="iterate logo" />
+              <img class="iterate-img" src="media/logo-rings-only-purple.png" alt="iterate logo" />
             </a>
           </span>
           <span class="footer-text-holder"

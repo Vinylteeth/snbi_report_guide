@@ -1,44 +1,83 @@
-// Insert in HTML
-const container = document.querySelector("#bridge-alignment-pg1 .content-container-paragraphs");
+// Imports
+import { bridgeComponents } from "./modules/bridge_objects.mjs";
+import {
+  approachBridgeElements,
+  jointsBridgeElements,
+  railingsBridgeElements,
+  deckBridgeElements,
+  wearingBridgeElements,
+  superBridgeElements,
+  paintBridgeElements,
+  bearingsBridgeElements,
+  subBridgeElements,
+  culvertBridgeElements,
+  bridgeElements,
+  elementComponentContainer,
+  createButtonElement,
+  createElementContainer,
+} from "./modules/elements.mjs";
 
-// Insert the commentary
+import {
+  alignmentMaintenanceTasks,
+  approachMaintenanceTasks,
+  jointsMaintenanceTasks,
+  railingsMaintenanceTasks,
+  deckMaintenanceTasks,
+  superMaintenanceTasks,
+  bearingsMaintenanceTasks,
+  subMaintenanceTasks,
+  culvertMaintenanceTasks,
+  channelMaintenanceTasks,
+  repairTaskNames,
+  createButtonMaintenance,
+  createMaintenanceTaskContainer,
+  populateMaintenanceTasks,
+} from "./modules/maintenance.mjs";
+
+// css
+import "../styles/foundations.css";
+import "../styles/components.css";
+
+// images
+// import logoPurple from "../media/logo-rings-only-purple.png";
+// import logoOrange from "../media/logo-rings-only-orange.png";
+
+// Insert commentary in HTML safely
+const container = document.querySelector("#bridge-alignment-pg1 .content-container-paragraphs");
 if (container) {
-  let unsafeHTML = bridgeComponents[0].commentary;
-  let safeHTML = DOMPurify.sanitize(unsafeHTML);
+  const safeHTML = DOMPurify.sanitize(bridgeComponents[0].commentary);
   container.innerHTML = safeHTML;
   console.log("Sanitization complete and inserted.");
 } else {
   console.log("Container element not found.");
 }
 
-// General open tab function
+// General openTab function
 function openTab(evt) {
-  var button = evt.currentTarget;
-
-  // Extract data attributes from the clicked button
-  var componentName = button.getAttribute("data-target");
-  var containerClass = button.getAttribute("data-container-class");
-  var buttonClass = button.getAttribute("data-button-class");
+  const button = evt.currentTarget;
+  const componentName = button.dataset.target;
+  const containerClass = button.dataset.containerClass;
+  const buttonClass = button.dataset.buttonClass;
 
   // Hide all containers
-  var containers = document.getElementsByClassName(containerClass);
-  for (var i = 0; i < containers.length; i++) {
+  const containers = document.getElementsByClassName(containerClass);
+  for (let i = 0; i < containers.length; i++) {
     containers[i].style.display = "none";
   }
 
   // Remove "active" class from all buttons
-  var buttons = document.getElementsByClassName(buttonClass);
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].className = buttons[i].className.replace(" active", "");
+  const buttons = document.getElementsByClassName(buttonClass);
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove("active");
   }
 
   // Show the current tab and add "active" class to the clicked button
   document.getElementById(componentName).style.display = "block";
-  button.className += " active";
+  button.classList.add("active");
 }
 
-// Array of button classes
-var buttonClasses = [
+// Button classes to handle tabs
+const buttonClasses = [
   "asset-buttons",
   "bridge-component-buttons",
   "bridge-alignment-buttons",
@@ -62,102 +101,72 @@ var buttonClasses = [
   "wall-item-buttons",
 ];
 
-// Loop through the array and add event listeners to each button class
-buttonClasses.forEach(function (buttonClass) {
-  document.querySelectorAll("." + buttonClass).forEach(function (button) {
+// Add event listeners for each button class
+buttonClasses.forEach((buttonClass) => {
+  document.querySelectorAll(`.${buttonClass}`).forEach((button) => {
     button.addEventListener("click", openTab);
   });
 });
 
-// // Activate the second tab (assuming you want to display pg2 as the initial active page)
-// window.addEventListener('load', function() {
-//   var secondButton = document.querySelectorAll('.' + buttonClasses[0])[1]; // Select the second button in each class
-//   if (secondButton) {
-//     secondButton.click(); // Trigger a click event on the second button to activate pg2
-//   }
-// });
-
-// Add event listeners to buttons
-// document.querySelectorAll('[class^="bridge-"][class$="-buttons"]').forEach(function(button) {
-//   button.addEventListener('click', openTab);
-// });
-
-// Function to copy innerHTML to clipboard
+// Clipboard functionality for copying
 function copyToClipboard(evt) {
-  var textToCopy = evt.currentTarget.innerHTML; // Get the innerHTML of the clicked element
-  navigator.clipboard.writeText("");
+  const textToCopy = evt.currentTarget.innerHTML; // Get the innerHTML of the clicked element
   navigator.clipboard
     .writeText(textToCopy) // Copy text to clipboard
-    .then(function () {
-      // alert("Copied to clipboard: " + textToCopy); // Alert on successful copy
-    })
-    .catch(function (err) {
+    .catch((err) => {
       console.error("Error copying text: ", err); // Log any errors
     });
 }
 
-// Function to paste clipboard content into the textarea
+// Clipboard functionality for pasting
 function pasteFromClipboard(evt) {
-  var textarea = evt.currentTarget; // Get the double-clicked textarea
+  const textarea = evt.currentTarget; // Get the double-clicked textarea
   navigator.clipboard
     .readText() // Read text from the clipboard
-    .then(function (clipboardText) {
+    .then((clipboardText) => {
       textarea.value += clipboardText; // Append the clipboard content to the textarea
-      // alert("Pasted into textarea: " + clipboardText); // Optional: Alert the pasted content
     })
-    .catch(function (err) {
+    .catch((err) => {
       console.error("Error pasting text: ", err); // Log any errors
     });
 }
 
-// Add event listener for double-click on the textarea
-document.querySelectorAll(".textarea-comments").forEach(function (textarea) {
-  textarea.addEventListener("dblclick", pasteFromClipboard);
-});
-
-// Add event listener to all elements with the class 'content-container-comment-lines'
-document.querySelectorAll(".content-container-comment-lines").forEach(function (element) {
+// Event listener for copy and paste actions
+document.querySelectorAll(".content-container-comment-lines").forEach((element) => {
   element.addEventListener("click", copyToClipboard);
 });
 
-//element alert
-function addDeficiencyButtons(event) {
-  // Get the button element that was clicked
-  const button = event.target;
+document.querySelectorAll(".textarea-comments").forEach((textarea) => {
+  textarea.addEventListener("dblclick", pasteFromClipboard);
+});
 
-  // Access the shared data attributes
-  const buttonNumber = button.getAttribute("data-button-number");
-  const severityLevel = button.getAttribute("data-button-category");
-  const taskName = button.getAttribute("data-button-name");
-
-  if (buttonNumber.includes("Element")) {
-    // Perform the action based on the element number and CS level
-    alert(`Opening details for ${buttonNumber} at Condition State ${severityLevel}`);
-    // Copy the text to the clipboard
-    navigator.clipboard.writeText(`Opening details for ${buttonNumber} at Condition State ${severityLevel}`);
-  }
-  if (buttonNumber.includes("Maintenance")) {
-    // Perform the action based on the element number and CS level
-    alert(`Opening details for ${taskName} at Deficiency Level ${severityLevel}`);
-    // Copy the text to the clipboard
-    navigator.clipboard.writeText(`Opening details for ${taskName} at Deficiency Level ${severityLevel}`);
-  }
+// Expand Textarea functionality
+export function expandTextarea(evt, componentName) {
+  const elem = document.getElementById(componentName); // Get the textarea element
+  elem.parentNode.dataset.replicatedValue = elem.value; // Replicate the value to its parent
 }
 
-// textarea row control
-function expandTextarea(evt, componentName) {
-  // Declare all variables
-  var elem = document.getElementById(componentName); // Get the textarea element to use its properties.
-  elem.parentNode.dataset.replicatedValue = elem.value; // Match the parent element value to it (divTextAreaMirror class = value/comment).
+// Setup event listeners for textareas
+export function setupTextAreaListeners() {
+  const textareas = document.querySelectorAll(".textarea-comments");
+
+  textareas.forEach((textarea) => {
+    textarea.addEventListener("input", function (event) {
+      expandTextarea(event, textarea.id);
+    });
+  });
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////
+// Call this function when the page loads or when new textareas are dynamically added
+document.addEventListener("DOMContentLoaded", setupTextAreaListeners);
 
+// Sidebar toggle function
 function toggleSidebar() {
   const sidebar = document.getElementById("sidebar");
   sidebar.classList.toggle("collapsed");
 }
 
+// Function to open content sections
 function openContent(sectionId) {
   // Hide all sections
   document.querySelectorAll(".content-section").forEach((section) => {
